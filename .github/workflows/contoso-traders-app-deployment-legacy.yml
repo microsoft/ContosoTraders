@@ -1,0 +1,42 @@
+name: contoso-traders-app-deployment-legacy
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      [
+        "src/ContosoTraders.Api.Core/**",
+        "src/ContosoTraders.Api.Images/**",
+        "src/ContosoTraders.Api.Products/**",
+      ]
+
+env:
+  PRODUCTS_WEBAPP_NAME: contoso-traders-products
+
+jobs:
+  deploy-products-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.SERVICEPRINCIPAL }}
+      # @TODO: REMOVE EVERYTHING BELOW THIS LINE AFTER AKS INTEGRATION IS DONE
+      - name: install dotnet
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
+      - name: dotnet publish
+        run: dotnet publish -o ../Publish/ContosoTraders.Api.Products -c release
+        working-directory: src/ContosoTraders.Api.Products
+      - name: diagnostic output
+        run: ls -la ./src/Publish/ContosoTraders.Api.Products
+      - name: deploy to app service
+        uses: Azure/webapps-deploy@v2
+        with:
+          app-name: ${{ env.PRODUCTS_WEBAPP_NAME }}${{ secrets.ENVIRONMENT }}
+          package: ./src/Publish/ContosoTraders.Api.Products
+
