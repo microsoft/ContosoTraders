@@ -1,25 +1,26 @@
-# Contoso Traders Enhancements
+# Contoso Traders
+
+![Logo](./docs/logo-1280x640.png)
 
 ## Application Links
 
-| Application  | Link                                                                                                                                          |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| UI           | [PROD](https://www.contosotraders.com/) \| [TEST](https://test.contosotraders.com/) \| [LEGACY](https://contoso-traders-uitest.azureedge.net) |
-| Carts API    | [LINK](https://contoso-traders-cartstest.orangeflower-95b09b9d.eastus.azurecontainerapps.io/swagger/)                                         |
-| Products API | [LINK](https://contoso-traders-productstest.azurewebsites.net/swagger/)                                                                       |
+| Application  | Link                                                                                                                                                                                                            |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| UI           | [PROD](https://www.contosotraders.com/) \| [TEST](https://test.contosotraders.com/) \| [LEGACY](https://contoso-traders-uitest.azureedge.net)                                                                   |
+| Carts API    | [PROD](https://contoso-traders-cartsprod.delightfuldune-ced90d47.eastus.azurecontainerapps.io/swagger) \| [TEST](https://contoso-traders-cartstest.orangeflower-95b09b9d.eastus.azurecontainerapps.io/swagger/) |
+| Products API | [PROD](https://contoso-traders-productsprod.azurewebsites.net/swagger/) \| [TEST](https://contoso-traders-productstest.azurewebsites.net/swagger/)                                                              |
 
-## Pipeline Status
+## Pipelines
 
-* [![contoso-traders-app-deployment](https://github.com/CloudLabs-AI/ContosoTraders/actions/workflows/contoso-traders-app-deployment.yml/badge.svg)](https://github.com/CloudLabs-AI/ContosoTraders/actions/workflows/contoso-traders-app-deployment.yml)
-* [![contoso-traders-load-testing](https://github.com/CloudLabs-AI/ContosoTraders/actions/workflows/contoso-traders-load-testing.yml/badge.svg)](https://github.com/CloudLabs-AI/ContosoTraders/actions/workflows/contoso-traders-load-testing.yml)
-* [![contoso-traders-infra-provisioning](https://github.com/CloudLabs-AI/ContosoTraders/actions/workflows/contoso-traders-infra-provisioning.yml/badge.svg)](https://github.com/CloudLabs-AI/ContosoTraders/actions/workflows/contoso-traders-infra-provisioning.yml)
+* [![contoso-traders-load-testing](https://github.com/microsoft/ContosoTraders/actions/workflows/contoso-traders-load-testing.yml/badge.svg)](https://github.com/microsoft/ContosoTraders/actions/workflows/contoso-traders-load-testing.yml)
+* [![contoso-traders-provisioning-deployment](https://github.com/microsoft/ContosoTraders/actions/workflows/contoso-traders-provisioning-deployment.yml/badge.svg)](https://github.com/microsoft/ContosoTraders/actions/workflows/contoso-traders-provisioning-deployment.yml)
 
 ## Documentation
 
 * [Setup Instructions](./docs/setup-instructions.md)
-* [Known Issues](https://github.com/CloudLabs-AI/ContosoTraders/issues)
+* [Known Issues](https://github.com/microsoft/ContosoTraders/issues)
 * [Contributing](./docs/contributing.md)
 
-## Architecture (Proposed)
+## Proposed Architecture
 
 ![Architecture](./docs/architecture/contoso-traders-enhancements.drawio.png)

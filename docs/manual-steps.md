@@ -4,9 +4,7 @@ While our infra provisioning will be fully-automated to the greatest extent poss
 
 ## Pre Deployment
 
-These are the sources files that we have to manually patch (with environment suffix) before deployment:
-
-* `src\ContosoTraders.Ui.Website\src\services\configService.js`
+None.
 
 ## Post Deployment For Local Development
 
