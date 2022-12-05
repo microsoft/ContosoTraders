@@ -26,7 +26,10 @@ Contoso Traders has different departments like marketing, sales, accounts, HR, a
    
    - **FRONTEND**: Frontend is basically a ReactJS application hosted in Azure App service which works with backend(microservices) in a synchronized manner to get data.
   
-   - **MICROSERVICES (3)**: There are 3 components of the application which are containerized that is, Shopping cart, 
+   - **MICROSERVICES (3)**: There are 3 components of the application which are containerized that is, Shopping cart, products + carts, and Image search.**Shopping cart** is hosted in Azure container instance which pulls the image from container instance. **Products + carts** is hosted in Azure Kubernetes cluster which is deployed by pulling the image from container instance. **Image search** is hosted in conatinerzied App service.
+   
+   - **GATEWAY & IAM**: All the resources, identities communicate using Azure APIs to provide seamless experience inorder to keep up the website up and running.
+   
    
 1. Navigate to **github/workflows** folder, it contains the workflow YAML files using which you can the deployment resources. Each workflow contributes majorly in setting up the infrastructure. 
 
