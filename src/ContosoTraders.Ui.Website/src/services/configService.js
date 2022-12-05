@@ -4,8 +4,8 @@ require("dotenv").config();
 const settingsUrl = "/api/settings";
 
 // Note: The '{PRODUCTS_API_ENDPOINT}', '{CARTS_API_ENDPOINT}' tokens will be substituted by github workflow.
-const APIUrl = `https://${process.env.REACT_APP_APIUrl}/v1`;
-const APIUrlShoppingCart = `https://${process.env.REACT_APP_APIUrlShoppingCart}/v1`;
+const APIUrl = process.env.REACT_APP_APIUrl;
+const APIUrlShoppingCart = process.env.REACT_APP_APIUrlShoppingCart;
 const UseB2C = process.env.REACT_APP_USEB2C;
 const B2cAuthority = process.env.REACT_APP_B2CAUTHORITY;
 const B2cClientId =  process.env.REACT_APP_B2CCLIENTID;
