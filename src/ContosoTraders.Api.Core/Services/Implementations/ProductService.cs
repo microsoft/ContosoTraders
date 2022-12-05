@@ -52,6 +52,8 @@ internal class ProductService : ContosoTradersServiceBase, IProductService
 
     public IEnumerable<ProductDto> GetProducts(string searchTerm)
     {
+        searchTerm = searchTerm.ToLower();
+
         var allTypes = _productRepository.Types.ToArray();
 
         var allFeatures = _productRepository.Features.ToArray();

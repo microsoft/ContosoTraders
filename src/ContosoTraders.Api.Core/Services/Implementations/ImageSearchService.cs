@@ -43,8 +43,10 @@ internal class ImageSearchService : ContosoTradersServiceBase, IImageSearchServi
             throw new MatchingProductsNotFoundException(searchTags);
         }
 
-        products = products.Distinct().ToList();
+        var productList = products
+                     .GroupBy(p => p.Id)
+                     .Select(p => p.First());
 
-        return products;
+        return productList;
     }
 }
