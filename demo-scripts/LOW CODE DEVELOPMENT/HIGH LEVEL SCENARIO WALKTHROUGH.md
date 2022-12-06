@@ -27,4 +27,4 @@ Walkthrough
 2.	Once the Power Platform get loaded and ask for the credentials, enter the credentials given by Cloudlabs, and then select Contoso Traders default environment.
 3.	Go to the Apps tab and Click on Inventory Management System
 
-         ![App1](images/App1.png)
+       ![App1](images/App1.png)
