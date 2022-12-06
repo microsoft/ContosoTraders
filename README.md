@@ -21,6 +21,16 @@
 * [Known Issues](https://github.com/microsoft/ContosoTraders/issues)
 * [Contributing](./docs/contributing.md)
 
+## Demo Scripts
+
+  | Scenario                                  | Level                                                                                                                                                                                       |
+  | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | Cloud Native App Architecture Walkthrough | [Overview](./demo-scripts/Cloud-Native-App-Architecture/Overview.md) \| [Technical Walkthrough](./demo-scripts/Cloud-Native-App-Architecture/Technical-Walkthrough.md)                      |
+  | Autoscaling Cloud Native Apps in Azure    | Overview \| Technical Walkthrough                                                                                                                                                           |
+  | DevSecOps Journey with GitHub + Azure     | [Overview](./demo-scripts/DevSecOps/overview.md) \| [Technical Walkthrough](./demo-scripts/DevSecOps/Technical-Walkthrough.md)                                                              |
+  | Low Code App Development Power Platform   | [Overview](./demo-scripts/LOW%20CODE%20DEVELOPMENT/HIGH%20LEVEL%20SCENARIO%20WALKTHROUGH.md) \| [Technical Walkthrough](./demo-scripts/LOW%20CODE%20DEVELOPMENT/TECHNICAL%20WALKTHROUGH.md) |
+  | Intelligent Apps with Azure AI Services   | [Overview](./demo-scripts/Intelligent-Apps-with-Azure-AI-Services/L100.md) \| [Technical Walkthrough](./demo-scripts/Intelligent-Apps-with-Azure-AI-Services/L300.md)                       |
+
 ## Proposed Architecture
 
 ![Architecture](./docs/architecture/contoso-traders-enhancements.drawio.png)
