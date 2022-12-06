@@ -34,10 +34,11 @@ and clicking on the Run workflow button. This will both provision the infrastruc
 
 Following are the use cases we can apply
 
-1. Cloud-Native-App-Architecture            : https://github.com/seenakhan/ContosoTraders/tree/main/demo-scripts/Cloud-Native-App-Architecture
-2. DevSecOps                                : https://github.com/seenakhan/ContosoTraders/tree/main/demo-scripts/DevSecOps
-3. Intelligent-Apps-with-Azure-AI-Services  : https://github.com/seenakhan/ContosoTraders/tree/main/demo-scripts/Intelligent-Apps-with-Azure-AI-Services
-4. LOW CODE DEVELOPMENT                     : https://github.com/seenakhan/ContosoTraders/tree/main/demo-scripts/LOW%20CODE%20DEVELOPMENT
+1. Cloud-Native-App-Architecture            : https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/Cloud-Native-App-Architecture
+2. DevSecOps                                : https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/DevSecOps
+3. Intelligent-Apps-with-Azure-AI-Services  : https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/Intelligent-Apps-with-Azure-AI-Services
+4. LOW CODE DEVELOPMENT                     : https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/LOW%20CODE%20DEVELOPMENT
+5. Autoscaling-Cloud-Native-Apps-Azure      : https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/Autoscaling-Cloud-Native-Apps-Azure
 
 **Clean Up**
 
@@ -50,7 +51,9 @@ Following are the use cases we can apply
   Common errors
 1.	Authentication failed
 2.	Connection string not listed
-  Troubleshoot
+
+  How to troubleshoot
+  
 1.	Check the user connection string is available, if not please go to the prerequisite section step 1.
 2.	If the Azure SQL database connection string not validated please create a connection string in dataverse section of the power platform.
 
