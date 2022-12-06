@@ -33,7 +33,7 @@
 
 ## Resources
 
-* [Github Workflows](./.github/workflows/) ([Run](https://github.com/microsoft/ContosoTraders/actions)) 
+* [Github Workflows](./.github/workflows/) | [Runs](https://github.com/microsoft/ContosoTraders/actions)
 * [Github Issues](https://github.com/microsoft/ContosoTraders/issues)
 * [Bicep Templates](./iac/)
 * [Load Tests](./tests/loadtests/)
