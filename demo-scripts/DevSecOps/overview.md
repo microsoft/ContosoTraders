@@ -22,27 +22,19 @@ You will explore the Contoso traders code base present in a GitHub repository wh
    
 1. Navigate to any category and select any of the product. You'll be able to see details like **technical description of the product**, **bank offers**, **Question and Answers** related to the product.
 
-   ![](media/ct29.png)    
+   ![](media/ct29.png)  
+   
+1. In a new browser tab open `https://www.github.com` and Log in with your personal GitHub account.
 
-1. Open browser, using a new tab navigate to `https://github.com/CloudLabs-AI/ContosoTraders` GitHub repository. This repository conatins all the neccessary files and documents which will guide you to host the contoso traders application from the scratch.
+   **Note** : You have to use your own GitHub account. If you don't have a GitHub account then navigate to the following link `https://github.com/join` and create one.   
+   
+1. Open browser, using a new tab navigate to your forked **ContosoTraders** repo (`https://github.com/<GITHUB USERNAME/ContosoTraders`) GitHub repository. This repository conatins all the neccessary files and documents which will guide you to host the contoso traders application from the scratch.
 
-   ![](media/ct1.png)
+   ![](media/ct30.png) 
 
-1. Navigate to **github/workflows** folder, it contains the workflow YAML files using which you can the deployment resources. Please see the individual workflows for more information.
+1. Navigate to **github/workflows (1)** folder, it contains the **workflow YAML files (2)** using which you can deploy and configure the resources. Each workflow has its own functionality.
 
-   ![](media/ct2.png) 
-
-1. **Contoso-traders-infra-deployment.yml** will deploy the infrastructure into Azure which includes resource groups, resources, sets access policies to key vaults, and seeds the database from storage accounts into an Azure SQL database.
-
-   ![](media/ct3.png) 
-
-1. **contoso-traders-app-deployment.yml** deploys the application to Azure cloud. The application is configured to use the pre-deployed resources.
-
-   ![](media/ct4.png) 
-
-1. **contoso-traders-load-testing.yml** configures the load testing for the application.
-  
-   ![](media/ct5.png)
+   ![](media/ct31.png) 
 
 1. The **docs** folder contains the deployment instruction files, which guide you to deploy the infrastructure and application.
 
@@ -66,7 +58,23 @@ You will explore the Contoso traders code base present in a GitHub repository wh
 
 1. If you scroll a little bit more, you’ll visualise the entire application infrastructure diagram. The diagram explains how different Azure resources are integrated together and runs in a synchronised manner to ensure the smooth operation of the application.
 
-   ![](media/ct11.png)  
+   ![](media/ct11.png)
+
+1. Navigate to **github/workflows** folder, it contains the workflow YAML files using which you can the deployment resources. Each workflow has its own functionality.
+
+   ![](media/ct31.png)   
+
+1. **Contoso-traders-infra-deployment.yml** will deploy the infrastructure into Azure which includes resource groups, resources, sets access policies to key vaults, and seeds the database from storage accounts into an Azure SQL database.
+
+   ![](media/ct3.png) 
+
+1. **contoso-traders-app-deployment.yml** deploys the application to Azure cloud. The application is configured to use the pre-deployed resources.
+
+   ![](media/ct4.png) 
+
+1. **contoso-traders-load-testing.yml** configures the load testing for the application.
+  
+   ![](media/ct5.png)
 
 1. From the GitHub repository, navigate to **Actions (1)** tab. You’ll see the different **GitHub workflows (2)** in the Actions sidebar.
 
@@ -93,6 +101,22 @@ You will explore the Contoso traders code base present in a GitHub repository wh
     - **Dependabot security updates** creates  alert for every vulnerable dependency identified in your full dependency graph. However, security updates are triggered only for dependencies that are specified in a manifest or lock file.
    
     ![](media/ct16.png)
+    
+1. Navigate to **Security (1)** tab and select the **Dependabot (2)** from the side bar.
+
+   ![](media/ct32.png)  
+   
+1. Select the **Improper Neutralization of Special Elements used in a Command in Shell-quote** alert.
+
+   ![](media/ct33.png)
+   
+1. Go through the alert description and click on **Review security update**.
+
+   ![](media/ct34.png)
+   
+1. You can **review (1)** the changes that will be made to resolve the alerts. By clicking on **Merge pull request (2)** button, you can resolve the alert. This how you make the repository more safer and eliminate the vulnerabilities.
+
+   ![](media/ct35.png)
    
 1. Now, sign in to your Azure account, where the contoso traders infrastructure is hosted. If the infrastructure is not deployed, please follow the **Deployment setup** documentation.
 
@@ -128,6 +152,10 @@ You will explore the Contoso traders code base present in a GitHub repository wh
 
     ![](media/ct23.png) 
    
+1. Navigate back to Microsoft Defender for cloud page, select **DevOps Security (preview)** from the side bar.
+
+   ![](media/ct.png)
+   
 ## Summary
 
 You have understood and got an overview about the Contoso traders GitHub repostory, GitHub security features, and Microsoft Defender for cloud.
