@@ -324,7 +324,7 @@ jobs:
         with:
           tokenPrefix: "{{"
           tokenSuffix: "}}"
-          files: ./src/ContosoTraders.Ui.Website/src/services/configService.js
+          files: ./src/ContosoTraders.Ui.Website/.env
         env:
           CARTS_API_ENDPOINT: ${{ steps.get-cartsApiEndpoint.outputs.cartsApiEndpoint }}
           PRODUCTS_API_ENDPOINT: ${{ steps.get-productsApiEndpoint.outputs.productsApiEndpoint }}

@@ -2,6 +2,7 @@
 --------------------------------------------------------------------------
 
 **Pre-Requisite**
+
   1.	Azure Portal
       Login into Azure Portal and go to Azure Active directory.
       Add a user named contoso.approver@contosotraderslabs.onmicrosoft.com having licenses of Power apps, Power automate and Microsoft Teams Exploratory.
@@ -9,10 +10,13 @@
   2.  Power platform environment
       Login into power platform environment with your trial or organization account by clicking on the below link:
       https://powerapps.microsoft.com/en-us/ 
+  
   3.  Add a business user in sharepoint list. For user details refer cloudlabs instructions.
       **Note: This user is going authenticate the Inventory Management Application.** 
+  
   4. A sharepoint list to be created named Update Product details.
       **Note: This list will store the details of the Product update, the business entered through the inventory app.**
+  
   5. Create an Azure SQL database connection string in the dataverse section of the power platform environment.
       
 **Deployment**
@@ -35,13 +39,3 @@
   1. Check the user connection string is available, if not please go to the prerequisite section step 1.
     
   2. If the Azure SQL database connection string not validated please create a connection string in dataverse section of the power platform.
-    
-    
- 
- 
-  
-    
-
-
-
-

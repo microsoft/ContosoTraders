@@ -4,12 +4,12 @@ require("dotenv").config();
 const settingsUrl = "/api/settings";
 
 // Note: The '{PRODUCTS_API_ENDPOINT}', '{CARTS_API_ENDPOINT}' tokens will be substituted by github workflow.
-const APIUrl = 'https://{{PRODUCTS_API_ENDPOINT}}/v1';
-const APIUrlShoppingCart = 'https://{{CARTS_API_ENDPOINT}}/v1';
-const UseB2C = '';//process.env.REACT_APP_USEB2C;
-const B2cAuthority = "https://login.microsoftonline.com/common";//process.env.REACT_APP_B2CAUTHORITY;
-const B2cClientId =  "9db8d08a-d9b6-4e4c-8b46-a3898f985735";//process.env.REACT_APP_B2CCLIENTID;
-const B2cScopes = ["User.Read"];//process.env.REACT_APP_B2CSCOPES;
+const APIUrl = process.env.REACT_APP_APIUrl;
+const APIUrlShoppingCart = process.env.REACT_APP_APIUrlShoppingCart;
+const UseB2C = process.env.REACT_APP_USEB2C;
+const B2cAuthority = process.env.REACT_APP_B2CAUTHORITY;
+const B2cClientId =  process.env.REACT_APP_B2CCLIENTID;
+const B2cScopes = process.env.REACT_APP_B2CSCOPES;
 const userEmail = localStorage.getItem('state') ? JSON.parse(localStorage.getItem('state')).userName : null;
 
 const _HeadersConfig = (token, devspaces = undefined) => {

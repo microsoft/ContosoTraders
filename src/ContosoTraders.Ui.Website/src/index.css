@@ -198,6 +198,24 @@ body {
   background-color: #F8F8F8 !important;
   border: 1px solid #EFEFEF !important;
 }
+/* Header Message */
+.headerMessageDiv{
+  height: 55px;
+  font-family: 'Poppins';
+  letter-spacing: 0.42px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerMessageDiv.warning{
+  background-color: #F0A428;
+  color: #fff;
+}
+.headerMessageDiv.error{
+  background-color: #E81D1D;
+  color: #fff;
+}
 /* //Appbar */
 .appbar{
   box-shadow: none !important;
