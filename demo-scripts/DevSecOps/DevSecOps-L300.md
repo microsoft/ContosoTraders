@@ -10,6 +10,20 @@ Contoso Traders has different departments like marketing, sales, accounts, HR, a
 
 You will explore the Contoso traders code base present in a GitHub repository which contains all the files related to the application’s UI, backend APIs, deployment files, GitHub workflows, and deployment guides. You will also explore about GitHub security features like Dependency graph and Dependabot. You will also explore Azure Defender for cloud and how it protects the rsoources
 
-## prerequisite
+## Prerequisite
 
 Before proceeding to next steps. The application and related resources should be deployed and configured. If not deployed, please follow the **Deployment** documentation to complete the deployment.
+
+## Launch App
+
+1. Open browser, using a new tab and navigate to `https://www.contosotraders.com/` **(1)**. If you see `Your connection isn't private` warning then click on **Advanced** an select **Continue to contosotraders.com (unsafe) (2)**
+
+   ![](media/devsecops-l300-1.png)
+   
+1. The products are seperated based on different catagories like **Laptops**, **Controllers**, **Desktops**, **Mobiles**, and **Monitors**.   
+      
+   ![](media/devsecops-l300-2.png)      
+   
+1. Navigate to any category and select any of the product. You'll be able to see details like **technical description of the product**, **bank offers**, **Question and Answers** related to the product.
+
+   ![](media/devsecops-l300-3.png)
