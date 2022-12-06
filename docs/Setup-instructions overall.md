@@ -17,15 +17,14 @@
 15. Type git clone, and then paste the URL you copied earlier.
 16. After copying, it will look like this: $ git clone https://github.com/YOUR-USERNAME/ContosoTraders.
 17. Press Enter and your local clone will be created.
-18. 
-19. Create the SERVICEPRINCIPAL, ENVIRONMENT, and SQL_PASSWORD github secrets 
+18. On the github repository, go to the Settings tab > Secrets > Actions then by clicking on New Repository Secret, you can create these necessary secrets: SERVICEPRINCIPAL, ENVIRONMENT, and SQL_PASSWORD  
 
 **Deployment**
-1. Run the contoso-traders-provisioning-deployment github workflow. You can do this by going to the github repo's Actions tab, selecting the workflow, 
-and clicking on the Run workflow button. This will both provision the infrastructure on Azure as well as deploy the applications (APIs, UI) to the infrastructure.
+1. Go to ContosoTraders repository, under Actions tab select the workflow named contoso-traders-provisioning-deployment and click on Run workflow button.
+2. This will both provision the infrastructure on Azure as well as deploy the applications (APIs, UI) to the infrastructure.
 2. Next, deploy the apps, by running the contoso-traders-app-deployment workflow.
 3. Check the resource groups, databases, App services been created and deployed.
-4. Check the We app deployed through the url https://www.contosotraders.com/
+4. Check the Web app deployed through the url https://www.contosotraders.com/
 
 **Power App**
 
