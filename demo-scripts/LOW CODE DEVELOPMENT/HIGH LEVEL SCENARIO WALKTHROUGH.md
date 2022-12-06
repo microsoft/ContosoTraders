@@ -26,3 +26,5 @@ Walkthrough
 1.	Launch the app by opening URL.  https://make.powerapps.com/environments/Default-08b2a7bc-d241-4500-a789-a1f56bb0cfd9/apps 
 2.	Once the Power Platform get loaded and ask for the credentials, enter the credentials given by Cloudlabs, and then select Contoso Traders default environment.
 3.	Go to the Apps tab and Click on Inventory Management System
+
+         ![App1](images/App1.png)
