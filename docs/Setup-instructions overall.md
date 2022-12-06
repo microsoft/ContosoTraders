@@ -26,7 +26,7 @@ and clicking on the Run workflow button. This will both provision the infrastruc
 1.	After login into the Power platform environment go to Power platform admin center and click on Apps and then click on Import Canvas App.
 2.	After clicking on Import Canvas App, you will reach into import package details pane and validate the connection strings. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Then click on the import button.
 3.	It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
-4.	CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. To achieve this you can go through this link: https://github.com/seenakhan/ContosoTraders/blob/main/demo-scripts/LOW%20CODE%20DEVELOPMENT/HIGH%20LEVEL%20SCENARIO%20WALKTHROUGH.md
+4.	CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product.
 5.	You can successfully run the application.
 
 
