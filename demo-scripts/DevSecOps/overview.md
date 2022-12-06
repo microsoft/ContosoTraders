@@ -148,13 +148,25 @@ You will explore the Contoso traders code base present in a GitHub repository wh
 
     ![](media/ct22.png)
   
-1. Here, you can see the **Description** of the recommendation, **Remidiation steps** using which you can fix the vulnerability , and **Affected resources**.
+1. Here, you can see the **Description** of the recommendation. Using **Remidiation steps**, you can fix the vulnerability. Alos you can check the affect**Affected resources**.
 
     ![](media/ct23.png) 
    
 1. Navigate back to Microsoft Defender for cloud page, select **DevOps Security (preview)** from the side bar.
 
-   ![](media/ct.png)
+   ![](media/ct41.png)
+   
+1. **Defender for DevOps** allows you to manage your connected environments and provides your security teams with a high level overview of discovered issues that may exist within the repository. Click on the **ContosoTraders** GitHub repository.
+
+   ![](media/ct42.png)
+   
+1. Select any one of the **Recommendations** from the list.
+
+   ![](media/ct43.png)
+   
+1. Take a look at the **Descrption** of the recommendation. Using the steps mentioned in the **Remeditaion steps**, you can take action and resolve the issue.
+
+   ![](media/ct44.png)
    
 ## Summary
 
