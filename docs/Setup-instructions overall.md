@@ -12,9 +12,13 @@
 10. At the Nmae section provide Contoso Traders, under Supported account types select the first option (Accounts in this organizational directory only (Default Directory only - Single tenant))
 11.  After selecting web and add the URI as www.contosotraders.com under Redirect URI section, click on register.
 12.  Now you have created the service principal in the owner role on Azure Subscription.
-13. 
-14. 14. Git clone this repository to your machine.
-15. Create the SERVICEPRINCIPAL, ENVIRONMENT, and SQL_PASSWORD github secrets 
+13. Go to Github repository named ContosoTraders, click on Code and Select HTTPS and copy the url, then open Git Bash.
+14. Change the current working directory to the location where you want the cloned directory.
+15. Type git clone, and then paste the URL you copied earlier.
+16. After copying, it will look like this: $ git clone https://github.com/YOUR-USERNAME/ContosoTraders.
+17. Press Enter and your local clone will be created.
+18. 
+19. Create the SERVICEPRINCIPAL, ENVIRONMENT, and SQL_PASSWORD github secrets 
 
 **Deployment**
 1. Run the contoso-traders-provisioning-deployment github workflow. You can do this by going to the github repo's Actions tab, selecting the workflow, 
