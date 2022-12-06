@@ -5,10 +5,16 @@
 3. Under settings tab, select the resource provider to see the list of resource providers.
 4. Please Select Microsoft.OperationsManagement as resource provider and then click on Register.
 5. Wait for completing the registration.
-6. 
-7. You'll need a service principal in the owner role on the Azure subscription 	where the infrastructure is to be provisioned.
-8. Git clone this repository to your machine.
-9. Create the SERVICEPRINCIPAL, ENVIRONMENT, and SQL_PASSWORD github secrets 
+6. After the Resource provider is registered go to the Subscription and select my permission under settings, then click on "Go to subscription access control (IAM)"
+7. Click on Role Assignments to see the list of users and their roles.
+8. If the desired user account is not having owner role please assign the user as owner role.
+9. Go to Azure Active Directory select App registrations under Manage section then click on New Registration.
+10. At the Nmae section provide Contoso Traders, under Supported account types select the first option (Accounts in this organizational directory only (Default Directory only - Single tenant))
+11.  After selecting web and add the URI as www.contosotraders.com under Redirect URI section, click on register.
+12.  Now you have created the service principal in the owner role on Azure Subscription.
+13. 
+14. 14. Git clone this repository to your machine.
+15. Create the SERVICEPRINCIPAL, ENVIRONMENT, and SQL_PASSWORD github secrets 
 
 **Deployment**
 1. Run the contoso-traders-provisioning-deployment github workflow. You can do this by going to the github repo's Actions tab, selecting the workflow, 
