@@ -10,6 +10,10 @@ Contoso Traders has different departments like marketing, sales, accounts, HR, a
 
 You will explore the Contoso traders code base present in a GitHub repository which contains all the files related to the application’s UI, backend APIs, deployment files, GitHub workflows, and deployment guides. You will also explore about GitHub security features like Dependency graph and Dependabot. You will also explore Azure Defender for cloud and how it protects the rsoources
 
+## prerequisite
+
+Before proceeding to next steps. The application and related resources should be deployed and configured. If not deployed, please follow the **Deployment** documentation to complete the deployment.
+
 ## Steps
 
 1. Open browser, using a new tab navigate to `https://www.contosotraders.com/` **(1)**. If you see `Your connection isn't private` warning then click on **Advanced** an select **Continue to contosotraders.com (unsafe) (2)**
@@ -100,7 +104,7 @@ You will explore the Contoso traders code base present in a GitHub repository wh
 
     - **Dependabot security updates** creates  alert for every vulnerable dependency identified in your full dependency graph. However, security updates are triggered only for dependencies that are specified in a manifest or lock file.
    
-    ![](media/ct16.png)
+   ![](media/ct16.png)
     
 1. Navigate to **Security (1)** tab and select the **Dependabot (2)** from the side bar.
 
@@ -116,7 +120,7 @@ You will explore the Contoso traders code base present in a GitHub repository wh
    
 1. You can **review (1)** the changes that will be made to resolve the alerts. By clicking on **Merge pull request (2)** button, you can resolve the alert. This how you make the repository more safer and eliminate the vulnerabilities.
 
-   ![](media/ct35.png)
+   ![](media/ct45.png)
    
 1. Now, sign in to your Azure account, where the contoso traders infrastructure is hosted. If the infrastructure is not deployed, please follow the **Deployment setup** documentation.
 
