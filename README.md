@@ -29,7 +29,7 @@
   | Autoscaling Cloud Native Apps in Azure    | [Overview](./demo-scripts/Autoscaling-Cloud-Native-Apps-Azure/overview.md) \| [Technical Walkthrough](./demo-scripts/Autoscaling-Cloud-Native-Apps-Azure/technical-walkthrough.md)          |
   | DevSecOps Journey with GitHub + Azure     | [Overview](./demo-scripts/DevSecOps/overview.md) \| [Technical Walkthrough](./demo-scripts/DevSecOps/Technical-Walkthrough.md)                                                              |
   | Low Code App Development Power Platform   | [Overview](./demo-scripts/LOW%20CODE%20DEVELOPMENT/HIGH%20LEVEL%20SCENARIO%20WALKTHROUGH.md) \| [Technical Walkthrough](./demo-scripts/LOW%20CODE%20DEVELOPMENT/TECHNICAL%20WALKTHROUGH.md) |
-  | Intelligent Apps with Azure AI Services   | [Overview](./demo-scripts/Intelligent-Apps-with-Azure-AI-Services/L100.md) \| [Technical Walkthrough](./demo-scripts/Intelligent-Apps-with-Azure-AI-Services/L300.md)                       |
+  | Intelligent Apps with Azure AI Services   | [Overview](./demo-scripts/intelligent-apps-with-azure-ai-services/overview.md) \| [Technical Walkthrough](./demo-scripts/intelligent-apps-with-azure-ai-services/technical-walkthrough.md)  |
 
 ## Resources
 
