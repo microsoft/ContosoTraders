@@ -14,7 +14,7 @@ You will explore the Contoso traders code base present in a GitHub repository wh
 
 Before proceeding to next steps. The application and related resources should be deployed and configured. If not deployed, please follow the **Deployment** documentation to complete the deployment.
 
-## Launch App
+## Steps
 
 1. Open browser, using a new tab and navigate to `https://www.contosotraders.com/` **(1)**. If you see `Your connection isn't private` warning then click on **Advanced** an select **Continue to contosotraders.com (unsafe) (2)**
 
@@ -27,3 +27,13 @@ Before proceeding to next steps. The application and related resources should be
 1. Navigate to any category and select any of the product. You'll be able to see details like **technical description of the product**, **bank offers**, **Question and Answers** related to the product.
 
    ![](media/devsecops-l300-3.png)
+   
+1. In a new browser tab open `https://www.github.com` and Log in with your personal GitHub account.
+
+   **Note** : You have to use your own GitHub account. If you don't have a GitHub account then navigate to the following link `https://github.com/join` and create one.   
+   
+1. Open browser, using a new tab navigate to your forked **ContosoTraders** repo (`https://github.com/<GITHUB USERNAME/ContosoTraders`) GitHub repository. This repository conatins all the neccessary files and documents which will guide you to host the contoso traders application from the scratch.
+
+   ![](media/devsecops-l300-4.png)
+   
+1. 
