@@ -4,8 +4,6 @@ Lab time: 5 minutes
 
 ## Overview of the Contoso Traders application
 
-![Logo](../../docs/logo-1280x640.png)
-
 Contoso Traders is a fictitious company that sells a wide range of products. The company has a website that allows customers to browse products and add them to their shopping cart. The website also allows customers to search for products by name or category. The website is hosted in Azure and uses a variety of Azure services to provide the functionality.
 
 In this demo script, we will explore how to use Azure AI services to enhance the Contoso Traders application. We will start by launching the application and giving an overview of the app with a focus on the need for AI/Visual Search. We will then search for a product through an image. Finally, we will explore the AI services used in the app and how/where they are hosted.
