@@ -174,6 +174,6 @@ Before proceeding to next steps. The application and related resources should be
    
 ## Summary
 
-You have understood and got an overview about the Contoso traders GitHub repostory, GitHub security features, and Microsoft Defender for cloud.
+You have understood and got an overview about the Contoso Traders website, GitHub repostory, GitHub security features, and Microsoft Defender for cloud and DevOps.
 
     
