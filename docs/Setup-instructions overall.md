@@ -28,9 +28,39 @@ and clicking on the Run workflow button. This will both provision the infrastruc
 3.	It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
 4.	CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. To achieve this you can go through this link: https://github.com/seenakhan/ContosoTraders/blob/main/demo-scripts/LOW%20CODE%20DEVELOPMENT/HIGH%20LEVEL%20SCENARIO%20WALKTHROUGH.md
 5.	You can successfully run the application.
-Common errors
+
+
+**Use Cases**
+
+Following are the use cases we can apply
+
+1. Cloud-Native-App-Architecture            : https://github.com/seenakhan/ContosoTraders/tree/main/demo-scripts/Cloud-Native-App-Architecture
+2. DevSecOps                                : https://github.com/seenakhan/ContosoTraders/tree/main/demo-scripts/DevSecOps
+3. Intelligent-Apps-with-Azure-AI-Services  : https://github.com/seenakhan/ContosoTraders/tree/main/demo-scripts/Intelligent-Apps-with-Azure-AI-Services
+4. LOW CODE DEVELOPMENT                     : https://github.com/seenakhan/ContosoTraders/tree/main/demo-scripts/LOW%20CODE%20DEVELOPMENT
+
+**Clean Up**
+
+1. Delete all the resource groups created through the workflow execution
+2. Delete the Dataverse connections, Power Automate flow and Inventory Management App from the Power Platform environment.
+3. Delete the sharepoint lists if needed.
+
+**Troubleshoot**
+
+  Common errors
 1.	Authentication failed
 2.	Connection string not listed
-Troubleshoot
+  Troubleshoot
 1.	Check the user connection string is available, if not please go to the prerequisite section step 1.
 2.	If the Azure SQL database connection string not validated please create a connection string in dataverse section of the power platform.
+
+**Request Support**
+
+You can raise an issue to report any bug or any feature request on the github repo Contoso Traders.
+                                
+                                
+                                
+
+
+
+
