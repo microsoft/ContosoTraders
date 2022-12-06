@@ -75,9 +75,9 @@ The primary use of a CDN is to decrease load times across a geographical area an
 
 ## Launch App
 
-1. Now open browser and navigate to [https://contosotraders.com/](https://www.contosotraders.com/)
+1. Open browser and navigate to [https://contosotraders.com/](https://www.contosotraders.com/)
 
-   ![image](https://user-images.githubusercontent.com/48020356/204910981-44806350-9b7d-4b88-95f4-0c3c08196430.png)
+   ![](media/launchapp.png)
    
    In the webpage you will be able to see the ecommerce store with clsuter of electronic products such as Laptops, Xbox controllers, Desktops, mobile phones and monitors of different brands.
 
