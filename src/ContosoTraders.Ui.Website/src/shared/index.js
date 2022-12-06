@@ -6,7 +6,7 @@ import Footer from './footer/footer';
 import LoadingSpinner from './loadingSpinner/loadingSpinner'
 import UploadFile from './uploadFile/uploadFile'
 import Card from './card/card'
-
+import HeaderMessage from './header/headermessage';
 export {
     Header,
     Appbar,
@@ -16,4 +16,5 @@ export {
     UploadFile,
     Card,
     Categories,
+    HeaderMessage,
 };
