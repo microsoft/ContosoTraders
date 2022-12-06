@@ -62,6 +62,20 @@ Before proceeding to next steps. The application and related resources should be
 1. If you scroll a little bit more, you’ll visualise the entire application infrastructure diagram. The diagram explains how different Azure resources are integrated together and runs in a synchronised manner to ensure the smooth operation of the application.
 
    ![](media/ct11.png)
+   
+1. From the **code (1)** tab, click on **commits (2)** button.
+
+   ![](media/ct46.png)  
+   
+1. Here, you'll be able to see all the commit history of the GitHub repository.
+
+   ![](media/ct47.png)    
+   
+1. click on any of the **Angle brackets** button. It will discard the latest commits after that particular commit and take you the state of the repository when the particular commit was merged.
+
+   ![](media/ct48.png)     
+   
+   ![](media/ct49.png) 
 
 1. Navigate to **github/workflows** folder, it contains the workflow YAML files using which you can the deployment resources. Each workflow has its own functionality.
 
