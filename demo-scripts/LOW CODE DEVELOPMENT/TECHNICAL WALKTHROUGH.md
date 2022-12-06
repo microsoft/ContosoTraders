@@ -55,7 +55,7 @@ In this workflow three variables initialized with values submitted by, submitted
 After that configured “Post an Adaptive card and wait for response” flow. In this flow, configured an Adaptive card in json script and pass value of two variables submitted on and submitted by into the adaptive card. 
 
 
-*Refer the Adaptive card document.
+*Refer the Adaptive card document* https://github.com/seenakhan/ContosoTraders/blob/main/demo-scripts/LOW%20CODE%20DEVELOPMENT/Adaptivecard.json 
 
 After that a Condition control flow configured with a condition body(‘PostAdaptiveCardToChannelAndWaitforaresponse’)[‘submitActionId’] is equal to Approve. Along with the condition If Yes and IF No flows also configured When the stakeholder click on the Approve button then the If yes flow will execute. It has additional three flows added two flows are for passing the message on the Teams channel and One flow is for calling the variable having T-SQL update query. Below are the images shows the If Yes flow configuration.
 
