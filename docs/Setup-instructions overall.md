@@ -1,9 +1,14 @@
 **Pre-Requisite**
 
-1. You'll need an Azure subscription with 	the Microsoft.OperationsManagement resource provider registered (steps).
-2. You'll need a service principal in the owner role on the Azure subscription 	where the infrastructure is to be provisioned.
-3. Git clone this repository to your machine.
-4. Create the SERVICEPRINCIPAL, ENVIRONMENT, and SQL_PASSWORD github secrets 
+1. Login into Azure portal with your trial or organization account.
+2. Go to Subscriptions, Select the subscription you want to register with the resource provider.
+3. Under settings tab, select the resource provider to see the list of resource providers.
+4. Please Select Microsoft.OperationsManagement as resource provider and then click on Register.
+5. Wait for completing the registration.
+6. 
+7. You'll need a service principal in the owner role on the Azure subscription 	where the infrastructure is to be provisioned.
+8. Git clone this repository to your machine.
+9. Create the SERVICEPRINCIPAL, ENVIRONMENT, and SQL_PASSWORD github secrets 
 
 **Deployment**
 1. Run the contoso-traders-provisioning-deployment github workflow. You can do this by going to the github repo's Actions tab, selecting the workflow, 
