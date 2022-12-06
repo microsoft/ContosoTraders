@@ -15,7 +15,7 @@ const Footer = () => {
             <Link to="/">
                 <Logo />
             </Link>
-            <p  className='mt-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p  className='mt-2'>We are proud to announce the launch of one of our latest innovations: Contoso Traders eCommerce store. Our journey of building India’s biggest unicorn start-up has been full of successes, but also failures and learning from them.</p>
         </Grid>
         <Grid item xs={2} className='section-2'>
             <ul>
