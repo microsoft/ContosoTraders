@@ -8,4 +8,9 @@
 **Deployment**
 1. Run the contoso-traders-provisioning-deployment github workflow. You can do this by going to the github repo's Actions tab, selecting the workflow, 
 and clicking on the Run workflow button. This will both provision the infrastructure on Azure as well as deploy the applications (APIs, UI) to the infrastructure.
-3. Next, deploy the apps, by running the contoso-traders-app-deployment workflow.
+2. Next, deploy the apps, by running the contoso-traders-app-deployment workflow.
+3. Check the resource groups, databases, App services been created and deployed.
+4. Check the We app deployed through the url https://www.contosotraders.com/
+
+**Power App**
+
