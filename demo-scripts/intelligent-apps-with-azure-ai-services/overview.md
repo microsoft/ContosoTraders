@@ -1,10 +1,10 @@
 # Intelligent Apps with Azure AI Services - L100
 
-Lab time: 05 minutes
+Lab time: 5 minutes
 
 ## Overview of the Contoso Traders application
 
-![Logo](./docs/logo-1280x640.png)
+![Logo](../../docs/logo-1280x640.png)
 
 Contoso Traders is a fictitious company that sells a wide range of products. The company has a website that allows customers to browse products and add them to their shopping cart. The website also allows customers to search for products by name or category. The website is hosted in Azure and uses a variety of Azure services to provide the functionality.
 
