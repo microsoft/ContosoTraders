@@ -1,12 +1,29 @@
 **Setup Instructions for Power Platform App- Inventory Management System**
 --------------------------------------------------------------------------
 
+**Pre-Requisite**
+  1.	Azure Portal
+      Login into Azure Portal and go to Azure Active directory.
+      Add a user named contoso.approver@contosotraderslabs.onmicrosoft.com having licenses of Power apps, Power automate and Microsoft Teams Exploratory.
 
-1.	Create Users 
-You need to have a user in Azure Active directory with administrative privileges and a business user in SharePoint list.
+  2.  Power platform environment
+      Login into power platform environment with contoso.approver@contosotraderslabs.onmicrosoft.com account by clicking on the below link:
+      https://powerapps.microsoft.com/en-us/  or else login into azure portal with contoso.approver@contosotraderslabs.onmicrosoft.com search power platform in Azure           portal and click on Build an App option.
+  3.  Add a business user in sharepoint list. For user details refer cloudlabs instructions.
+      **Note: This user is going authenticate the Inventory Management Application.** 
+  4. A sharepoint list to be created named Update Product details.
+      **Note: This list will store the details of the Product update, the business entered through the inventory app.**
+      
+**Deployment**
 
-2.	License Users 
-For the Azure Active directory user can access the Power platform environment with administrator privilege and SharePoint user can access the application deployed on Power app. Also a SharePoint list should be created for storing the Product update details. This should be viewed by stakeholders.
+  1. After login into the Power platform environment click on Apps and then click on Import Canvas App.
+  2. After clicking on Import Canvas App, you will reach into import package details pane and validate the connection strings. Then click on the import button.
+  3. It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
+  4. CLick on the App to execute it, enter the business user credentials on it and go to product details screen and do an update of the price of any product.
+  
+    
+
+
 
 3.	Power Platform Admin Center 
 Login into the Power Platform Admin center to Import the Inventory Management System App. Once open the admin center go to click on apps tab and click on import canvas App. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Also validate the SharePoint List connection as update.
