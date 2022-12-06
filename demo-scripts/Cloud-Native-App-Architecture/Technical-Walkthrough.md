@@ -18,7 +18,7 @@ Contoso Traders has different departments like marketing, sales, accounts, HR, a
 
    ![](media/cni3.png)
    
-1. The architecture is broken down into mulitple parts and the major ones are, **DEVOPS (1)**, **FRONT END (2)**, **MICROSERVICES (3)**, and **GATEWAY & IAM (4)**.  
+1. The architecture is broken down into mulitple parts and the major ones are, **DEVOPS (1)**, **FRONT END (2)**, **MICROSERVICES (3)**, **GATEWAY & IAM (4)**, **MONITORING AND TELEMETRY (5)**, and **SECURITY (6)**.  
 
    ![](media/cni1.png)
    
@@ -28,17 +28,26 @@ Contoso Traders has different departments like marketing, sales, accounts, HR, a
   
    - **MICROSERVICES (3)**: There are 3 components of the application which are containerized that is, Shopping cart, products + carts, and Image search.**Shopping cart** is hosted in Azure container instance which pulls the image from container instance. **Products + carts** is hosted in Azure Kubernetes cluster which is deployed by pulling the image from container instance. **Image search** is hosted in conatinerzied App service.
    
-   - **GATEWAY & IAM**: All the resources, identities communicate using Azure APIs to provide seamless experience inorder to keep up the website up and running.
+   - **GATEWAY & IAM**: All the resources, identities communicate using Azure APIs to provide seamless experience inorder to keep up the website up and running. Azure Key vault is used to store all the sensitive keys and secrets, access policies are created which is assigned to resources and identities which uses the stored keys and secrets as needed.
    
+   - **MONITORING AND TELEMETRY**: Azure Monitor, Application Insights, and Log Analytics is used to collect the logs and telemetry which can be used to check features like availabilty, performance, scability, etc of the resources.
    
-1. Navigate to **github/workflows** folder, it contains the workflow YAML files using which you can the deployment resources. Each workflow contributes majorly in setting up the infrastructure. 
+   - **SECURITY**: Microsoft Defender for cloud and DevOps are used th protect the resources and GitHub repository from vulnerabilities and threats. 
+   
+   ![](media/cni1.png)
+   
+1. Open browser, using a new tab navigate to your forked **ContosoTraders** repo (`https://github.com/<GITHUB USERNAME/ContosoTraders`) GitHub repository. This repository conatins all the neccessary files and documents which will guide you to host the contoso traders application from the scratch.
 
-   ![](media/ani4.png) 
+   ![](media/cni6.png) 
 
-1. **Contoso-traders-infra-deployment.yml** will deploy the infrastructure into Azure which includes resource groups, resources, sets access policies to key vaults, and seeds the database from storage accounts into an Azure SQL database.
+1. Navigate to **github/workflows (1)** folder, it contains the **workflow YAML files (2)** using which you can deploy and configure the resources. Each workflow has its own functionality.
 
-   ![](media/ct3.png) 
+   ![](media/cni7png)   
+   
+1. Click on **contoso-traders-provisioning-deployment.yml** to open the workflow. The workflow has multiple jobs which deploys/configures the different parts of application architecture. Many **environment variables (1)** are defined which are basically names of the resources which will be created as part of the pipeline. Let's dive in depth and look at all the jobs. 
 
-1. **contoso-traders-app-deployment.yml** deploys the application to Azure cloud. The application is configured to use the pre-deployed resources.
+   ![](media/cni8png)  
+   
+1. The first job **provision-infrastructure** is the one which deploys the Infrasructure to Azure. Let us look at the each component of the job.
 
-   ![](media/ct4.png)   
+   - **checkout code (1)**: The checkout component automates the Azure sign in using the details   
