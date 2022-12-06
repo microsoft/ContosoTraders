@@ -18,6 +18,7 @@
 ## Documentation
 
 * [Setup Instructions](./docs/setup-instructions.md)
+  * [Setup Instructions for PowerApp](./docs/Setup%20instructions%20for%20PowerApp.md)
 * [Known Issues](https://github.com/microsoft/ContosoTraders/issues)
 * [Contributing](./docs/contributing.md)
 
