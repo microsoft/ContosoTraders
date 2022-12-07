@@ -14,7 +14,7 @@ Following are the key take aways for anyone having basic knowledge in Azure as w
 
 **Before you begin with the first task**
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Let us deploy the web app first and then we will do You need to follow the below steps to configure the Azure portal environment to deploy the Web App into a containerized instance.
+Let us deploy the ContosoTraders Web app. Before you begin, need to follow the below steps to configure the Azure portal environment to deploy the Web App into a containerized instance. 
 
 1. Login into Azure portal with your trial or organization account.
 2. Go to Subscriptions, Select the subscription you want to register with the resource provider.
@@ -25,7 +25,7 @@ Let us deploy the web app first and then we will do You need to follow the below
 7. Click on Role Assignments to see the list of users and their roles.
 8. If the desired user account is not having owner role please assign the user as owner role.
 9. Go to Azure Active Directory select App registrations under Manage section then click on New Registration.
-10. At the Nmae section provide Contoso Traders, under Supported account types select the first option (Accounts in this organizational directory only (Default Directory only - Single tenant))
+10. At the Name section provide Contoso Traders, under Supported account types select the first option (Accounts in this organizational directory only (Default Directory only - Single tenant))
 11.  After selecting web and add the URI as www.contosotraders.com under Redirect URI section, click on register.
 12.  Now you have created the service principal in the owner role on Azure Subscription.
 13. Go to Github repository named ContosoTraders, click on Code and Select HTTPS and copy the url, then open Git Bash.
