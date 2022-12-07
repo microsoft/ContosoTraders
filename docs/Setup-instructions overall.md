@@ -9,17 +9,20 @@ This will deploy all components defined in architecture  – https://github.com/
 **Pre-Requisites**
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 You will need following before we start with deployment. 
-1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin.
+1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin.(https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 2.	A GitHub Account. You can create a free account here https://github.com/
 
-Preparing your Azure Subscription 
+<html><h2>Preparing your Azure Subscription</h2></html>
 
-Register Required Resource Providers 
+**Register Required Resource Providers**
+
 You will need to register required resource providers on your Azure subscription to your subscription to use the required Azure services.   
 1.	Login to Azure Portal by visiting https://portal.azure.com and sign-in with an account having Owner privileges. 
 2.	Navigate to Subscription > Resource Providers
 3.	Find following resource provider and click register. 
-<Insert Screenshot with proper marking showing where to click.>
+
+     ![img1](images/Dapp2.png)
+ 
 1.	Microsoft.Operationsmanagement
 2.	Microsoft.Cdn
 4.	This will take few minutes to complete. 
