@@ -129,6 +129,10 @@ Let us take a look at how dependabot is used in Contoso Traders.  Please note th
 GitHub scans repositories for known secret formats to prevent fraudulent use of credentials that were committed accidentally. Secret scanning happens by default on public repositories and can be enabled on private repositories by repository administrators or organization owners. 
 
  Contoso Traders is set to have secret scanning enabled for the public repository. Please note that GitHub Advanced security secret scanning alerts are not public, so screenshots are included further. If you’d like to see this in action, please follow technical walkthrough for DevSecOps with Contoso Traders. 
+ 
+ You will notice that Secret Scanning is already enabled. GitHub enables secret scanning by default for all Public repo. If you have a private repo, you can manually enable it from this page.
+ 
+   ![](media/L300-16.png)
 
  
 ## Microsoft Defender for Cloud with GitHub Advanced Security  
