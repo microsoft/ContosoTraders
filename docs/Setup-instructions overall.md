@@ -172,7 +172,7 @@ Your GitHub repository is now ready for deployment.
 
 
 **Deploying the Contoso Traders Application**
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 You are now ready to start deployment of application to your Azure account. We will be using GitHub Action workflows for this deployment. 
 We will be using following workflows as part of deployment.  You can review workflow code by navigating to .github/workflows directory in your repository. 
@@ -216,19 +216,19 @@ Review Provisioned Azure Resources
 
 1.	Navigate to Azure
 2.	Contoso-traders-rg
-a.	Contoso-traders-product App Service
-b.	Azure Redis Cache
-c.	Cosmos DB (2)
-d.	Load Testing Resource
-e.	Cognitive Services
-f.	Azure Container App
-g.	Azure Container Registry. 
-h.	Front Door and CDN Profiles
-i.	Key Vault
-j.	Azure Kubernetes Service
-k.	Log Analytics Workspace
-l.	SQL Databases 
-m.	Storage Accounts
+	* Contoso-traders-product App Service
+	* Azure Redis Cache
+	* Cosmos DB (2)
+	* Load Testing Resource
+	* Cognitive Services
+	* Azure Container App
+	* Azure Container Registry. 
+	* Front Door and CDN Profiles
+	* Key Vault
+	* Azure Kubernetes Service
+	* Log Analytics Workspace
+	* SQL Databases 
+	* Storage Accounts
 3.	Along with contoso-traders-rg, you will also see another RG named contoso-traders-aks-nodes-rg, which includes Kubernetes node resources. 
 If you want to understand how these components are used, please refer to the architecture here link)
 
@@ -245,7 +245,9 @@ Deploy Inventory Management PowerApps
 
 If you are interested, you can follow these steps to deploy the inventory management application used by internal users for managing product pricing, stock etc. 
 It will be hosted using Power Apps and will use Power Automate & MS Teams to enable a full inventory management and approval workflow.
-Please follow the instructions here – link to that. 
+Please follow the instructions here:
+			
+
 
 Try Out Demo Scripts
 
