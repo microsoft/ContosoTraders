@@ -19,14 +19,19 @@ You will need following before we start with deployment.
 You will need to register required resource providers on your Azure subscription to your subscription to use the required Azure services.   
 1.	Login to Azure Portal by visiting https://portal.azure.com and sign-in with an account having Owner privileges. 
 2.	Navigate to Subscription > Resource Providers
-3.	Find following resource provider and click register. 
+3.	Find following resource provider and click register.    
+	1. Microsoft.Operationsmanagement
+	2. Microsoft.Cdn
+	
+      ![img1](images/Dapp2.png)
+      
+      
+      ![img2](images/cdnregister.png)
+      
+     
+	This will take few minutes to complete. 
 
-     ![img1](images/Dapp2.png)
- 
-1.	Microsoft.Operationsmanagement
-2.	Microsoft.Cdn
-4.	This will take few minutes to complete. 
-Create an Azure Service Principal 
+<html><h2>Create an Azure Service Principal</h2></html>
 
 GitHub Actions will need to authenticate with your Azure account in order to deploy the application. We will be using an Azure AD Service Principal for allowing GitHub Actions to deploy the resources in Azure. 
  An Azure service principal is an identity created for use with applications, hosted services, and automated tools to access Azure resources. This access is restricted by the roles assigned to the service principal, giving you control over which resources can be accessed and at which level
@@ -37,27 +42,33 @@ Let’s create an Azure Service Principal and assign required permissions.
 3.	Select App registrations.
 4.	Select New registration.
 5.	Provide following values and click Register
-a.	Name:  “ContosoTraders-GitHubActions”
-b.	Supported Account Type:
-c.	Redirect URI:
-Screenshot with all setting pre-filled>
+	1. Name:  “ContosoTraders-GitHubActions”
+	2. Supported Account Type:
+	3. Redirect URI:
+
+     ![img3](images/appreg.png)
 
 Once the app is registered, please make a note of it’s Application ID,  Secret and Tenant ID.
 
 1.	Find your newly created application in Azure AD > App Registration
 2.	Make a note of Application ID & Tenant ID
-<Screenshot highlighting values>
+     
+     ![img4](images/APPIDCTenantID.png)
+     
 3.	Navigate to Secrets and create a new secret.
-a.	Name: <ContosoTrader-Secret-GitHubActions>
-b.	Validity – 1 Year
+	1. Name: ContosoTrader-Secret-GitHubActions
+	2. Validity – 1 Year
 4.	Make a note of the secret value. Please keep it in a safe location until next step. This value can not be retrieved once you navigate away from this page. 
 
 Now, we will assign Owner rights to this SPN on Azure subscription. 
 1.	In Azure Portal, Navigate to Subscriptions and Select your subscription
 2.	Click on Access Control (IAM) and Click Add Role Assignment
-Screenshot
+
+     ![img5](images/Accesscontrol.png)
+     
 3.	Select Owner as role and find the newly created SPN
-<Screenshot>
+	
+     ![img6](images/addrolespn.png)
 4.	Click Review+Assign 
 
 Your subscription is now ready for deployment. 
