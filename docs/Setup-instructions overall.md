@@ -31,7 +31,7 @@ You will need to register required resource providers on your Azure subscription
      
 	This will take few minutes to complete. 
 
-<html><h2>Create an Azure Service Principal</h2></html>
+**Create an Azure Service Principal**
 
 GitHub Actions will need to authenticate with your Azure account in order to deploy the application. We will be using an Azure AD Service Principal for allowing GitHub Actions to deploy the resources in Azure. 
  An Azure service principal is an identity created for use with applications, hosted services, and automated tools to access Azure resources. This access is restricted by the roles assigned to the service principal, giving you control over which resources can be accessed and at which level
@@ -111,25 +111,27 @@ Fork the Contoso Traders Repo
 
 
 **Create Secrets in GitHub**
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 GitHub Secrets are encrypted and allow you to store sensitive information, such as access tokens, in your repository. In our scenario, we will be using GitHub Secrets to store the Azure authentication credentials and other secrets. 
 These secretes will be used by GitHub Action Workflows during deployment and CI/CD process.  We will be creating following three secrets
-1.	ENVIRONMENT: Pre-fix for resource naming, URLs etc. You can give any value, such as yournametraders
-2.	SERVICEPRINCIPAL: Azure Service Principal credentials for GitHub Action workflow to authenticate with Azure
-3.	SQL_PASSWORD: New Password for SQL DB to be created as part of deployment. 
-Let’s get started. 
-4.	Login to GitHub and navigate to your fork of Contoso traders repository. https://github.com/YOURUSERNAME/ContosoTraders.
-5.	Under your repository name, click on the "Settings" tab.
+
+   * ENVIRONMENT: Pre-fix for resource naming, URLs etc. You can give any value, such as yournametraders
+   * SERVICEPRINCIPAL: Azure Service Principal credentials for GitHub Action workflow to authenticate with Azure
+   * SQL_PASSWORD: New Password for SQL DB to be created as part of deployment. 
+	
+**Let’s get started**
+
+1. Login to GitHub and navigate to your fork of Contoso traders repository. https://github.com/YOURUSERNAME/ContosoTraders.
+2. Under your repository name, click on the "Settings" tab.
 	
 	![img8](images/settingsgithub.png)
 	
-6.	In the left sidebar, click Secrets and select actions.
+3. In the left sidebar, click Secrets and select actions.
 	
 	![img9](images/githubsett.png)
 
-7.	On the right bar, click on "Add a new secret"
-8.	Create the following secret for Azure SPN. 
+4. On the right bar, click on "Add a new secret"
+5. Create the following secret for Azure SPN. 
 	1. Secret Name: SERVICEPRINCIPAL
 	2. Value: Please replace the values with your App ID created earlier.
 	
