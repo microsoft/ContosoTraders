@@ -8,17 +8,48 @@ Contoso Traders has different departments like marketing, sales, accounts, HR, a
 
 ## Key Takeaway
 
-1. **ContosoTraders GitHub repository**: Contoso traders GitHub repository contains all the files related to the application’s UI, backend APIs, deployment files, GitHub workflows, and deployment guides.
+The key takeaways from this demo are: 
 
-1. **GitHub Advance security features**: GitHub has many features that help you improve and maintain the quality of your code. Some of these are included in all plans, such as dependency graph and Dependabot alerts. You will explore about Dependency graph and Dependabot alerts.
- 
-1. **Microsoft Defender for Cloud**: Microsoft Defender for Cloud is a Cloud Security Posture Management (CSPM) and Cloud Workload Protection Platform (CWPP) for all your Azure, on-premises, and multicloud (Amazon AWS and Google GCP) resources. You will explore Azure Defender for cloud and how it protects the resources 
+   - GitHub Actions is used to automate the deployment of the application and infrastructure. Using GitHub Action workflows, the application and infrastructure can be deployed to Azure cloud with a single click, allowing you to implement continuous integration and continuous deployment process.  
+   - GitHub Actions integrates with Azure services to enable you to build, test, and deploy to Azure directly from your GitHub repository, along with tons of other integrations. 
+   - GitHub Advanced Security is a set of tools that help you find and fix vulnerabilities in your code, protect your users, and detect and prevent malicious activity.
+   - GitHub Advanced Security is available for public and private repositories on GitHub.com and GitHub Enterprise Cloud. 
+   - GitHub Advanced Security can be integrated with Microsoft Defender for Cloud to provide a unified view of security alerts and vulnerabilities across the entire DevSecOps pipeline.
+
 
 ## Before you begin
 
-Before proceeding to next steps. The application and related resources should be deployed and configured. If not deployed, please follow the **Deployment** documentation to complete the deployment.
+   - No prerequisites are required for this specific demo. 
 
-## walkthrough
+## Walkthrough – DevSecOps with Contoso Traders  
+
+## Walkthrough – GitHub Actions for CI/CD 
+
+ GitHub Actions is a way to automate processes and workflows in your GitHub repository. Some of the benefits of using GitHub Actions include the ability to automate your software development lifecycle, integrate with other tools and services, including Azure services. 
+
+Let us take a look at the GitHub Actions used by Contoso Traders for CI/CD. 
+
+## Review Workflows used in Contoso Traders 
+
+1. Navigate to https://github.com/microsoft/ContosoTraders  
+
+2. Go to the **github/workflows (1)** folder; inside, you'll find the workflow **YAML files (2)** that are used to deploy and set up the resources.  
+
+    ![image](https://user-images.githubusercontent.com/83349577/206231087-981ed021-4b12-474e-8c41-b80782609993.png)
+
+
+3. Here is a quick overview of both workflows. If you are interested, you can review the workflow code to get into more details.  
+
+   a. **Contoso-traders-provisioning-deployment:**  This workflow provisions Azure resources used for hosting the application and deploys the application and initial data to the provisioned resources. 
+
+     It includes everything needed to get the application up and running in an Azure Environment.  
+
+      ![image](https://user-images.githubusercontent.com/83349577/206231035-2fbae1d1-0003-43c0-b9e6-400a38359677.png)
+
+ 
+   b. **contoso-traders-load-testing:** This workflow runs a load testing against the ContosoTraders application using Azure Load Testing.  
+
+      ![image](https://user-images.githubusercontent.com/83349577/206231646-337c418f-624c-4c66-89f0-3ed473e35d3b.png)
 
 ### Launch the Contoso Traders application
 
