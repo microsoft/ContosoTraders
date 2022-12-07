@@ -177,11 +177,10 @@ Let’s get started.
 	
 	
 3.	In the workflow list, select the “contoso-traders-provisioning-deployment” workflow.
- 
-	![img14](images/workflowrun1.png)
 	
 4.	Click on Run Workflow and run the workflow with main branch. 
-<screenshot>
+	
+	![img14](images/workflowrun1.png)
 
 15.	If you refresh the page, you will see that workflow provisioning has started. You can click on workflow to see the progress live and logs.  If you navigate in the workflow execution, you will the following stages.
 a.	Provision-infrastructure: This stage provisions the required resource groups and other Azure services as per architecture (link to architecture) and prepares them for app.
