@@ -157,6 +157,6 @@ If you are interested in a technical walkthrough with steps, please follow the t
 
 ### Reference Links  
 
-  - https://learn.microsoft.com/en-us/azure/architecture/solution-ideas/articles/devsecops-in-github  
-  - https://github.com/features/actions 
-  - https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security  
+  - [DevSecops in GitHub](https://learn.microsoft.com/en-us/azure/architecture/solution-ideas/articles/devsecops-in-github)
+  - [GitHub Features and Actions](https://github.com/features/actions)
+  - [GitHub advanced security](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security) 
