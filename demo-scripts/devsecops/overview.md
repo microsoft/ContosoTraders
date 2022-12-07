@@ -30,7 +30,7 @@ You will launch the Contoso Traders application and explore its functionality.
    
 1. The products are separated based on different categories like **Laptops**, **Controllers**, **Desktops**, **Mobiles**, and **Monitors**.   
       
-   ![](media/ct28.png)      
+   ![](media/ct53.png)      
    
 1. Navigate to any category and select any of the product. You'll be able to see details like **technical description of the product**, **bank offers**, **Question and Answers** related to the product.
 
