@@ -130,28 +130,32 @@ Let’s get started.
 7.	On the right bar, click on "Add a new secret"
 8.	Create the following secret for Azure SPN. 
 	1. Secret Name: SERVICEPRINCIPAL
-	2. Value: Please replace the values with your App ID created earlier. 
+	2. Value: Please replace the values with your App ID created earlier.
+	
 	{
   		"clientId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
   		"clientSecret": "your-client-secret",
   		"tenantId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
   		"subscriptionId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz"
 	}
+	
 	3. Click Add Secret
 	
 	![img10](images/addserviceprniciopagithub.png)
 
 9.	Create the following secret for ENVIRONMENT.  This is a prefix for your environment and all resources are provisioned with this pre-fix to avoid conflict with public resource names in Azure. 
 
-a.	Secret Name: ENVIRONMENT
-b.	Value	   : Add any combination of characters not exceeding 6
+	1. Secret Name: ENVIRONMENT
+	2. Value      : Add any combination of characters not exceeding 6 and dont take below 3
 	
-<Screenshot>
+	![img11](images/envwork.png)
+	
+
 10.	Create the following secret for SQL Password.  
-a.	Secret Name: SQL_PASSWORD
-b.	Value
-i.	<Insert full format and tell clearly what to replace>
-<Screenshot>
+	1. Secret Name: SQL_PASSWORD
+	2. Value	   : Add any combination of alphanumeric characters of minimum 12
+	
+	![img12](images/sqlsecretgit.png)
 
 
 Your GitHub repository is now ready for deployment. 
