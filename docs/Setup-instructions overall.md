@@ -1,4 +1,4 @@
-<html><h1> Setup instructions of Web App deployment and Power App Deployment </h1></html>
+<html><h1> Setup instructions of Web App deployment </h1></html>
 
 
 This deployment  guide is designed to help you deploy Contoso Traders application in your Azure environment. Contoso Trader sis a micro-services-based application, leveraging various Azure services including Azure Kubernetes Service, App Services, Cosmos DB, SQL Database and many more. 
