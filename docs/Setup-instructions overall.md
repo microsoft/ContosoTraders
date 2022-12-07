@@ -254,9 +254,9 @@ Please follow the instructions here:
 
 As further learning, you can try running through some of the demo scripts listed below which’d help in understanding the Azure Cloud Native Technologies. 
 
-<Table of Demo Scripts >
 
 **Common Errors & Troubleshooting**
+	
 This includes some of the common problems you may during deployment and approach to resolve them. 
 
 1.	AI Terms and services
@@ -266,7 +266,9 @@ This includes some of the common problems you may during deployment and approach
 5.	Incorrect secrets format
 
 **Known Issues**
-When you run the workflow, it shows following warnings. . 
+	
+When you run the workflow, it shows following warnings.
+	
 Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net" [https://aka.ms/bicep/linter/no-hardcoded-env-urls]
 
 Warning: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net" [https://aka.ms/bicep/linter/no-hardcoded-env-urls]
