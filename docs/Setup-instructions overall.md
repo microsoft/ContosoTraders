@@ -1,3 +1,11 @@
+<html><h1> Setup instructions of Web App deployment and Power App Deployment </h1></html>
+
+**Key Takeaway**
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Following are the key take aways for anyone having basic knowledge in Azure as well as Power platform.
+1.
+
+
 **Pre-Requisite**
 
 1. Login into Azure portal with your trial or organization account.
