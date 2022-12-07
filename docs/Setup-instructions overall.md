@@ -17,23 +17,24 @@ Following are the key take aways for anyone having basic knowledge in Azure as w
 Let us deploy the ContosoTraders Web app. Before you begin, need to follow the below steps to configure the Azure portal environment to deploy the Web App into a containerized instance. 
 
 1. Login into Azure portal with your trial or organization account.
-2. Go to Subscriptions, Select the subscription you want to register with the resource provider.
-3. Under settings tab, select the resource provider to see the list of resource providers.
-4. Please Select Microsoft.OperationsManagement as resource provider and then click on Register.
-5. Wait for completing the registration.
-6. After the Resource provider is registered go to the Subscription and select my permission under settings, then click on "Go to subscription access control (IAM)"
-7. Click on Role Assignments to see the list of users and their roles.
-8. If the desired user account is not having owner role please assign the user as owner role.
-9. Go to Azure Active Directory select App registrations under Manage section then click on New Registration.
-10. At the Name section provide Contoso Traders, under Supported account types select the first option (Accounts in this organizational directory only (Default Directory only - Single tenant))
-11.  After selecting web and add the URI as www.contosotraders.com under Redirect URI section, click on register.
-12.  Now you have created the service principal in the owner role on Azure Subscription.
-13. Go to Github repository named ContosoTraders, click on Code and Select HTTPS and copy the url, then open Git Bash.
-14. Change the current working directory to the location where you want the cloned directory.
-15. Type git clone, and then paste the URL you copied earlier.
-16. After copying, it will look like this: $ git clone https://github.com/YOUR-USERNAME/ContosoTraders.
-17. Press Enter and your local clone will be created.
-18. On the github repository, go to the Settings tab > Secrets > Actions then by clicking on New Repository Secret, you can create these necessary secrets: SERVICEPRINCIPAL, ENVIRONMENT, and SQL_PASSWORD  
+2. We are using Bicep scripts in the workflows, 
+3. Go to Subscriptions, Select the subscription you want to register with the resource provider.
+4. Under settings tab, select the resource provider to see the list of resource providers.
+5. Please Select Microsoft.OperationsManagement as resource provider and then click on Register.
+6. Wait for completing the registration.
+7. After the Resource provider is registered go to the Subscription and select my permission under settings, then click on "Go to subscription access control (IAM)"
+8. Click on Role Assignments to see the list of users and their roles.
+9. If the desired user account is not having owner role please assign the user as owner role.
+10. Go to Azure Active Directory select App registrations under Manage section then click on New Registration.
+11. At the Name section provide Contoso Traders, under Supported account types select the first option (Accounts in this organizational directory only (Default Directory only - Single tenant))
+12.  After selecting web and add the URI as www.contosotraders.com under Redirect URI section, click on register.
+13.  Now you have created the service principal in the owner role on Azure Subscription.
+14. Go to Github repository named ContosoTraders, click on Code and Select HTTPS and copy the url, then open Git Bash.
+15. Change the current working directory to the location where you want the cloned directory.
+16. Type git clone, and then paste the URL you copied earlier.
+17. After copying, it will look like this: $ git clone https://github.com/YOUR-USERNAME/ContosoTraders.
+18. Press Enter and your local clone will be created.
+19. On the github repository, go to the Settings tab > Secrets > Actions then by clicking on New Repository Secret, you can create these necessary secrets: SERVICEPRINCIPAL, ENVIRONMENT, and SQL_PASSWORD  
 
 **Deployment**
 1. Go to ContosoTraders repository, under Actions tab select the workflow named contoso-traders-provisioning-deployment and click on Run workflow button.
