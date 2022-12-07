@@ -5,7 +5,7 @@
 
   1.	Azure Portal
       Login into Azure Portal and go to Azure Active directory.
-      Add a user named contoso.approver@contosotraderslabs.onmicrosoft.com having licenses of Power apps, Power automate and Microsoft Teams Exploratory.
+      Add a user having licenses of Power apps, Power automate and Microsoft Teams Exploratory.
 
   2.  Power platform environment
       Login into power platform environment with your trial or organization account by clicking on the below link:
@@ -25,7 +25,7 @@
   2. After clicking on Import Canvas App, you will reach into import package details pane and validate the connection strings. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Then click on the import button.
   3. It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
   4. CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. To achieve this you can go through this link:
-   https://github.com/seenakhan/ContosoTraders/blob/main/demo-scripts/LOW%20CODE%20DEVELOPMENT/HIGH%20LEVEL%20SCENARIO%20WALKTHROUGH.md
+   https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/low-code-development/overview.md
    
   5. You can successfully run the application.
     
