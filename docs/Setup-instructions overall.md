@@ -14,6 +14,11 @@ Following are the key take aways for anyone having basic knowledge in Azure as w
 
 **Before you begin with the first task**
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.	You'll need an Azure subscription with the Microsoft.OperationsManagement resource provider registered.
+2.	You'll need a service principal in the owner role on the Azure subscription where the infrastructure is to be provisioned.
+3.	Git clone this repository to your machine.
+4.	Create the SERVICEPRINCIPAL, ENVIRONMENT, and SQL_PASSWORD github secrets.
+
 You'll need an Azure subscription with the Microsoft.OperationsManagement resource provider registered.	Also you'll need a service principal in the owner role on the Azure subscription where the infrastructure is to be provisioned.
 
 1. Make sure your Azure subscription registered with Microsoft.Operationsmanagement resource provider.
