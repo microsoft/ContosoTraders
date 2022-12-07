@@ -121,7 +121,7 @@ These secretes will be used by GitHub Action Workflows during deployment and CI/
    * SERVICEPRINCIPAL: Azure Service Principal credentials for GitHub Action workflow to authenticate with Azure
    * SQL_PASSWORD: New Password for SQL DB to be created as part of deployment. 
 	
-<h3>Let’s get started</h3>
+Let’s get started
 
 1. Login to GitHub and navigate to your fork of Contoso traders repository. https://github.com/YOURUSERNAME/ContosoTraders.
 2. Under your repository name, click on the "Settings" tab.
@@ -214,7 +214,7 @@ Please note that the workflow provisions all resources through bicep templates, 
 If you feel workflow failure error due to missing Azure resources (Key vault, CDN, container apps etc, please re-run the failed jobs. 
 
 
-<h3>Validate & test the deployment</h3>
+<h2>Validate & test the deployment</h2>
 
 Contoso Traders application is now ready in your subscription. Let us review and validate the deployment to ensure application is functioning as expected.
 
@@ -238,7 +238,7 @@ Contoso Traders application is now ready in your subscription. Let us review and
 3.	Along with contoso-traders-rg, you will also see another RG named contoso-traders-aks-nodes-rg, which includes Kubernetes node resources. 
 If you want to understand how these components are used, please refer to the architecture here link)
 
-<h3>Test Application</h3>
+<h2>Test Application</h2>
 
 1.	Navigate to Azure and look for CDN endpoints by searching for Content Delivery Network in search menu.
 2.	Select the CDN profile starting with name contoso-traders-cdn$ENVIRONMENTNAME 
@@ -257,7 +257,7 @@ https://github.com/microsoft/ContosoTraders/blob/main/docs/Inventory-power-app-d
 			
 
 
-<h3>Try Out Demo Scripts</h3>
+<h2>Try Out Demo Scripts</h2>
 			
 
 As further learning, you can try running through some of the demo scripts listed below which’d help in understanding the Azure Cloud Native Technologies. 
@@ -272,7 +272,7 @@ As further learning, you can try running through some of the demo scripts listed
 			
 
 
-<h3>Common Errors & Troubleshooting</h3>
+<h2>Common Errors & Troubleshooting</h2>
 	
 This includes some of the common problems you may during deployment and approach to resolve them. 
 
