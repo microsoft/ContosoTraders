@@ -245,7 +245,7 @@ https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/cloud-native-
        
 8.     The web app will launched.
 
-       ![img34](images/test5.png)
+      ![img34](images/test5.png)
        
 9.	Test basic operations. 
 	
