@@ -246,6 +246,8 @@ If you would like to add a custom domain, like contosotraders.com, you can purch
 If you are interested, you can follow these steps to deploy the inventory management application used by internal users for managing product pricing, stock etc. 
 It will be hosted using Power Apps and will use Power Automate & MS Teams to enable a full inventory management and approval workflow.
 Please follow the instructions here:
+
+https://github.com/microsoft/ContosoTraders/blob/main/docs/Setup%20instructions%20for%20PowerApp.md
 			
 
 
