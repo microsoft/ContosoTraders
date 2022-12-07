@@ -1,14 +1,23 @@
 # Technical Walkthrough: Cloud Native Infrastructure
 
-## Overview
+## Overview of the Contoso Traders application
 
 Contoso Traders is one of the leading E-Commerce platforms with a wide range of electronic products like desktops and laptops, mobile phones, gaming console accessories, and monitors. This includes a wide range of international brands like Microsoft Surface, XBOX, Samsung, ASUS, DELL etc. Contoso Traders Organization is using Microsoft 365 for their collaboration works internally.
 
 Contoso Traders has different departments like marketing, sales, accounts, HR, and IT. For internal communication, they are using Microsoft Teams and Outlook. In the Contoso Traders organisation, there are various functionalities with the Contoso Traders E-commerce platform like product approval, product price approval, Product 
 
-## Context
+## Key Takeway
 
-## Steps
+1. **Archiecture Contoso Traders application**: The complete architecture of the Contoso Traders application is explained. The architecture is divided into multiple sub-components which covers different aspect of the application.
+
+1. **Demo of Azure Deployment**: You 
+
+
+## Walkthrough
+
+### Archiecture Contoso Traders application
+
+In this walkthrough, You will understand the architecture of the Contoso Traders application and its different components.
 
 1. Open browser, using a new tab navigate to `https://github.com/microsoft/ContosoTraders` GitHub repository. This repository conatins all the neccessary files and documents which will guide you to host the contoso traders application from the scratch.
 
@@ -37,6 +46,10 @@ Contoso Traders has different departments like marketing, sales, accounts, HR, a
 1. Open browser, using a new tab navigate to your forked **ContosoTraders** repo (`https://github.com/<GITHUB USERNAME/ContosoTraders`) GitHub repository. This repository conatins all the neccessary files and documents which will guide you to host the contoso traders application from the scratch.
 
    ![](media/cni6.png) 
+   
+### Deploying the application to Azure
+
+In this walkthrough, Let's explore and understand the GitHub Wworkflows which deploys the Contoso traders application in detail.
 
 1. Navigate to **github/workflows (1)** folder, it contains the **workflow YAML files (2)** using which you can deploy and configure the resources. Each workflow has its own functionality.
 
@@ -48,7 +61,7 @@ Contoso Traders has different departments like marketing, sales, accounts, HR, a
    
 1. The first job **provision-infrastructure** is the one which deploys the Infrasructure to Azure. Let us look at the each component of the job.
 
-   - **checkout code (1)**: The checkout component step automates the Azure sign in using the details defined in a secret named **SERVICEPRINCIPAL**.
+   - **azure login (1)**: The checkout component step automates the Azure sign in using the details defined in a secret named **SERVICEPRINCIPAL**.
    
    - **create resource group (2)**: This step creates an **Azure resource group**, A bicep template named **createResources.bicep** bicep template which is present in `ContosoTraders/iac` directory.
    
@@ -62,6 +75,12 @@ Contoso Traders has different departments like marketing, sales, accounts, HR, a
    
    - **purge CDN endpoint (7)**: This step purges the **CDN Endpoint**.
 
-   ![](media/cni9.png)  
+   ![](media/cni11.png) 
+   
+1. The second job **deploy-carts-api**, it builds a docker image of the carts-api and pushes it to Azure container instance. Let us look at the each component of the job.
+
+   - **azure login (1)**: The checkout component step automates the Azure sign in using the details defined in a secret named **SERVICEPRINCIPAL**.
+   
+   - 
 
 
