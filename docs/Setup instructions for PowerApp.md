@@ -35,8 +35,8 @@ This deployment guide is designed to deploy a Power app into your Power platform
   1. Authentication failed
   2. Connection string not listed
     
-**Troubleshoot**    
+**to resolve the above errors you can choose following options**    
     
-  1. Check the user connection string is available, if not please go to the prerequisite section step 1.
+  1. Check the user connection string is available.
     
   2. If the Azure SQL database connection string not validated please create a connection string in dataverse section of the power platform.
