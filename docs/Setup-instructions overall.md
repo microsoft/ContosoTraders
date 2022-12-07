@@ -175,24 +175,24 @@ Let’s get started.
 	![img13](images/workflowenable.png)
 	
 	
-3.	In the workflow list, select the “contoso-traders-provisioning-deployment” workflow.
+3. In the workflow list, select the “contoso-traders-provisioning-deployment” workflow.
 	
-4.	Click on Run Workflow and run the workflow with main branch. 
+4. Click on Run Workflow and run the workflow with main branch. 
 	
 	![img14](images/workflowrun1.png)
 
-15.	If you refresh the page, you will see that workflow provisioning has started. You can click on workflow to see the progress live and logs.  If you navigate in the workflow execution, you will the following stages.
-a.	Provision-infrastructure: This stage provisions the required resource groups and other Azure services as per architecture (link to architecture) and prepares them for app.
-i.	You can see each stage and what it does in below screenshot
+5. If you refresh the page, you will see that workflow provisioning has started. You can click on workflow to see the progress live and logs.  If you navigate in the workflow execution, you will the following stages.
+	1. Provision-infrastructure: This stage provisions the required resource groups and other Azure services as per architecture (link to architecture) and prepares them for app.
+	2. You can see each stage and what it does in below screenshot
 <expanded workflow secret>
 
-b.	Deploy the carts & product API.
-i.	Explanation on what’s happening 
-ii.	<expanded workflow secret>
+	3. Deploy the carts & product API.
+	4. Explanation on what’s happening 
+	<expanded workflow secret>
 
-c.	Deploy the UI
-i.	Explanation on what’s happening 
-ii.	<expanded workflow secret>
+	5. Deploy the UI
+	6. Explanation on what’s happening 
+	<expanded workflow secret>
 Please note that the workflow provisions all resources through bicep templates, scripts etc. We’ve observed that in many cases, Azure subscription resource cache does not get updated fast enough before the next dependent step starts executing.
 If you feel workflow failure error due to missing Azure resources (Key vault, CDN, container apps etc, please re-run the failed jobs. 
 
