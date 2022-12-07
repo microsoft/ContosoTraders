@@ -3,7 +3,9 @@
 **Key Takeaway**
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Following are the key take aways for anyone having basic knowledge in Azure as well as Power platform.
-1.
+
+1. By executing Github workflows you can easily deploy a web application in Azure containerized instance.
+2. By executing an inventory management app in Power platform, user can easily update the details of the product and take the approval from their stakeholders in an automated way.
 
 
 **Pre-Requisite**
