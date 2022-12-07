@@ -31,7 +31,7 @@ Let us take a look at the GitHub Actions used by Contoso Traders for CI/CD.
 
 ## Review Workflows used in Contoso Traders 
 
-1. Navigate to https://github.com/microsoft/ContosoTraders or [ContosoTraders](https://github.com/microsoft/ContosoTraders) 
+1. Navigate to [ContosoTraders](https://github.com/microsoft/ContosoTraders) 
 
 2. Go to the **github/workflows (1)** folder; inside, you'll find the workflow **YAML files (2)** that are used to deploy and set up the resources.  
 
