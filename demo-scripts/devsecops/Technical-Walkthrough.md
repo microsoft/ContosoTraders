@@ -88,7 +88,7 @@ Let us take a fictious scenario, Contoso Traders marketing team requires changin
 Currently, it is set to “Contoso Traders is an e-commerce platform that specializes in electronic items. Our website offers a wide range of electronics, including smartphones, laptops, and other popular gadgets.” 
 
  
-  ![image](https://user-images.githubusercontent.com/83349577/206260144-dedfee65-606d-448c-83d0-46b663b45c73.png)
+  ![image](media/L300-1.png)
 
 
 Your marketing team requires changing this to following 
@@ -103,14 +103,14 @@ Let us make the changes and experience magic of GitHub Actions.
 
 2. Create a new branch **footer-update**.
 
-    ![image](https://user-images.githubusercontent.com/83349577/206260522-b148b3b1-7b2c-4cdf-910b-09486072af0b.png)
+    ![image](media/L300-2.png)
     
 3. Navigate to footer.js file, located in  **.src/ContosoTraders.Ui.Website/src/shared/footer/footer.js **.
 
    
 4. If you notice, the footer text is defined in **line#18 (1)**. Let us make an edit on this, click on edit **symbol (2)**.
 
-    ![image](https://user-images.githubusercontent.com/83349577/206260966-3aa3f8e6-0a45-45fb-b55e-bdeba90b8aa8.png)
+    ![image](media/L300-3.png)
 
 5. Replace the text with new text received from Marketing team. Line 18 should look like below.  
 
@@ -118,23 +118,23 @@ Let us make the changes and experience magic of GitHub Actions.
     
 6. Commit the change to footer-update branch. Click on Commit changes after updating commit message.  
 
-     ![image](https://user-images.githubusercontent.com/83349577/206261619-cc6b62c2-a488-42dd-be18-c3553c2d6b10.png)
+     ![image](media/L300-4.png)
      
 7. Now, let us raise a pull request to merge this change to **main branch**. Click on **Pull Requests** and notice that changes are detected already. Click on **Review and raise Pull Request**.
 
-    ![image](https://user-images.githubusercontent.com/83349577/206262037-205a6fc1-d3ab-4070-810b-7b30923155b8.png)
+    ![image](media/L300-5.png)
 
 8. Change the base from microsoft/contosotraders to **YOURUSERNAME/contosotraders** and click **Create Pull Request**.  
 
-    ![image](https://user-images.githubusercontent.com/83349577/206262492-c1f3b81b-230e-4505-ac72-ab062a3b03bd.png)
+    ![image](media/L300-6.png)
 
 9. Merge the pull request to main branch.  
 
-    ![image](https://user-images.githubusercontent.com/83349577/206262786-c509e67b-6224-4cbf-bf53-1f1408041afa.png)
+    ![image](media/L300-7.png)
 
 10. Merging the pull request should trigger your GitHub Action workflow, it will take few minutes for workflow to complete.  You can navigate inside the workflow to review progress, as documented in previous step.
 
-    ![image](https://user-images.githubusercontent.com/83349577/206263127-c17d6228-1aa4-471a-b3d0-2c605ac35baa.png)
+    ![image](media/L300-8.png)
     
 11. Once the workflow successfully completes, you can navigate to your Contoso Traders Instance and see that the footer is updated on website.
 
