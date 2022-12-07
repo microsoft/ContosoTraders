@@ -1,23 +1,23 @@
-<html><h1> Contos Traders - Deployment Guide </h1></html>
+<html><h1> Contoso Traders - Deployment Guide </h1></html>
 
 
 This deployment  guide is designed to help you deploy Contoso Traders application in your Azure environment. Contoso Trader is a micro-services-based application, leveraging various Azure services including Azure Kubernetes Service, App Services, Cosmos DB, SQL Database and many more. 
 While it’s possible to deploy overall solution using Azure Portal, CLI, PowerShell, ARM Templates, we will be using a combination of GitHub Actions and bicep templates to automate the provisioning of overall solution. 
 
-This will deploy all components defined in architecture  – https://github.com/microsoft/ContosoTraders/blob/main/docs/architecture/contoso-traders-enhancements.drawio.png
+This will deploy all components defined in architecture  – [Architecture Diagram](https://github.com/microsoft/ContosoTraders/blob/main/docs/architecture/contoso-traders-enhancements.drawio.png) 
 
 <html><h3>Pre-Requisites</h3></html>
 
 You will need following before we start with deployment. 
-1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin.(https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-2.	A GitHub Account. You can create a free account here https://github.com/
+1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin by clicking [here](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+2.	A GitHub Account. You can create a free account [here](https://github.com/). 
 
 <h2>Preparing your Azure Subscription</h2>
 
 <h3>Register Required Resource Providers</h3>
 
 You will need to register required resource providers on your Azure subscription to your subscription to use the required Azure services.   
-1.	Login to Azure Portal by visiting https://portal.azure.com and sign-in with an account having Owner privileges. 
+1.	Login to Azure Portal by visiting [Azure portal](https://portal.azure.com) and sign-in with an account having Owner privileges. 
 2.	Navigate to Subscription > Resource Providers
 3.	Find following resource provider and click register.    
 	1. Microsoft.Operationsmanagement
@@ -103,8 +103,8 @@ Once the provisioning is completed, you can delete the resource group “Cogniti
 In this step, you will form the original ContosoTraders GitHub repository to your GitHub Account and prepare for deployment. 
 Fork the Contoso Traders Repo
 
-1.	Login to GitHub by visiting https://github.com
-2.	Open https://github.com/microsoft/ContosoTraders and Click on Fork
+1.	Login to GitHub by visiting [github](https://github.com).
+2.	Open [ContosoTraders repository](https://github.com/microsoft/ContosoTraders) and Click on Fork
 	
 	![img7](images/Repofork.png)
 
@@ -220,9 +220,7 @@ Contoso Traders application is now ready in your subscription. Let us review and
 
 <h3>Review Provisioned Azure Resources</h3>
 
-Please refer to the architecture demo script and technical walkthrough to review the provisioned resources.  PLease check teh following link:
-
-https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/cloud-native-app-architecture/technical-walkthrough.md
+Please refer to the architecture demo script and technical walkthrough to review the provisioned resources.  PLease check the link [here](https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/cloud-native-app-architecture/technical-walkthrough.md).
 
 
 <h2>Test Application</h2>
@@ -249,7 +247,7 @@ https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/cloud-native-
        
 9.	Test basic operations. 
 	
-If you would like to add a custom domain, like contosotraders.com, you can purchase the domain and add to CDN profile. Please see documentation here - https://learn.microsoft.com/en-us/azure/cdn/cdn-map-content-to-custom-domain?tabs=azure-dns%2Cazure-portal%2Cazure-portal-cleanup 
+If you would like to add a custom domain, like contosotraders.com, you can purchase the domain and add to CDN profile. Please see documentation [here](https://learn.microsoft.com/en-us/azure/cdn/cdn-map-content-to-custom-domain?tabs=azure-dns%2Cazure-portal%2Cazure-portal-cleanup).
 
 <h2>Deploy Inventory Management PowerApps</h2>
 
@@ -257,8 +255,8 @@ If you are interested, you can follow these steps to deploy the inventory manage
 It will be hosted using Power Apps and will use Power Automate & MS Teams to enable a full inventory management and approval workflow.
 Please follow the instructions here:
 
-https://github.com/microsoft/ContosoTraders/blob/main/docs/Inventory-power-app-deployment-guide.md
-			
+[Inventory Management](https://github.com/microsoft/ContosoTraders/blob/main/docs/Inventory-power-app-deployment-guide.md)
+		
 
 
 <h2>Try Out Demo Scripts</h2>
@@ -268,11 +266,11 @@ As further learning, you can try running through some of the demo scripts listed
 
 | Technologies  | Link                                                                                                                                                                                                            |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| For Auto scaling CLoud native Apps          | https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/autoscaling-cloud-native-apps-azure         |
-| Cloud native app architecture    	      | https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/cloud-native-app-architecture               |
-| Devsecops                                   | https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/devsecops                                   |
-| Intelligent App with AI services	      | https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/intelligent-apps-with-azure-ai-services     |
-| Low COde Deevlopment                        | https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/low-code-development                        |
+| For Auto scaling CLoud native Apps          | [Cloud Native App](https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/autoscaling-cloud-native-apps-azure)         |
+| Cloud native app architecture    	      | [Architecture](https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/cloud-native-app-architecture)                |
+| Devsecops                                   | [Devsecops](https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/devsecops)                                    |
+| Intelligent App with AI services	      | [Intelligent App](https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/intelligent-apps-with-azure-ai-services)      |
+| Low Code Development                        | [Power App ](https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/low-code-development)                      |
 			
 
 
@@ -281,18 +279,29 @@ As further learning, you can try running through some of the demo scripts listed
 This includes some of the common problems you may during deployment and approach to resolve them. 
 
 1.	AI Terms and services
-2.	Lack of permissions
-3.	Environment name having not allowed characters
-4.	Subscription quota
-5.	Incorrect secrets format
+
+	 **When creating Cognitive service please the allowed locations in your policy. If it resist you can include the location where you want to deploy cognitive service in the allowed policy or you can remove the policy.** 
+	 
+3.	Lack of permissions
+	
+       **Check the role of the service prinipal is owner. If its not shown please provide the owner role to the service principal.**
+	
+5.	Environment name having not allowed characters
+	
+	**When you are creating secret for Environment please add combination of alphanumeric characters without any symbols. Maximum characters allowed is 6 and minimum characters allowed is 3. Keep small case letters**
+	
+8.	Subscription quota
+9.	Incorrect secrets format
+
+	**Check the github secret formats given as per the directions**
 
 <h3>Known Issues</h3>
 	
 When you run the workflow, it shows following warnings.
 	
-Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net" [https://aka.ms/bicep/linter/no-hardcoded-env-urls]
+Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).
 
-Warning: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net" [https://aka.ms/bicep/linter/no-hardcoded-env-urls]
+Warning: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).
 
 
 This does not block the deployment and workflow will run successfully. It does not have any other impact. It is being tracked here <Link to Issue>
