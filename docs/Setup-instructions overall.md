@@ -8,7 +8,9 @@ Following are the key take aways for anyone having basic knowledge in Azure as w
 2. By executing an inventory management app in Power platform, user can easily update the details of the product and take the approval from their stakeholders in an automated way.
 
 
-**Pre-Requisite**
+**Before you begin**
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+You need to follow the below steps to configure the Azure portal environment to deploy the Web App into a containerized instance.
 
 1. Login into Azure portal with your trial or organization account.
 2. Go to Subscriptions, Select the subscription you want to register with the resource provider.
