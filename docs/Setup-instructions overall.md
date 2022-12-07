@@ -253,6 +253,16 @@ Please follow the instructions here:
 			
 
 As further learning, you can try running through some of the demo scripts listed below which’d help in understanding the Azure Cloud Native Technologies. 
+			
+* For Auto scaling CLoud native Apps : https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/autoscaling-cloud-native-apps-azure
+			
+* Cloud native app architecture : https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/cloud-native-app-architecture
+			
+* Devsecops : https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts
+			
+* Intelligent App with AI services: https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/intelligent-apps-with-azure-ai-services			
+
+* Low COde Deevlopment : https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/low-code-development
 
 
 **Common Errors & Troubleshooting**
