@@ -14,7 +14,7 @@ You will need following before we start with deployment.
 
 <h2>Preparing your Azure Subscription</h2>
 
-**Register Required Resource Providers**
+<h3>Register Required Resource Providers</h3>
 
 You will need to register required resource providers on your Azure subscription to your subscription to use the required Azure services.   
 1.	Login to Azure Portal by visiting https://portal.azure.com and sign-in with an account having Owner privileges. 
@@ -31,7 +31,7 @@ You will need to register required resource providers on your Azure subscription
      
 	This will take few minutes to complete. 
 
-**Create an Azure Service Principal**
+<h3>Create an Azure Service Principal</h3>
 
 GitHub Actions will need to authenticate with your Azure account in order to deploy the application. We will be using an Azure AD Service Principal for allowing GitHub Actions to deploy the resources in Azure. 
  An Azure service principal is an identity created for use with applications, hosted services, and automated tools to access Azure resources. This access is restricted by the roles assigned to the service principal, giving you control over which resources can be accessed and at which level
@@ -73,7 +73,7 @@ Now, we will assign Owner rights to this SPN on Azure subscription.
 
 Your subscription is now ready for deployment. 
 
-**Accept Responsible AI Terms**
+<h3>Accept Responsible AI Terms</h3>
 
 In Contoso Traders, we are using Azure Cognitive Service to facilitate the search by image functionality. Before you can use Azure AI services, you must accept the terms for Responsible AI usage. 
 In order to accept the terms, you will need to manually provision a Cognitive Service Resource using Azure Portal, with which you will be able to accept the terms. 
@@ -84,7 +84,7 @@ It is recommended to create this temporary in a separate resource group, so that
 	
 2. On the Create page, provide the following information:
 	
-**Project details Description**
+<h3>Project details Description</h3>
 
     1. Subscription		:Select one of your available Azure subscriptions.
     2. Resource group	:Create new > Cognitive-Temp
@@ -112,7 +112,7 @@ Fork the Contoso Traders Repo
 4.	You will be using this repository for deployment. Since it exists in your GitHub Account, you will be able to make changes to the contents as well, including source code. 
 
 
-**Create Secrets in GitHub**
+<h3>Create Secrets in GitHub</h3>
 
 GitHub Secrets are encrypted and allow you to store sensitive information, such as access tokens, in your repository. In our scenario, we will be using GitHub Secrets to store the Azure authentication credentials and other secrets. 
 These secretes will be used by GitHub Action Workflows during deployment and CI/CD process.  We will be creating following three secrets
@@ -121,7 +121,7 @@ These secretes will be used by GitHub Action Workflows during deployment and CI/
    * SERVICEPRINCIPAL: Azure Service Principal credentials for GitHub Action workflow to authenticate with Azure
    * SQL_PASSWORD: New Password for SQL DB to be created as part of deployment. 
 	
-**Let’s get started**
+<h3>Let’s get started</h3>
 
 1. Login to GitHub and navigate to your fork of Contoso traders repository. https://github.com/YOURUSERNAME/ContosoTraders.
 2. Under your repository name, click on the "Settings" tab.
@@ -216,7 +216,7 @@ If you feel workflow failure error due to missing Azure resources (Key vault, CD
 
 Contoso Traders application is now ready in your subscription. Let us review and validate the deployment to ensure application is functioning as expected.
 
-**Review Provisioned Azure Resources**
+<h3>Review Provisioned Azure Resources</h3>
 
 1.	Navigate to Azure
 2.	Contoso-traders-rg
@@ -236,7 +236,7 @@ Contoso Traders application is now ready in your subscription. Let us review and
 3.	Along with contoso-traders-rg, you will also see another RG named contoso-traders-aks-nodes-rg, which includes Kubernetes node resources. 
 If you want to understand how these components are used, please refer to the architecture here link)
 
-**Test Application**
+<h3>Test Application</h3>
 
 1.	Navigate to Azure and look for CDN endpoints by searching for Content Delivery Network in search menu.
 2.	Select the CDN profile starting with name contoso-traders-cdn$ENVIRONMENTNAME 
@@ -245,7 +245,7 @@ If you want to understand how these components are used, please refer to the arc
 5.	Test basic operations. 
 If you would like to add a custom domain, like contosotraders.com, you can purchase the domain and add to CDN profile. Please see documentation here - https://learn.microsoft.com/en-us/azure/cdn/cdn-map-content-to-custom-domain?tabs=azure-dns%2Cazure-portal%2Cazure-portal-cleanup 
 
-**Deploy Inventory Management PowerApps**
+<h3>Deploy Inventory Management PowerApps</h3>
 
 If you are interested, you can follow these steps to deploy the inventory management application used by internal users for managing product pricing, stock etc. 
 It will be hosted using Power Apps and will use Power Automate & MS Teams to enable a full inventory management and approval workflow.
@@ -255,7 +255,7 @@ https://github.com/microsoft/ContosoTraders/blob/main/docs/Inventory-power-app-d
 			
 
 
-**Try Out Demo Scripts**
+<h3>Try Out Demo Scripts</h3>
 			
 
 As further learning, you can try running through some of the demo scripts listed below which’d help in understanding the Azure Cloud Native Technologies. 
@@ -270,7 +270,7 @@ As further learning, you can try running through some of the demo scripts listed
 			
 
 
-**Common Errors & Troubleshooting**
+<h3>Common Errors & Troubleshooting</h3>
 	
 This includes some of the common problems you may during deployment and approach to resolve them. 
 
@@ -280,7 +280,7 @@ This includes some of the common problems you may during deployment and approach
 4.	Subscription quota
 5.	Incorrect secrets format
 
-**Known Issues**
+<h3>Known Issues</h3>
 	
 When you run the workflow, it shows following warnings.
 	
@@ -293,10 +293,10 @@ This does not block the deployment and workflow will run successfully. It does n
 
 
 
-**Questions & Support**
+	<h3>Questions & Support</h3>
 This project is community supported. Please raise issue via GitHub incase of issues/questions. 
 
-**Cleanup**
+	<h3>Cleanup</h3>
 
 Once you are done deploying, testing, exploring, you can delete the provisioned RGs to prevent incurring additional cost. 
 Delete the following resource groups.
