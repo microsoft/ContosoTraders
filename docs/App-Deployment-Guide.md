@@ -210,8 +210,8 @@ Let’s get started.
 	 
 	![img21](images/workflow4.png)
 	
-Please note that the workflow provisions all resources through bicep templates, scripts etc. We’ve observed that in many cases, Azure subscription resource cache does not get updated fast enough before the next dependent step starts executing.
-If you feel workflow failure error due to missing Azure resources (Key vault, CDN, container apps etc, please re-run the failed jobs. 
+**Note : Please note that the workflow provisions all resources through bicep templates, scripts etc. We’ve observed that in many cases, Azure subscription resource cache does not get updated fast enough before the next dependent step starts executing.
+If you feel workflow failure error due to missing Azure resources (Key vault, CDN, container apps etc, please re-run the failed jobs.** 
 
 
 <h2>Validate & test the deployment</h2>
@@ -220,23 +220,10 @@ Contoso Traders application is now ready in your subscription. Let us review and
 
 <h3>Review Provisioned Azure Resources</h3>
 
-1.	Navigate to Azure
-2.	Contoso-traders-rg
-	* Contoso-traders-product App Service
-	* Azure Redis Cache
-	* Cosmos DB (2)
-	* Load Testing Resource
-	* Cognitive Services
-	* Azure Container App
-	* Azure Container Registry. 
-	* Front Door and CDN Profiles
-	* Key Vault
-	* Azure Kubernetes Service
-	* Log Analytics Workspace
-	* SQL Databases 
-	* Storage Accounts
-3.	Along with contoso-traders-rg, you will also see another RG named contoso-traders-aks-nodes-rg, which includes Kubernetes node resources. 
-If you want to understand how these components are used, please refer to the architecture here link)
+Please refer to the architecture demo script and technical walkthrough to review the provisioned resources.  PLease check teh following link:
+
+https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/cloud-native-app-architecture/technical-walkthrough.md
+
 
 <h2>Test Application</h2>
 
