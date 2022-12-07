@@ -7,12 +7,12 @@ While it’s possible to deploy overall solution using Azure Portal, CLI, PowerS
 This will deploy all components defined in architecture  – https://github.com/seenakhan/ContosoTraders/blob/main/docs/architecture/contoso-traders-enhancements.drawio.png
 
 **Pre-Requisites**
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 You will need following before we start with deployment. 
 1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin.(https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 2.	A GitHub Account. You can create a free account here https://github.com/
 
-<html><h2>Preparing your Azure Subscription</h2></html>
+**Preparing your Azure Subscription**
 
 **Register Required Resource Providers**
 
@@ -43,8 +43,8 @@ Let’s create an Azure Service Principal and assign required permissions.
 4.	Select New registration.
 5.	Provide following values and click Register
 	1. Name:  “ContosoTraders-GitHubActions”
-	2. Supported Account Type:
-	3. Redirect URI:
+	2. Supported Account Type: Select the first option - Accounts in the organizational directory only(Default Directory-Single Tenant)
+	3. Redirect URI: Select Web and enter the url : https://www.contosotraders.com or your domain url you can enter.
 
      ![img3](images/appreg.png)
 
