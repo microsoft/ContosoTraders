@@ -73,22 +73,27 @@ Now, we will assign Owner rights to this SPN on Azure subscription.
 
 Your subscription is now ready for deployment. 
 
-Accept Responsible AI Terms
+**Accept Responsible AI Terms**
+
 In Contoso Traders, we are using Azure Cognitive Service to facilitate the search by image functionality. Before you can use Azure AI services, you must accept the terms for Responsible AI usage. 
 In order to accept the terms, you will need to manually provision a Cognitive Service Resource using Azure Portal, with which you will be able to accept the terms. 
 It is recommended to create this temporary in a separate resource group, so that you can delete the resource group once the terms are accepted. 
 1.	Select the following link to create a Computer Vision resource:
-•	Computer vision
+
+	[Computer vision](https://portal.azure.com/#create/Microsoft.CognitiveServicesComputerVision)
+	
 2.	On the Create page, provide the following information:
-Project details	Description
-Subscription	Select one of your available Azure subscriptions.
-Resource group	Create new > Cognitive-Temp
-Region	The location of your cognitive service instance.
-Name	A descriptive name for your cognitive services resource. For example, MyTempCognitiveServicesResource1.
-Pricing tier	Free or Standard S0.
-Scroll down and check the box for reviewing and acknowledging all the terms above.
-3.	Click Review & Create
-4.	After Validating click Create
+	
+**Project details Description**
+
+	1. Subscription		:Select one of your available Azure subscriptions.
+	2. Resource group	:Create new > Cognitive-Temp
+	3. Region		:The location of your cognitive service instance.
+	4. Name			:A descriptive name for your cognitive services resource. For example, MyTempCognitiveServicesResource1.
+	5. Pricing tier		:Free or Standard S0.
+	6. Scroll down and check the box for reviewing and acknowledging all the terms above.
+	7. Click Review & Create
+	8. After Validating click Create
 
 Once the provisioning is completed, you can delete the resource group “Cognitive-Temp” as terms are accepted for your subscription now. 
 Preparing your GitHub Account
@@ -98,12 +103,14 @@ Fork the Contoso Traders Repo
 
 1.	Login to GitHub by visiting https://github.com
 2.	Open https://github.com/microsoft/ContosoTraders and Click on Fork
-<<ScreenShot>>
-3.	Your should now a clone of this repository in your GitHub Account, with https://github.com/YOURUSERNAME/ContosoTraders. 
+	
+	![img7](images/Repofork.png)
+
+3.	You should now a clone of this repository in your GitHub Account, with https://github.com/YOURUSERNAME/ContosoTraders. 
 4.	You will be using this repository for deployment. Since it exists in your GitHub Account, you will be able to make changes to the contents as well, including source code. 
 
 
-Create Secrets in GitHub
+**Create Secrets in GitHub**
 
 GitHub Secrets are encrypted and allow you to store sensitive information, such as access tokens, in your repository. In our scenario, we will be using GitHub Secrets to store the Azure authentication credentials and other secrets. 
 These secretes will be used by GitHub Action Workflows during deployment and CI/CD process.  We will be creating following three secrets
