@@ -25,7 +25,7 @@
 
   | Scenario                                  | Level                                                                                                                                                                                       |
   | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | Cloud Native App Architecture Walkthrough | [Overview](./demo-scripts/Cloud-Native-App-Architecture/Overview.md) \| [Technical Walkthrough](./demo-scripts/Cloud-Native-App-Architecture/Technical-Walkthrough.md)                      |
+  | Cloud Native App Architecture Walkthrough | [Overview](./demo-scripts/cloud-native-app-architecture/overview.md) \| [Technical Walkthrough](./demo-scripts/cloud-native-app-architecture/technical-walkthrough.md)                      |
   | Autoscaling Cloud Native Apps in Azure    | [Overview](./demo-scripts/Autoscaling-Cloud-Native-Apps-Azure/overview.md) \| [Technical Walkthrough](./demo-scripts/Autoscaling-Cloud-Native-Apps-Azure/technical-walkthrough.md)          |
   | DevSecOps Journey with GitHub + Azure     | [Overview](./demo-scripts/DevSecOps/overview.md) \| [Technical Walkthrough](./demo-scripts/DevSecOps/Technical-Walkthrough.md)                                                              |
   | Low Code App Development Power Platform   | [Overview](./demo-scripts/LOW%20CODE%20DEVELOPMENT/HIGH%20LEVEL%20SCENARIO%20WALKTHROUGH.md) \| [Technical Walkthrough](./demo-scripts/LOW%20CODE%20DEVELOPMENT/TECHNICAL%20WALKTHROUGH.md) |
