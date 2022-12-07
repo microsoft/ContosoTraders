@@ -270,10 +270,55 @@ Let us setup Microsoft Defender for Cloud with your GitHub repository.
    
 10. Review and Click Create to complete the deployment.  
 
-   ![image](media/L300-23.png)
+    ![image](media/L300-23.png)
    
-   You have not completed linking your GitHub Repositories Advanced Security with Microsoft Defender for Cloud – DevOps. 
+    You have not completed linking your GitHub Repositories Advanced Security with Microsoft Defender for Cloud – DevOps. 
 
-   Next take a look at some of the recommendations.  
+    Next take a look at some of the recommendations.  
     
+## Review Microsoft Defender for Cloud Recommendations  
 
+Once you setup Microsoft Defender for Cloud, it may take few hour to sync and generate recommendations.  
+
+Let us take a look at some the recommendations generated.  
+
+ 
+1. Login to Azure Portal and navigate to Microsoft Defender for Cloud. 
+
+   ![](media/ct17.png)
+   
+2. Click on Recommendations, it should list out security recommendations based on Contoso Traders deployment in your environment.
+ 
+   ![image](media/L300-24.png)
+   
+3. Let us take a look at some of the recommendations, expand **Remediate vulnerabilities**.
+
+    ![image](media/L300-25.png)
+    
+4. If you expand on any of the recommendation, it will include details about the vulnerability and remediation steps.  
+
+    ![image](media/L300-26.png)  
+   
+5. Microsoft Defender for Cloud can also automatically remediate various recommendations with one click.  
+
+6. You may explore and remediate other recommendation similarly.  
+
+7. GitHub Advanced security alerts and recommendations are available in Defender for Cloud > DevOps Security.
+
+   ![image](media/L300-27.png) 
+   
+   
+## Summary 
+
+In this scenario, we looked at how GitHub Actions and Advanced Security features can help organizations build an effective DevSecOps process, enhancing overall productivity and security posture of software development lifecycle. 
+
+We also looked at Microsoft Defender for Cloud integration with GitHub.  
+  
+## Additional Reading  
+
+Reference Links  
+
+ - [DevSecops in GitHub](https://learn.microsoft.com/en-us/azure/architecture/solution-ideas/articles/devsecops-in-github) 
+ - [GitHub features and Actions](https://github.com/features/actions) 
+ - [GitHub Advnced Security](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security)
+ - [Microsoft Defender for DevOps - the benefits and features | Microsoft Learn](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction)  
