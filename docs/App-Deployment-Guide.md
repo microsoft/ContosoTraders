@@ -6,13 +6,13 @@ While it’s possible to deploy overall solution using Azure Portal, CLI, PowerS
 
 This will deploy all components defined in architecture  – https://github.com/microsoft/ContosoTraders/blob/main/docs/architecture/contoso-traders-enhancements.drawio.png
 
-<html><h2>Pre-Requisites</h2></html>
+<html><h3>Pre-Requisites</h3></html>
 
 You will need following before we start with deployment. 
 1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin.(https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 2.	A GitHub Account. You can create a free account here https://github.com/
 
-**Preparing your Azure Subscription**
+<h2>Preparing your Azure Subscription</h2>
 
 **Register Required Resource Providers**
 
@@ -97,7 +97,8 @@ It is recommended to create this temporary in a separate resource group, so that
 4. After Validating click Create
 
 Once the provisioning is completed, you can delete the resource group “Cognitive-Temp” as terms are accepted for your subscription now. 
-Preparing your GitHub Account
+
+<h2>Preparing your GitHub Account</h2>
 
 In this step, you will form the original ContosoTraders GitHub repository to your GitHub Account and prepare for deployment. 
 Fork the Contoso Traders Repo
@@ -171,7 +172,7 @@ These secretes will be used by GitHub Action Workflows during deployment and CI/
 Your GitHub repository is now ready for deployment. 
 
 
-**Deploying the Contoso Traders Application**
+<h2>Deploying the Contoso Traders Application</h2>
 
 
 You are now ready to start deployment of application to your Azure account. We will be using GitHub Action workflows for this deployment. 
@@ -193,22 +194,25 @@ Let’s get started.
 	![img14](images/workflowrun1.png)
 
 5. If you refresh the page, you will see that workflow provisioning has started. You can click on workflow to see the progress live and logs.  If you navigate in the workflow execution, you will the following stages.
-	1. Provision-infrastructure: This stage provisions the required resource groups and other Azure services as per architecture (link to architecture) and prepares them for app.
-	2. You can see each stage and what it does in below screenshot
-		<expanded workflow secret>
+	1. Provision-infrastructure: This stage provisions the required resource groups and other Azure services as per architecture  and prepares them for app.
+	2. You can see each stage and what it does in below screenshot 
+	 
+	![img19](images/workflow5.png)
 
-	3. Deploy the carts & product API.
-	4. Explanation on what’s happening 
-		<expanded workflow secret>
+	3. Deploy the carts & product API: This stage provisions pushing of carts api and products api to azure container registry.
+	
+	![img22](images/workflow7.png)
+	![img20](images/workflow3.png)
 
-	5. Deploy the UI
-	6. Explanation on what’s happening 
-		<expanded workflow secret>
+	5. Deploy the UI: This stage configure the endpoints of the cart api and products api.
+	 
+	![img21](images/workflow4.png)
+	
 Please note that the workflow provisions all resources through bicep templates, scripts etc. We’ve observed that in many cases, Azure subscription resource cache does not get updated fast enough before the next dependent step starts executing.
 If you feel workflow failure error due to missing Azure resources (Key vault, CDN, container apps etc, please re-run the failed jobs. 
 
 
-**Validate & test the deployment**
+<h3>Validate & test the deployment</h3>
 
 Contoso Traders application is now ready in your subscription. Let us review and validate the deployment to ensure application is functioning as expected.
 
