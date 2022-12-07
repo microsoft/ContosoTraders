@@ -118,7 +118,7 @@ Let us take a look at how dependabot is used in Contoso Traders.  Please note th
    GitHub Dependabot can also raise pull request automatically based on vulnerability detected along with selected versions. Let us take a look at one such pull request raised by dependabot
    
    
-4. Navigate to one search pull request [example](https://github.com/microsoft/ContosoTraders/pull/25).
+4. Navigate to one search pull request example [Pull request](https://github.com/microsoft/ContosoTraders/pull/25).
 
 5. You can see the PR raised by dependabot automatically fixing the vulnerability by upgrading node-forge from 0.10.0 to 1.3.1 and react-scripts from 3.4.4 to 5.0.1
 
