@@ -212,7 +212,7 @@ If you feel workflow failure error due to missing Azure resources (Key vault, CD
 
 Contoso Traders application is now ready in your subscription. Let us review and validate the deployment to ensure application is functioning as expected.
 
-Review Provisioned Azure Resources
+**Review Provisioned Azure Resources**
 
 1.	Navigate to Azure
 2.	Contoso-traders-rg
@@ -232,7 +232,7 @@ Review Provisioned Azure Resources
 3.	Along with contoso-traders-rg, you will also see another RG named contoso-traders-aks-nodes-rg, which includes Kubernetes node resources. 
 If you want to understand how these components are used, please refer to the architecture here link)
 
-Test Application
+**Test Application**
 
 1.	Navigate to Azure and look for CDN endpoints by searching for Content Delivery Network in search menu.
 2.	Select the CDN profile starting with name contoso-traders-cdn$ENVIRONMENTNAME 
@@ -241,7 +241,7 @@ Test Application
 5.	Test basic operations. 
 If you would like to add a custom domain, like contosotraders.com, you can purchase the domain and add to CDN profile. Please see documentation here - https://learn.microsoft.com/en-us/azure/cdn/cdn-map-content-to-custom-domain?tabs=azure-dns%2Cazure-portal%2Cazure-portal-cleanup 
 
-Deploy Inventory Management PowerApps
+**Deploy Inventory Management PowerApps**
 
 If you are interested, you can follow these steps to deploy the inventory management application used by internal users for managing product pricing, stock etc. 
 It will be hosted using Power Apps and will use Power Automate & MS Teams to enable a full inventory management and approval workflow.
@@ -249,13 +249,14 @@ Please follow the instructions here:
 			
 
 
-Try Out Demo Scripts
+**Try Out Demo Scripts**
+			
 
 As further learning, you can try running through some of the demo scripts listed below which’d help in understanding the Azure Cloud Native Technologies. 
 
 <Table of Demo Scripts >
 
-Common Errors & Troubleshooting
+**Common Errors & Troubleshooting**
 This includes some of the common problems you may during deployment and approach to resolve them. 
 
 1.	AI Terms and services
@@ -264,7 +265,7 @@ This includes some of the common problems you may during deployment and approach
 4.	Subscription quota
 5.	Incorrect secrets format
 
-Known Issues
+**Known Issues**
 When you run the workflow, it shows following warnings. . 
 Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net" [https://aka.ms/bicep/linter/no-hardcoded-env-urls]
 
@@ -275,10 +276,10 @@ This does not block the deployment and workflow will run successfully. It does n
 
 
 
-Questions & Support
+**Questions & Support**
 This project is community supported. Please raise issue via GitHub incase of issues/questions. 
 
-Cleanup
+**Cleanup**
 
 Once you are done deploying, testing, exploring, you can delete the provisioned RGs to prevent incurring additional cost. 
 Delete the following resource groups.
