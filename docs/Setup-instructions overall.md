@@ -10,9 +10,9 @@ Following are the key take aways for anyone having basic knowledge in Azure as w
 **Following tasks we are going to do**
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. Deploy the ContosoTraders Web application on Azure Containerized instance by running workflows from github.
-2. Update a product price detail and take an approval from the stakeholders in a fully automated way.
+2. By using Power platform canvas app named Inventory Management System App you will update a product price detail and take an approval from the stakeholders in a fully automated way.
 
-**Before you begin**
+**Before you begin with the first task**
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Let us deploy the web app first and then we will do You need to follow the below steps to configure the Azure portal environment to deploy the Web App into a containerized instance.
 
