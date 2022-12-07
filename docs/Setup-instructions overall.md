@@ -147,9 +147,8 @@ Let’s get started.
 
 	1. Secret Name: ENVIRONMENT
 	2. Value      : Add any combination of characters not exceeding 6 and dont take below 3
-	
-	
-	![img11](images/envwork.png)
+		
+	 ![img15](images/envwork.png)
 	
 
 10.	Create the following secret for SQL Password.  
