@@ -99,7 +99,7 @@ Let us make the changes and experience magic of GitHub Actions.
 
  
 
-1. Login to your fork of Contoso Traders repository and navigate to Contoso Traders repository https://github.com/**YOURUSERNAME**/ContosoTraders. 
+1. Login to your fork of Contoso Traders repository and navigate to Contoso Traders repository `https://github.com/**YOURUSERNAME**/ContosoTraders`. 
 
 2. Create a new branch **footer-update**.
 
