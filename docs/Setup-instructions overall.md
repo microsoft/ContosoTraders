@@ -148,12 +148,14 @@ Let’s get started.
 	1. Secret Name: ENVIRONMENT
 	2. Value      : Add any combination of characters not exceeding 6 and dont take below 3
 	
+	
 	![img11](images/envwork.png)
 	
 
 10.	Create the following secret for SQL Password.  
 	1. Secret Name: SQL_PASSWORD
 	2. Value	   : Add any combination of alphanumeric characters of minimum 12
+	
 	
 	![img12](images/sqlsecretgit.png)
 
@@ -167,13 +169,18 @@ We will be using following workflows as part of deployment.  You can review work
 •	contoso-traders-provisioning-deployment: 
 
 Let’s get started. 
-11.	Login to GitHub and navigate to your fork of Contoso traders repository. https://github.com/YOURUSERNAME/ContosoTraders
-12.	Navigate to Actions and Accept enabling the workflows
-<screenshot>
 
-13.	In the workflow list, select the “contoso-traders-provisioning-deployment” workflow. 
-<screenshot>
-14.	Click on Run Workflow and run the workflow with main branch. 
+1. Login to GitHub and navigate to your fork of Contoso traders repository. https://github.com/YOURUSERNAME/ContosoTraders
+2. Navigate to Actions and Accept enabling the workflows
+		
+	![img13](images/workflowenable.png)
+	
+	
+3.	In the workflow list, select the “contoso-traders-provisioning-deployment” workflow.
+ 
+	![img14](images/workflowrun1.png)
+	
+4.	Click on Run Workflow and run the workflow with main branch. 
 <screenshot>
 
 15.	If you refresh the page, you will see that workflow provisioning has started. You can click on workflow to see the progress live and logs.  If you navigate in the workflow execution, you will the following stages.
