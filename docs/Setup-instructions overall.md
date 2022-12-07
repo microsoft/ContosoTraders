@@ -111,6 +111,7 @@ Fork the Contoso Traders Repo
 
 
 **Create Secrets in GitHub**
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 GitHub Secrets are encrypted and allow you to store sensitive information, such as access tokens, in your repository. In our scenario, we will be using GitHub Secrets to store the Azure authentication credentials and other secrets. 
 These secretes will be used by GitHub Action Workflows during deployment and CI/CD process.  We will be creating following three secrets
@@ -162,7 +163,9 @@ Let’s get started.
 Your GitHub repository is now ready for deployment. 
 
 
-Deploying the Contoso Traders Application. 
+**Deploying the Contoso Traders Application**
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 You are now ready to start deployment of application to your Azure account. We will be using GitHub Action workflows for this deployment. 
 We will be using following workflows as part of deployment.  You can review workflow code by navigating to .github/workflows directory in your repository. 
 •	contoso-traders-provisioning-deployment: 
