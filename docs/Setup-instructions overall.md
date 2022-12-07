@@ -13,6 +13,7 @@ You will need following before we start with deployment.
 2.	A GitHub Account. You can create a free account here https://github.com/
 
 Preparing your Azure Subscription 
+
 Register Required Resource Providers 
 You will need to register required resource providers on your Azure subscription to your subscription to use the required Azure services.   
 1.	Login to Azure Portal by visiting https://portal.azure.com and sign-in with an account having Owner privileges. 
