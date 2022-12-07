@@ -251,7 +251,7 @@ If you are interested, you can follow these steps to deploy the inventory manage
 It will be hosted using Power Apps and will use Power Automate & MS Teams to enable a full inventory management and approval workflow.
 Please follow the instructions here:
 
-https://github.com/microsoft/ContosoTraders/blob/main/docs/Setup%20instructions%20for%20PowerApp.md
+https://github.com/microsoft/ContosoTraders/blob/main/docs/Inventory-power-app-deployment-guide.md
 			
 
 
