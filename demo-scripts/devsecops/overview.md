@@ -59,7 +59,7 @@ GitHub Actions workflows can be monitored from the Actions tab on a repository. 
 Let us take a look at the workflows status for Contoso Traders in this public repository  
 
 
-1. Navigate to https://github.com/microsoft/ContosoTraders/actions  
+1. Navigate to [ContosoTraders/Actions](https://github.com/microsoft/ContosoTraders/actions) 
 
     ![image](https://user-images.githubusercontent.com/83349577/206232683-32f09b2a-97b1-4518-9afc-483af675349e.png)
     
@@ -118,7 +118,7 @@ Let us take a look at how dependabot is used in Contoso Traders.  Please note th
    GitHub Dependabot can also raise pull request automatically based on vulnerability detected along with selected versions. Let us take a look at one such pull request raised by dependabot
    
    
-4. Navigate to https://github.com/microsoft/ContosoTraders/pull/25.
+4. Navigate to one search pull request [example](https://github.com/microsoft/ContosoTraders/pull/25).
 
 5. You can see the PR raised by dependabot automatically fixing the vulnerability by upgrading node-forge from 0.10.0 to 1.3.1 and react-scripts from 3.4.4 to 5.0.1
 
