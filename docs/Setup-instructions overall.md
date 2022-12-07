@@ -14,13 +14,20 @@ Following are the key take aways for anyone having basic knowledge in Azure as w
 
 **Before you begin with the first task**
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1. Make sure your Azure subscription registered with Microsoft.Operationsmanagement resource provider.
-    1. To check that go to subscriptions, Select the subuscription you want to view.
-    2. On the left menu, under settings pane, Select Resource providers.
-    3. You can search the resource provider name Microsoft.Operationsmanagement on the search box.
-    4. It will display the resource provider with the status of registered or not registered.
-    5. If its registered, you can go for the next step to check the user account having 
+You'll need an Azure subscription with the Microsoft.OperationsManagement resource provider registered.	Also you'll need a service principal in the owner role on the Azure subscription where the infrastructure is to be provisioned.
 
+1. Make sure your Azure subscription registered with Microsoft.Operationsmanagement resource provider.
+    1. To check that, Login into Azure Portal.
+    2. Go to subscriptions, Select the subuscription you want to view.
+    3. On the left menu, under settings pane, Select Resource providers.
+    4. You can search the resource provider name Microsoft.Operationsmanagement on the search box.
+    5. It will display the resource provider with the status of registered or not registered.
+
+2. If the status of the resource provider shows not registered, go to the following steps to register it with your subscription.
+    1. Go to Subscriptions, Select the subscription you want to register with the resource provider.
+    2. Under settings tab, select the resource provider to see the list of resource providers.
+    3. Please Select Microsoft.OperationsManagement as resource provider and then click on Register.
+    4. Wait for completing the registration.
 
 Let us deploy the ContosoTraders Web app. Before you begin, need to follow the below steps to configure the Azure portal environment to deploy the Web App into a containerized instance. 
 
