@@ -129,22 +129,23 @@ Let’s get started.
 
 7.	On the right bar, click on "Add a new secret"
 8.	Create the following secret for Azure SPN. 
-a.	Secret Name: SERVICEPRINCIPAL
-b.	Value: Please replace the values with your App ID created earlier. 
+	1. Secret Name: SERVICEPRINCIPAL
+	2. Value: Please replace the values with your App ID created earlier. 
 	{
   		"clientId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
   		"clientSecret": "your-client-secret",
   		"tenantId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
   		"subscriptionId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz"
 	}
-c.	Click Add Secret
+	3. Click Add Secret
 	
+	![img10](images/addserviceprniciopagithub.png)
 
 9.	Create the following secret for ENVIRONMENT.  This is a prefix for your environment and all resources are provisioned with this pre-fix to avoid conflict with public resource names in Azure. 
 
 a.	Secret Name: ENVIRONMENT
-b.	Value
-i.	<Insert full format and tell clearly what to replace>
+b.	Value	   : Add any combination of characters not exceeding 6
+	
 <Screenshot>
 10.	Create the following secret for SQL Password.  
 a.	Secret Name: SQL_PASSWORD
