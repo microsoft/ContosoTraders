@@ -1,4 +1,4 @@
-<html><h1> Setup instructions of Web App deployment </h1></html>
+<html><h1> Contos Traders - Deployment Guide </h1></html>
 
 
 This deployment  guide is designed to help you deploy Contoso Traders application in your Azure environment. Contoso Trader is a micro-services-based application, leveraging various Azure services including Azure Kubernetes Service, App Services, Cosmos DB, SQL Database and many more. 
@@ -6,7 +6,7 @@ While it’s possible to deploy overall solution using Azure Portal, CLI, PowerS
 
 This will deploy all components defined in architecture  – https://github.com/microsoft/ContosoTraders/blob/main/docs/architecture/contoso-traders-enhancements.drawio.png
 
-**Pre-Requisites**
+<html><h2>Pre-Requisites</h2?</html>
 
 You will need following before we start with deployment. 
 1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin.(https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
