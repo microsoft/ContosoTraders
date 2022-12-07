@@ -227,11 +227,28 @@ https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/cloud-native-
 
 <h2>Test Application</h2>
 
-1.	Navigate to Azure and look for CDN endpoints by searching for Content Delivery Network in search menu.
-2.	Select the CDN profile starting with name contoso-traders-cdn$ENVIRONMENTNAME 
-3.	Review the Endpoints and make a note of the URL for endpoint containing “UI2” website. It should look like https://contoso-traders-ui2$ENVNAME.azureedge.net
-4.	Launch the application. 
-5.	Test basic operations. 
+1.	Navigate to Azure and look for CDN endpoints by searching for Content Delivery Network in search menu. Type Content delivery network in the search box and select Front Door and CDN Profiles.
+	
+      ![img30](images/test1.png)
+	
+3.	Select the CDN profile starting with name contoso-traders-cdn$ENVIRONMENTNAME 
+
+     ![img31](images/Test2.png)
+	
+5.	Review the Endpoints and make a note of the URL for endpoint containing “UI2” website. It should look like https://contoso-traders-ui2$ENVNAME.azureedge.net
+      
+      ![img32](images/Test3.png)
+      
+7.	Launch the application by clicking on the endpoint hostname url.
+		
+       ![img33](images/Test4.png)
+       
+8.     The web app will launched.
+
+       ![img34](images/test5.png)
+       
+9.	Test basic operations. 
+	
 If you would like to add a custom domain, like contosotraders.com, you can purchase the domain and add to CDN profile. Please see documentation here - https://learn.microsoft.com/en-us/azure/cdn/cdn-map-content-to-custom-domain?tabs=azure-dns%2Cazure-portal%2Cazure-portal-cleanup 
 
 <h2>Deploy Inventory Management PowerApps</h2>
