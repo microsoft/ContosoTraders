@@ -6,7 +6,7 @@ While it’s possible to deploy overall solution using Azure Portal, CLI, PowerS
 
 This will deploy all components defined in architecture  – https://github.com/microsoft/ContosoTraders/blob/main/docs/architecture/contoso-traders-enhancements.drawio.png
 
-<html><h2>Pre-Requisites</h2?</html>
+<html><h2>Pre-Requisites</h2></html>
 
 You will need following before we start with deployment. 
 1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin.(https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
