@@ -160,6 +160,7 @@ These secretes will be used by GitHub Action Workflows during deployment and CI/
 		
 	 ![img15](images/envwork.png)
 	
+	**Note: When you are creating secret for Environment please add combination of alphanumeric characters without any symbols. Maximum characters allowed is 6 and minimum characters allowed is 3. Keep small case letters**
 
 10.	Create the following secret for SQL Password.  
 	1. Secret Name: SQL_PASSWORD
@@ -167,7 +168,8 @@ These secretes will be used by GitHub Action Workflows during deployment and CI/
 	
 	
 	![img12](images/sqlsecretgit.png)
-
+	
+**Note : When you are creating secret for SQL password please add combination of alphanumeric characters. Minimum characters allowed is 12.Keep small case letters.**
 
 Your GitHub repository is now ready for deployment. 
 
