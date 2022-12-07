@@ -41,7 +41,7 @@ In this walkthrough, You will understand the architecture of the Contoso Traders
    
    - **SECURITY**: Microsoft Defender for cloud and DevOps are used th protect the resources and GitHub repository from vulnerabilities and threats. 
    
-   ![](media/cni1.png)
+   ![](media/cni13.png)
    
 1. Open browser, using a new tab navigate to your forked **ContosoTraders** repo (`https://github.com/<GITHUB USERNAME/ContosoTraders`) GitHub repository. This repository conatins all the neccessary files and documents which will guide you to host the contoso traders application from the scratch.
 
