@@ -1,6 +1,7 @@
 # DevSecOps: L100
 
-## DevSecOps with GitHub & Azure: Overview  
+
+# DevSecOps with GitHub & Azure: Overview  
 
 ## Key Takeaway
 
