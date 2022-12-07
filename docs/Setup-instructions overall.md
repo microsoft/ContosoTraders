@@ -120,9 +120,11 @@ These secretes will be used by GitHub Action Workflows during deployment and CI/
 Let’s get started. 
 4.	Login to GitHub and navigate to your fork of Contoso traders repository. https://github.com/YOURUSERNAME/ContosoTraders.
 5.	Under your repository name, click on the "Settings" tab.
-<Screenshot>
+6.	
+	![img8](images/settingsgithub.png)
+	
 6.	In the left sidebar, click Secrets and select actions.
-a.	<Screenshot>
+a.	![img9](images/githubsett.png)
 7.	On the right bar, click on "Add a new secret"
 8.	Create the following secret for Azure SPN. 
 a.	Secret Name: SERVICEPRINCIPAL
