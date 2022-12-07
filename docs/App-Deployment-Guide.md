@@ -262,15 +262,15 @@ Please follow the instructions here:
 <h2>Try Out Demo Scripts</h2>
 			
 
-As further learning, you can try running through some of the demo scripts listed below which’d help in understanding the Azure Cloud Native Technologies. 
+As further learning, you can try running through some of the demo scripts listed below which’d help in understanding the Azure Cloud Native Technologies.
 
-| Technologies  | Link                                                                                                                                                                                                            |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| For Auto scaling CLoud native Apps          | [Cloud Native App](https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/autoscaling-cloud-native-apps-azure)         |
-| Cloud native app architecture    	      | [Architecture](https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/cloud-native-app-architecture)                |
-| Devsecops                                   | [Devsecops](https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/devsecops)                                    |
-| Intelligent App with AI services	      | [Intelligent App](https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/intelligent-apps-with-azure-ai-services)      |
-| Low Code Development                        | [Power App ](https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/low-code-development)                      |
+| Scenario                                  | Level                                                                                                                                                                                       |
+  | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | Cloud Native App Architecture Walkthrough | [Overview](./demo-scripts/cloud-native-app-architecture/overview.md) \| [Technical Walkthrough](./demo-scripts/cloud-native-app-architecture/technical-walkthrough.md)                      |
+  | Autoscaling Cloud Native Apps in Azure    | [Overview](./demo-scripts/autoscaling-cloud-native-apps-azure/overview.md) \| [Technical Walkthrough](./demo-scripts/autoscaling-cloud-native-apps-azure/technical-walkthrough.md)          |
+  | DevSecOps Journey with GitHub + Azure     | [Overview](./demo-scripts/devsecops/overview.md) \| [Technical Walkthrough](./demo-scripts/devsecops/technical-walkthrough.md)                                                              |
+  | Low Code App Development Power Platform   | [Overview](./demo-scripts/low-code-development/overview.md) \| [Technical Walkthrough](./demo-scripts/low-code-development/technical-walkthrough.md) |
+  | Intelligent Apps with Azure AI Services   | [Overview](./demo-scripts/intelligent-apps-with-azure-ai-services/overview.md) \| [Technical Walkthrough](./demo-scripts/intelligent-apps-with-azure-ai-services/technical-walkthrough.md)  |
 			
 
 
@@ -291,7 +291,10 @@ This includes some of the common problems you may during deployment and approach
 	**When you are creating secret for Environment please add combination of alphanumeric characters without any symbols. Maximum characters allowed is 6 and minimum characters allowed is 3. Keep small case letters**
 	
 8.	Subscription quota
-9.	Incorrect secrets format
+	
+	**For the details of subscription quota please click [here](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits).**
+
+10.	Incorrect secrets format
 
 	**Check the github secret formats given as per the directions**
 
