@@ -14,6 +14,10 @@ Following are the key take aways for anyone having basic knowledge in Azure as w
 
 **Before you begin with the first task**
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Make sure your Azure subscription registered with Microsoft.Operationsmanagement resource provider.
+    1. To check that go to subscriptions, Select the subuscription you want to view.
+    2. On the left menu, under settings pane, Select Resource providers.
+    3. You can search
 Let us deploy the ContosoTraders Web app. Before you begin, need to follow the below steps to configure the Azure portal environment to deploy the Web App into a containerized instance. 
 
 1. Login into Azure portal with your trial or organization account.
