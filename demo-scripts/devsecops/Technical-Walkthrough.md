@@ -99,7 +99,7 @@ Let us make the changes and experience magic of GitHub Actions.
 
  
 
-1. Login to your fork of Contoso Traders repository and navigate to Contoso Traders repository `https://github.com/**YOURUSERNAME**/ContosoTraders`. 
+1. Login to your fork of Contoso Traders repository and navigate to Contoso Traders repository `https://github.com/**YOURGITHUBUSERNAME**/ContosoTraders`. 
 
 2. Create a new branch **footer-update**.
 
@@ -160,7 +160,7 @@ Dependabot security updates make it easier for you to fix vulnerable dependencie
 
 Let us take a look at how dependabot can be used in Contoso Traders.   
 
-1. Login to your fork of Contoso Traders repository and navigate to Contoso Traders repository `https://github.com/**YOURUSERNAME**/ContosoTraders`. 
+1. Login to your fork of Contoso Traders repository and navigate to Contoso Traders repository `https://github.com/**YOURGITHUBUSERNAME**/ContosoTraders`. 
 
 2. Navigate to settings > Security > Code Analysis and Security.
 
