@@ -247,7 +247,7 @@ If you want to understand how these components are used, please refer to the arc
 5.	Test basic operations. 
 If you would like to add a custom domain, like contosotraders.com, you can purchase the domain and add to CDN profile. Please see documentation here - https://learn.microsoft.com/en-us/azure/cdn/cdn-map-content-to-custom-domain?tabs=azure-dns%2Cazure-portal%2Cazure-portal-cleanup 
 
-<h3>Deploy Inventory Management PowerApps</h3>
+<h2>Deploy Inventory Management PowerApps</h2>
 
 If you are interested, you can follow these steps to deploy the inventory management application used by internal users for managing product pricing, stock etc. 
 It will be hosted using Power Apps and will use Power Automate & MS Teams to enable a full inventory management and approval workflow.
@@ -295,10 +295,11 @@ This does not block the deployment and workflow will run successfully. It does n
 
 
 
-	<h3>Questions & Support</h3>
+<h3>Questions & Support</h3>
+	
 This project is community supported. Please raise issue via GitHub incase of issues/questions. 
 
-	<h3>Cleanup</h3>
+<h3>Cleanup</h3>
 
 Once you are done deploying, testing, exploring, you can delete the provisioned RGs to prevent incurring additional cost. 
 Delete the following resource groups.
