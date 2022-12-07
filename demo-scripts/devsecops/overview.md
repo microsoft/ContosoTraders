@@ -2,15 +2,15 @@
 
 ## Overview of the Contoso Traders application
 
-Contoso Traders is one of the leading E-Commerce platforms with a wide range of electronic products like desktops and laptops, mobile phones, gaming console accessories, and monitors. This includes a wide range of international brands like Microsoft Surface, XBOX, Samsung, ASUS, DELL etc. Contoso Traders Organization is using Microsoft 365 for their collaboration works internally.
+Contoso Traders is one of the leading E-Commerce platforms with a wide range of electronic products like desktops and laptops, mobile phones, gaming console accessories, and monitors. This includes a wide range of international brands like Microsoft Surface, XBOX, Samsung, ASUS, DELL, etc. Contoso Traders Organization is using Microsoft 365 for their collaboration works internally.
 
-Contoso Traders has different departments like marketing, sales, accounts, HR, and IT. For internal communication, they are using Microsoft Teams and Outlook. In the Contoso Traders organisation, there are various functionalities with the Contoso Traders E-commerce platform like product approval, product price approval, Product price update approval etc. 
+Contoso Traders has different departments like marketing, sales, accounts, HR, and IT. For internal communication, they are using Microsoft Teams and Outlook. In the Contoso Traders organization, there are various functionalities with the Contoso Traders E-commerce platform like product approval, product price approval, Product price update approval, etc. 
 
 ## Key Takeaway
 
 The key takeaways from this demo are: 
 
-   - GitHub Actions is used to automate the deployment of the application and infrastructure. Using GitHub Action workflows, the application and infrastructure can be deployed to Azure cloud with a single click, allowing you to implement continuous integration and continuous deployment process.  
+   - GitHub Actions is used to automate the deployment of the application and infrastructure. Using GitHub Action workflows, the application and infrastructure can be deployed to the Azure cloud with a single click, allowing you to implement continuous integration and a continuous deployment process.  
    - GitHub Actions integrates with Azure services to enable you to build, test, and deploy to Azure directly from your GitHub repository, along with tons of other integrations. 
    - GitHub Advanced Security is a set of tools that help you find and fix vulnerabilities in your code, protect your users, and detect and prevent malicious activity.
    - GitHub Advanced Security is available for public and private repositories on GitHub.com and GitHub Enterprise Cloud. 
@@ -25,7 +25,7 @@ The key takeaways from this demo are:
 
 ## Walkthrough – GitHub Actions for CI/CD 
 
- GitHub Actions is a way to automate processes and workflows in your GitHub repository. Some of the benefits of using GitHub Actions include the ability to automate your software development lifecycle, integrate with other tools and services, including Azure services. 
+ GitHub Actions is a way to automate processes and workflows in your GitHub repository. Some of the benefits of using GitHub Actions include the ability to automate your software development lifecycle and integrate with other tools and services, including Azure services. 
 
 Let us take a look at the GitHub Actions used by Contoso Traders for CI/CD. 
 
@@ -76,11 +76,11 @@ Let us take a look at the workflows status for Contoso Traders in this public re
 
     ![image](https://user-images.githubusercontent.com/83349577/206233488-20025b4a-6c65-4aa4-8aab-76984722e3bc.png)
 
-4. Click on **provision-infrastructure** job. You can now see detailed task of this job and expand to see the logs and steps.
+4. Click on **provision-infrastructure** job. You can now see the detailed task of this job and expand to see the logs and steps.
 
    ![image](https://user-images.githubusercontent.com/83349577/206234025-381770a5-2a59-4b11-a9b8-4db75e8cd938.png)
 
-  Similarly, you can review other jobs and workflows. Workflow are set to run on push to main branch, so that any new code change to main branch is automatically built and deployed. 
+  Similarly, you can review other jobs and workflows. Workflow are set to run on push to the main branch so that any new code change to the main branch is automatically built and deployed. 
   
   
 ## Walkthrough – GitHub Advanced Security 
@@ -107,7 +107,7 @@ Let us take a look at how dependabot is used in Contoso Traders.  Please note th
 
 1. Contoso Traders repository is enabled with GitHub Advanced Security features, including dependabot.  
 
-2. Dependabot generates alerts for vulerablity, as demonstrated in below screenshot.  These vulnerabilities are not fixed intentionally to demonstrate the dependabot features.
+2. Dependabot generates alerts for vulnerability, as demonstrated in the below screenshot.  These vulnerabilities are not fixed intentionally to demonstrate the dependabot features.
 
     ![image](https://user-images.githubusercontent.com/83349577/206235828-8b976009-9dd8-4da5-81ae-c8e4e2b074d1.png)
     
