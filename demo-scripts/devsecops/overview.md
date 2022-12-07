@@ -40,16 +40,77 @@ Let us take a look at the GitHub Actions used by Contoso Traders for CI/CD.
 
 3. Here is a quick overview of both workflows. If you are interested, you can review the workflow code to get into more details.  
 
-   a. **Contoso-traders-provisioning-deployment:**  This workflow provisions Azure resources used for hosting the application and deploys the application and initial data to the provisioned resources. 
+    a. **Contoso-traders-provisioning-deployment:**  This workflow provisions Azure resources used for hosting the application and deploys the application and initial data to the provisioned resources. 
 
      It includes everything needed to get the application up and running in an Azure Environment.  
 
       ![image](https://user-images.githubusercontent.com/83349577/206231035-2fbae1d1-0003-43c0-b9e6-400a38359677.png)
 
  
-   b. **contoso-traders-load-testing:** This workflow runs a load testing against the ContosoTraders application using Azure Load Testing.  
+    b. **contoso-traders-load-testing:** This workflow runs a load testing against the ContosoTraders application using Azure Load Testing.  
 
-      ![image](https://user-images.githubusercontent.com/83349577/206231646-337c418f-624c-4c66-89f0-3ed473e35d3b.png)
+       ![image](https://user-images.githubusercontent.com/83349577/206231861-f4b238cd-b0d5-4178-beab-d08f9c5aee6e.png)
+      
+     
+## Monitor GitHub Actions Workflow
+
+GitHub Actions workflows can be monitored from the Actions tab on a repository. This tab shows a list of all the active and past workflows, along with their status and any associated logs. Users can see at a glance whether their workflows are running successfully and can troubleshoot any issues that may arise. Additionally, users can set up notifications to be alerted when a workflow starts or completes, or if it encounters an error. This can help users stay on top of their workflows and ensure that their projects are running smoothly. 
+
+Let us take a look at the workflows status for Contoso Traders in this public repository  
+
+
+1. Navigate to https://github.com/microsoft/ContosoTraders/actions  
+
+    ![image](https://user-images.githubusercontent.com/83349577/206232683-32f09b2a-97b1-4518-9afc-483af675349e.png)
+    
+2. Select the workflow **contoso-traders-provisioning-deployment**. This will the history of workflows execution.  
+
+    ![image](https://user-images.githubusercontent.com/83349577/206233128-c0cdd257-4689-4cf9-b3cb-1f34502184f3.png)
+
+3. Select the latest run from the list. In Summary, you will see 4 jobs listed. 
+
+    - Provision-infrastructure: Used for provisioning Azure resources, configure access policies and permissions, seeding initial database. 
+    - deploy-carts-api: Used to deploy the Carts API in Azure Container Apps.  
+    - deploy-products-api: Used to deploy Products API service in Azure Kubernetes Service. 
+    - deploy-ui: Used to deploy the front end website to Azure App Service.  
+
+    ![image](https://user-images.githubusercontent.com/83349577/206233488-20025b4a-6c65-4aa4-8aab-76984722e3bc.png)
+
+4. Click on **provision-infrastructure** job. You can now see detailed task of this job and expand to see the logs and steps.
+
+   ![image](https://user-images.githubusercontent.com/83349577/206234025-381770a5-2a59-4b11-a9b8-4db75e8cd938.png)
+
+  Similarly, you can review other jobs and workflows. Workflow are set to run on push to main branch, so that any new code change to main branch is automatically built and deployed. 
+  
+  
+## Walkthrough – GitHub Advanced Security 
+
+GitHub Advanced Security is a set of features and tools that help users secure their repositories and protect their code. Some of its features include: 
+
+   - Dependency scanning: This feature automatically scans dependencies for known vulnerabilities and alerts users when a vulnerable package is detected. 
+   - Code scanning: This feature uses static analysis to detect potential security vulnerabilities in the code itself, and provides alerts and recommendations for how to fix the issues. 
+   - Access control: This feature allows users to set up granular permissions and access controls for their repositories, so they can control who can view, push, and manage code. 
+   - Secret scanning: This feature automatically scans repositories for potential secrets, such as API keys or password strings, and alerts users if any are detected. 
+   - DDoS protection: This feature provides additional protection against distributed denial of service (DDoS) attacks, which can disrupt access to repositories and make them unavailable. 
+
+These features can help users secure their repositories and protect their code from a variety of potential threats. 
+
+Let us look at some of the GitHub Advanced Security features in action on our Contoso Traders Public Repo.  
+
+
+## Review Dependabot in Contoso Traders
+
+Dependabot security updates make it easier for you to fix vulnerable dependencies in your repository. If you enable this feature, when a Dependabot alert is raised for a vulnerable dependency in the dependency graph of your repository, Dependabot automatically tries to fix it. 
+
+Let us take a look at how dependabot is used in Contoso Traders.  Please note that GitHub Advanced security alerts are not public, so screenshots are included further. If you’d like to see this in action, please follow technical walkthrough for DevSecOps with Contoso Traders.  
+
+
+1. Contoso Traders repository is enabled with GitHub Advanced Security features, including dependabot.  
+
+2. Dependabot generates alerts for vulerablity, as demonstrated in below screenshot.  These vulnerabilities are not fixed intentionally to demonstrate the dependabot features.
+
+    ![image](https://user-images.githubusercontent.com/83349577/206235828-8b976009-9dd8-4da5-81ae-c8e4e2b074d1.png)
+
 
 ### Launch the Contoso Traders application
 
