@@ -78,22 +78,23 @@ Your subscription is now ready for deployment.
 In Contoso Traders, we are using Azure Cognitive Service to facilitate the search by image functionality. Before you can use Azure AI services, you must accept the terms for Responsible AI usage. 
 In order to accept the terms, you will need to manually provision a Cognitive Service Resource using Azure Portal, with which you will be able to accept the terms. 
 It is recommended to create this temporary in a separate resource group, so that you can delete the resource group once the terms are accepted. 
-1.	Select the following link to create a Computer Vision resource:
+1. Select the following link to create a Computer Vision resource:
 
 	[Computer vision](https://portal.azure.com/#create/Microsoft.CognitiveServicesComputerVision)
 	
-2.	On the Create page, provide the following information:
+2. On the Create page, provide the following information:
 	
 **Project details Description**
 
-	1. Subscription		:Select one of your available Azure subscriptions.
-	2. Resource group	:Create new > Cognitive-Temp
-	3. Region		:The location of your cognitive service instance.
-	4. Name			:A descriptive name for your cognitive services resource. For example, MyTempCognitiveServicesResource1.
-	5. Pricing tier		:Free or Standard S0.
-	6. Scroll down and check the box for reviewing and acknowledging all the terms above.
-	7. Click Review & Create
-	8. After Validating click Create
+    1. Subscription		:Select one of your available Azure subscriptions.
+    2. Resource group	:Create new > Cognitive-Temp
+    3. Region		:The location of your cognitive service instance.
+    4. Name			:A descriptive name for your cognitive services resource. For example, MyTempCognitiveServicesResource1.
+    5. Pricing tier		:Free or Standard S0.
+    6. Scroll down and check the box for reviewing and acknowledging all the terms above.
+	
+3. Click Review & Create
+4. After Validating click Create
 
 Once the provisioning is completed, you can delete the resource group “Cognitive-Temp” as terms are accepted for your subscription now. 
 Preparing your GitHub Account
@@ -136,10 +137,15 @@ These secretes will be used by GitHub Action Workflows during deployment and CI/
 	2. Value: Please replace the values with your App ID created earlier.
 	
 	{
+	
   		"clientId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
+		
   		"clientSecret": "your-client-secret",
+		
   		"tenantId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
+		
   		"subscriptionId": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz"
+		
 	}
 	
 	3. Click Add Secret
