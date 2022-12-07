@@ -17,7 +17,7 @@ The key takeaways from this demo are:
   
 ## Before you Begin 
 
-You must have Contoso Traders deployed in your environment and setup with GitHub Actions.  Please refer to the deployment instructions [here](https://github.com/microsoft/ContosoTraders/blob/main/README.md)
+You must have Contoso Traders deployed in your environment and setup with GitHub Actions.  Please refer to the deployment instructions [here](https://github.com/microsoft/ContosoTraders/blob/main/docs/App-Deployment-Guide.md)
 
 ## Walkthrough – DevSecOps with Contoso Traders  
 
@@ -31,7 +31,7 @@ Let us take a look at the GitHub Actions used by Contoso Traders for CI/CD.
 
 ## Review Workflows used in Contoso Traders 
 
-1. Navigate to https://github.com/microsoft/ContosoTraders  
+1. Navigate to [ContosoTraders](https://github.com/microsoft/ContosoTraders)
 
 2. Go to the **github/workflows (1)** folder; inside, you'll find the workflow **YAML files (2)** that are used to deploy and set up the resources.  
 
@@ -105,7 +105,7 @@ Let us make the changes and experience magic of GitHub Actions.
 
     ![image](media/L300-2.png)
     
-3. Navigate to footer.js file, located in  **.src/ContosoTraders.Ui.Website/src/shared/footer/footer.js **.
+3. Navigate to footer.js file, located in  **.src/ContosoTraders.Ui.Website/src/shared/footer/footer.js**
 
    
 4. If you notice, the footer text is defined in **line#18 (1)**. Let us make an edit on this, click on edit **symbol (2)**.
@@ -203,7 +203,7 @@ GitHub scans repositories for known secret formats to prevent fraudulent use of 
 
 Let us setup Secret Scanning in your repository.  
 
-1. Login to your fork of Contoso Traders repository and navigate to Contoso Traders repository `https://github.com/**YOURUSERNAME**/ContosoTraders`. 
+1. Login to your fork of Contoso Traders repository and navigate to Contoso Traders repository `https://github.com/**YOURGITHUBUSERNAME**/ContosoTraders`. 
 
 2. Navigate to settings > Security > Code Analysis and Security.
 
