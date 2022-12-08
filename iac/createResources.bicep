@@ -1250,6 +1250,9 @@ resource aks 'Microsoft.ContainerService/managedClusters@2022-09-02-preview' = {
     type: 'SystemAssigned'
   }
   properties: {
+    networkProfile: {
+      networkPlugin: 'azure'
+    }
     dnsPrefix: aksClusterDnsPrefix
     nodeResourceGroup: aksClusterNodeResourceGroup
     agentPoolProfiles: [
