@@ -158,5 +158,7 @@ Before deploying in github go to docs folder, then click on PowerApp folder, you
   
   **Check the password given for the SQL database is taken from the github secrets SQL_PASSWORD configuration.**
           
-    
+<h3>Clean Up</h3>
+
+Once you are done deploying, testing, exploring, you can delete the provisioned Inventory Management App from the Power Platform Admin Center.   
 
