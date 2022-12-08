@@ -9,26 +9,26 @@ This deployment guide is designed to deploy a Power app into your Power platform
 
    In Azure portal you are going to add a user with licenses PowerApps, Power Automate. Please follow below steps.
   
-   1. Login into Azure Portal and go to Azure Active directory.
+ 1. Login into Azure Portal and go to Azure Active directory.
       
    ![pimg1](images/papp1.png)
       
-    2. Select User on the Azure Active Directory.
+ 2. Select User on the Azure Active Directory.
    
    ![pimg2](images/papp2.png)
    
-   3. Click on +New user to add a new user and select create new user.
+ 3. Click on +New user to add a new user and select create new user.
    
    ![pimg3](images/papp3.png)
    
-   4. You will navigate to New user page. Enter the user name, Name and password you an choose. After that scroll down and under Groups select a group (its not mandatory) and Roles section keep user as it is, you may add other details like usage location, job Info. After that click Create.
+ 4. You will navigate to New user page. Enter the user name, Name and password you an choose. After that scroll down and under Groups select a group (its not mandatory) and Roles section keep user as it is, you may add other details like usage location, job Info. After that click Create.
     
-   5. Once the user added, please click on the user name which you created just now from the Active Directory Users Page.
-   6. Click on Assigned Roles.
+ 5. Once the user added, please click on the user name which you created just now from the Active Directory Users Page.
+ 6. Click on Assigned Roles.
    
    ![pimg4](images/papp5.png)
    
-   7. Select +Add Assignments, a side screen will open with Display Roles, search power platform administrator and select the Power platform administrator role from the list and click Add.
+ 7. Select +Add Assignments, a side screen will open with Display Roles, search power platform administrator and select the Power platform administrator role from the list and click Add.
 
   ![pimg6](images/papp7.png)
 
@@ -36,51 +36,45 @@ Now the user is ready to access the power platform
 
 <h4>Power platform environment</h4>
   
-  1. Login into power platform environment with the same user account you have created by clicking on the below link:
-      https://powerapps.microsoft.com/en-us/ 
-     If its ask for Location and contact information please enter the detials and click submit.
+1.Login into power platform environment with the same user account you have created by clicking on this [link](https://powerapps.microsoft.com/en-us/):
+      
+  If its ask for Location and contact information please enter the detials and click submit.
      
-     ![pimg7](images/papp8.png)
+  ![pimg7](images/papp8.png)
       
+2. Add a sharepoint list     
   
-  3.  Add a business user in sharepoint list. For user details refer cloudlabs instructions.
-   
-    1. Create a new Team Site
-    2. Create a Sharepoint list with columns Title(defaukt column), Password(Single Line Text Type)
-  
-   **Note: This user is going authenticate the Inventory Management Application.** 
-  
-  4. A sharepoint list to be created named Update Product details.
-
-      1. Create a new Sharepoint Teamsite
-      2. Create a Sharepoint list having columns Title (default column), Id(Number Type), Name(Single Line Text type), ImageName(Single Line Text Type), Price(Number with 3 decimal places)
+  1. Create a Team Site
+  2. Create a Sharepoint list having columns Title (default column), Id(Number Type), Name(Single Line Text type), ImageName(Single Line Text Type), Price(Number with 3 decimal places)
       
-      4. Add the connection in your Dataverse
-        1. Go to Powerplatform admin center
-        2. Click down arrow of Dataverse, then select Connections, then click on +New connection.
-        3. From the list of new connection select Sharepoint and Select Connect directly (cloud services) and click Create.
+3. Add the connection in your Dataverse
+   1. Go to Powerplatform admin center
+   2. Click down arrow of Dataverse, then select Connections, then click on +New connection.
+   3. From the list of new connection select Sharepoint and Select Connect directly (cloud services) and click Create.
          
    Your sharepoint list connection is available in your Dataverse.   
   
    **Note: This list will store the details of the Product update, the business entered through the inventory app.**
   
-  5. Create an Azure SQL database connection string in the dataverse section of the power platform environment and validate it.
+4. Create an Azure SQL database connection string in the dataverse section of the power platform environment and validate it.
   
-    1. Go to Powerplatform admin center
-    2. Click down arrow of Dataverse, then select Connections, then click on +New connection.
-    3. From the list of connections select SQL Server.
-    4. On the Authentication type select SQL Server Authentication.
-    5. Provide the SQL Server Name. (You can copy the server name from the azure portal where you deployed the web app)
-       1. You can go to SQL Databases in Azure Portal
-       2. Select productsdb database fromt the list.
-       3. In the over view section you can see the server name on the top right corner.
-    6. Add database name productsdb
-    7. Add Username localadmin
-    8. Add password (you have created SQL_PASSWORD in github secrets for the execution of workflows), then click Create.
+   1. Go to Powerplatform admin center
+   2. Click down arrow of Dataverse, then select Connections, then click on +New connection.
+   3. From the list of connections select SQL Server.
+   4. On the Authentication type select SQL Server Authentication.
+   5. Provide the SQL Server Name. (You can copy the server name from the azure portal where you deployed the web app)
+   
+      1. You can go to SQL Databases in Azure Portal
+      2. Select productsdb database fromt the list.
+      3. In the over view section you can see the server name on the top right corner.
+      
+   6. Add database name productsdb
+   7. Add Username localadmin
+   8. Add password (you have created SQL_PASSWORD in github secrets for the execution of workflows), then click Create.
     
     Now you have a dataverse connection of your Azure SQL Database.
     
-**Deployment**
+<h3>Deployment</h3>
 
 Before deploying in github go to docs folder, then click on PowerApp folder, you can see a zip file named InventoryManagementSystemApp_20221201093604.zip. Please download this file. It is an Export Package file of Inventory Management System Canvas App.
 
@@ -137,9 +131,10 @@ Before deploying in github go to docs folder, then click on PowerApp folder, you
    
    
   15. To execute the Inventory Management System App Go to this [link](https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/low-code-development/overview.md) 
+ 
+ 
     
-    
-**Common errors**
+<h3>Common errors</h3>
   
   1. Authentication failed
   2. Connection string not listed
