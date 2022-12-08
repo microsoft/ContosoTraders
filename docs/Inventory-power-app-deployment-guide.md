@@ -215,6 +215,10 @@ Your Azure SQL Connection is now available in Dataverse.
   
    Check the password given for the SQL database is taken from the github secrets SQL_PASSWORD configuration.
           
+<h2>Questions & Support</h2>
+	
+This project is community supported. Please raise issue via GitHub incase of issues/questions. 
+
 <h3>Clean Up</h3>
 
 Once you are done deploying, testing, exploring, you can delete the provisioned Inventory Management App from the Power Platform Admin Center.   
