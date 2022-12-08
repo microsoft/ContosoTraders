@@ -131,9 +131,12 @@ Before deploying in github go to docs folder, then click on PowerApp folder, you
 
   ![dimg11](images/depap14.png)
   
-  12. and validate the connection strings. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Then click on the import button.
-  13. It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
-  14. CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. 
+  12. Go to PowerPlatform admin center, select Apps and you can see the imported Inventory Management System Canvas App is there.
+   
+   ![dimg12](images/depap15.png)
+   
+   
+  15. To execute the Inventory Management System App Go to this [link](https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/low-code-development/overview.md) 
     
     
 **Common errors**
