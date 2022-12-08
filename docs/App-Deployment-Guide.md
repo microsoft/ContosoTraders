@@ -1,23 +1,23 @@
-<html><h1> Contos Traders - Deployment Guide </h1></html>
+<html><h1> Contoso Traders - Deployment Guide </h1></html>
 
 
 This deployment  guide is designed to help you deploy Contoso Traders application in your Azure environment. Contoso Trader is a micro-services-based application, leveraging various Azure services including Azure Kubernetes Service, App Services, Cosmos DB, SQL Database and many more. 
 While it’s possible to deploy overall solution using Azure Portal, CLI, PowerShell, ARM Templates, we will be using a combination of GitHub Actions and bicep templates to automate the provisioning of overall solution. 
 
-This will deploy all components defined in architecture  – https://github.com/microsoft/ContosoTraders/blob/main/docs/architecture/contoso-traders-enhancements.drawio.png
+This will deploy all components defined in architecture  – [Architecture Diagram](https://github.com/microsoft/ContosoTraders/blob/main/docs/architecture/contoso-traders-enhancements.drawio.png) 
 
 <html><h3>Pre-Requisites</h3></html>
 
 You will need following before we start with deployment. 
-1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin.(https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-2.	A GitHub Account. You can create a free account here https://github.com/
+1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin by clicking [here](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+2.	A GitHub Account. You can create a free account [here](https://github.com/). 
 
 <h2>Preparing your Azure Subscription</h2>
 
-**Register Required Resource Providers**
+<h3>Register Required Resource Providers</h3>
 
 You will need to register required resource providers on your Azure subscription to your subscription to use the required Azure services.   
-1.	Login to Azure Portal by visiting https://portal.azure.com and sign-in with an account having Owner privileges. 
+1.	Login to Azure Portal by visiting [Azure portal](https://portal.azure.com) and sign-in with an account having Owner privileges. 
 2.	Navigate to Subscription > Resource Providers
 3.	Find following resource provider and click register.    
 	1. Microsoft.Operationsmanagement
@@ -31,7 +31,7 @@ You will need to register required resource providers on your Azure subscription
      
 	This will take few minutes to complete. 
 
-**Create an Azure Service Principal**
+<h3>Create an Azure Service Principal</h3>
 
 GitHub Actions will need to authenticate with your Azure account in order to deploy the application. We will be using an Azure AD Service Principal for allowing GitHub Actions to deploy the resources in Azure. 
  An Azure service principal is an identity created for use with applications, hosted services, and automated tools to access Azure resources. This access is restricted by the roles assigned to the service principal, giving you control over which resources can be accessed and at which level
@@ -73,7 +73,7 @@ Now, we will assign Owner rights to this SPN on Azure subscription.
 
 Your subscription is now ready for deployment. 
 
-**Accept Responsible AI Terms**
+<h3>Accept Responsible AI Terms</h3>
 
 In Contoso Traders, we are using Azure Cognitive Service to facilitate the search by image functionality. Before you can use Azure AI services, you must accept the terms for Responsible AI usage. 
 In order to accept the terms, you will need to manually provision a Cognitive Service Resource using Azure Portal, with which you will be able to accept the terms. 
@@ -84,7 +84,7 @@ It is recommended to create this temporary in a separate resource group, so that
 	
 2. On the Create page, provide the following information:
 	
-**Project details Description**
+<h3>Project details Description</h3>
 
     1. Subscription		:Select one of your available Azure subscriptions.
     2. Resource group	:Create new > Cognitive-Temp
@@ -103,8 +103,8 @@ Once the provisioning is completed, you can delete the resource group “Cogniti
 In this step, you will form the original ContosoTraders GitHub repository to your GitHub Account and prepare for deployment. 
 Fork the Contoso Traders Repo
 
-1.	Login to GitHub by visiting https://github.com
-2.	Open https://github.com/microsoft/ContosoTraders and Click on Fork
+1.	Login to GitHub by visiting [github](https://github.com).
+2.	Open [ContosoTraders repository](https://github.com/microsoft/ContosoTraders) and Click on Fork
 	
 	![img7](images/Repofork.png)
 
@@ -112,7 +112,7 @@ Fork the Contoso Traders Repo
 4.	You will be using this repository for deployment. Since it exists in your GitHub Account, you will be able to make changes to the contents as well, including source code. 
 
 
-**Create Secrets in GitHub**
+<h3>Create Secrets in GitHub</h3>
 
 GitHub Secrets are encrypted and allow you to store sensitive information, such as access tokens, in your repository. In our scenario, we will be using GitHub Secrets to store the Azure authentication credentials and other secrets. 
 These secretes will be used by GitHub Action Workflows during deployment and CI/CD process.  We will be creating following three secrets
@@ -121,7 +121,7 @@ These secretes will be used by GitHub Action Workflows during deployment and CI/
    * SERVICEPRINCIPAL: Azure Service Principal credentials for GitHub Action workflow to authenticate with Azure
    * SQL_PASSWORD: New Password for SQL DB to be created as part of deployment. 
 	
-**Let’s get started**
+Let’s get started
 
 1. Login to GitHub and navigate to your fork of Contoso traders repository. https://github.com/YOURUSERNAME/ContosoTraders.
 2. Under your repository name, click on the "Settings" tab.
@@ -160,6 +160,7 @@ These secretes will be used by GitHub Action Workflows during deployment and CI/
 		
 	 ![img15](images/envwork.png)
 	
+	**Note: When you are creating secret for Environment please add combination of alphanumeric characters without any symbols. Maximum characters allowed is 6 and minimum characters allowed is 3. Keep small case letters**
 
 10.	Create the following secret for SQL Password.  
 	1. Secret Name: SQL_PASSWORD
@@ -167,7 +168,8 @@ These secretes will be used by GitHub Action Workflows during deployment and CI/
 	
 	
 	![img12](images/sqlsecretgit.png)
-
+	
+**Note : When you are creating secret for SQL password please add combination of alphanumeric characters. Minimum characters allowed is 12.Keep small case letters.**
 
 Your GitHub repository is now ready for deployment. 
 
@@ -208,95 +210,112 @@ Let’s get started.
 	 
 	![img21](images/workflow4.png)
 	
-Please note that the workflow provisions all resources through bicep templates, scripts etc. We’ve observed that in many cases, Azure subscription resource cache does not get updated fast enough before the next dependent step starts executing.
-If you feel workflow failure error due to missing Azure resources (Key vault, CDN, container apps etc, please re-run the failed jobs. 
+**Note : Please note that the workflow provisions all resources through bicep templates, scripts etc. We’ve observed that in many cases, Azure subscription resource cache does not get updated fast enough before the next dependent step starts executing.
+If you feel workflow failure error due to missing Azure resources (Key vault, CDN, container apps etc, please re-run the failed jobs.** 
 
 
-<h3>Validate & test the deployment</h3>
+<h2>Validate & test the deployment</h2>
 
 Contoso Traders application is now ready in your subscription. Let us review and validate the deployment to ensure application is functioning as expected.
 
-**Review Provisioned Azure Resources**
+<h3>Review Provisioned Azure Resources</h3>
 
-1.	Navigate to Azure
-2.	Contoso-traders-rg
-	* Contoso-traders-product App Service
-	* Azure Redis Cache
-	* Cosmos DB (2)
-	* Load Testing Resource
-	* Cognitive Services
-	* Azure Container App
-	* Azure Container Registry. 
-	* Front Door and CDN Profiles
-	* Key Vault
-	* Azure Kubernetes Service
-	* Log Analytics Workspace
-	* SQL Databases 
-	* Storage Accounts
-3.	Along with contoso-traders-rg, you will also see another RG named contoso-traders-aks-nodes-rg, which includes Kubernetes node resources. 
-If you want to understand how these components are used, please refer to the architecture here link)
+Please refer to the architecture demo script and technical walkthrough to review the provisioned resources.  PLease check the link [here](https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/cloud-native-app-architecture/technical-walkthrough.md).
 
-**Test Application**
 
-1.	Navigate to Azure and look for CDN endpoints by searching for Content Delivery Network in search menu.
-2.	Select the CDN profile starting with name contoso-traders-cdn$ENVIRONMENTNAME 
-3.	Review the Endpoints and make a note of the URL for endpoint containing “UI2” website. It should look like https://contoso-traders-ui2$ENVNAME.azureedge.net
-4.	Launch the application. 
-5.	Test basic operations. 
-If you would like to add a custom domain, like contosotraders.com, you can purchase the domain and add to CDN profile. Please see documentation here - https://learn.microsoft.com/en-us/azure/cdn/cdn-map-content-to-custom-domain?tabs=azure-dns%2Cazure-portal%2Cazure-portal-cleanup 
+<h2>Test Application</h2>
 
-**Deploy Inventory Management PowerApps**
+1.	Navigate to Azure and look for CDN endpoints by searching for Content Delivery Network in search menu. Type Content delivery network in the search box and select Front Door and CDN Profiles.
+	
+      ![img30](images/test1.png)
+	
+3.	Select the CDN profile starting with name contoso-traders-cdn$ENVIRONMENTNAME 
+
+     ![img31](images/Test2.png)
+	
+5.	Review the Endpoints and make a note of the URL for endpoint containing “UI2” website. It should look like https://contoso-traders-ui2$ENVNAME.azureedge.net
+      
+      ![img32](images/Test3.png)
+      
+7.	Launch the application by clicking on the endpoint hostname url.
+		
+       ![img33](images/Test4.png)
+       
+8.     The web app will launched.
+
+      ![img34](images/test5.png)
+       
+9.	Test basic operations. 
+	
+If you would like to add a custom domain, like contosotraders.com, you can purchase the domain and add to CDN profile. Please see documentation [here](https://learn.microsoft.com/en-us/azure/cdn/cdn-map-content-to-custom-domain?tabs=azure-dns%2Cazure-portal%2Cazure-portal-cleanup).
+
+<h2>Deploy Inventory Management PowerApps</h2>
 
 If you are interested, you can follow these steps to deploy the inventory management application used by internal users for managing product pricing, stock etc. 
 It will be hosted using Power Apps and will use Power Automate & MS Teams to enable a full inventory management and approval workflow.
 Please follow the instructions here:
 
-https://github.com/microsoft/ContosoTraders/blob/main/docs/Inventory-power-app-deployment-guide.md
+[Inventory Management](https://github.com/microsoft/ContosoTraders/blob/main/docs/Inventory-power-app-deployment-guide.md)
+		
+
+
+<h2>Try Out Demo Scripts</h2>
+			
+
+As further learning, you can try running through some of the demo scripts listed below which’d help in understanding the Azure Cloud Native Technologies.
+
+| Scenario                                  | Level                                                                                                                                                                                       |
+  | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | Cloud Native App Architecture Walkthrough | [Overview](./demo-scripts/cloud-native-app-architecture/overview.md) \| [Technical Walkthrough](./demo-scripts/cloud-native-app-architecture/technical-walkthrough.md)                      |
+  | Autoscaling Cloud Native Apps in Azure    | [Overview](./demo-scripts/autoscaling-cloud-native-apps-azure/overview.md) \| [Technical Walkthrough](./demo-scripts/autoscaling-cloud-native-apps-azure/technical-walkthrough.md)          |
+  | DevSecOps Journey with GitHub + Azure     | [Overview](./demo-scripts/devsecops/overview.md) \| [Technical Walkthrough](./demo-scripts/devsecops/technical-walkthrough.md)                                                              |
+  | Low Code App Development Power Platform   | [Overview](./demo-scripts/low-code-development/overview.md) \| [Technical Walkthrough](./demo-scripts/low-code-development/technical-walkthrough.md) |
+  | Intelligent Apps with Azure AI Services   | [Overview](./demo-scripts/intelligent-apps-with-azure-ai-services/overview.md) \| [Technical Walkthrough](./demo-scripts/intelligent-apps-with-azure-ai-services/technical-walkthrough.md)  |
 			
 
 
-**Try Out Demo Scripts**
-			
-
-As further learning, you can try running through some of the demo scripts listed below which’d help in understanding the Azure Cloud Native Technologies. 
-
-| Technologies  | Link                                                                                                                                                                                                            |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| For Auto scaling CLoud native Apps          | https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/autoscaling-cloud-native-apps-azure         |
-| Cloud native app architecture    	      | https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/cloud-native-app-architecture               |
-| Devsecops                                   | https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/devsecops                                   |
-| Intelligent App with AI services	      | https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/intelligent-apps-with-azure-ai-services     |
-| Low COde Deevlopment                        | https://github.com/microsoft/ContosoTraders/tree/main/demo-scripts/low-code-development                        |
-			
-
-
-**Common Errors & Troubleshooting**
+<h2>Common Errors & Troubleshooting</h2>
 	
 This includes some of the common problems you may during deployment and approach to resolve them. 
 
 1.	AI Terms and services
-2.	Lack of permissions
-3.	Environment name having not allowed characters
-4.	Subscription quota
-5.	Incorrect secrets format
 
-**Known Issues**
+	 **When creating Cognitive service please the allowed locations in your policy. If it resist you can include the location where you want to deploy cognitive service in the allowed policy or you can remove the policy.** 
+	 
+3.	Lack of permissions
+	
+       **Check the role of the service prinipal is owner. If its not shown please provide the owner role to the service principal.**
+	
+5.	Environment name having not allowed characters
+	
+	**When you are creating secret for Environment please add combination of alphanumeric characters without any symbols. Maximum characters allowed is 6 and minimum characters allowed is 3. Keep small case letters**
+	
+8.	Subscription quota
+	
+	**For the details of subscription quota please click [here](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits).**
+
+10.	Incorrect secrets format
+
+	**Check the github secret formats given as per the directions**
+
+<h3>Known Issues</h3>
 	
 When you run the workflow, it shows following warnings.
 	
-Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net" [https://aka.ms/bicep/linter/no-hardcoded-env-urls]
+Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).
 
-Warning: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net" [https://aka.ms/bicep/linter/no-hardcoded-env-urls]
+Warning: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).
 
 
 This does not block the deployment and workflow will run successfully. It does not have any other impact. It is being tracked here <Link to Issue>
 
 
 
-**Questions & Support**
+<h3>Questions & Support</h3>
+	
 This project is community supported. Please raise issue via GitHub incase of issues/questions. 
 
-**Cleanup**
+<h3>Cleanup</h3>
 
 Once you are done deploying, testing, exploring, you can delete the provisioned RGs to prevent incurring additional cost. 
 Delete the following resource groups.
