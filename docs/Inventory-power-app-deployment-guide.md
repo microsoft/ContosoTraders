@@ -89,7 +89,7 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
     
 <h2>Deployment of Inventory Management System App</h2>
 
-Before deploying in github go to docs folder, then click on PowerApp folder, you can see a zip file named InventoryManagementApp.zip. Please download this file. It is an Export Package file of Inventory Management System Canvas App. You are going to import this zip file into your power platform environment.
+   Before deploying, in github go to docs folder, then click on PowerApp folder, you can see a zip file named InventoryManagementApp.zip. Please download this file. It  is an Export Package file of Inventory Management System Canvas App. You are going to import this zip file into your power platform environment.
 
 1. After login into the Power platform environment go to Power platform admin center and click on Apps and then click on Import Canvas App.
   
@@ -144,12 +144,16 @@ Before deploying in github go to docs folder, then click on PowerApp folder, you
  
  You have successfully imported the Inventory Management System App.
  
- <h3>Testing the App</h3>
+ <h2>Testing the App</h2>
    
- To execute the Inventory Management System App Go to this [link](https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/low-code-development/overview.md) 
+ To execute the Inventory Management System App 
  
+  1. Go to Power Platform Admin center and select Apps.
+  2. You can see the imported Power App there and click on it to run it.
  
-    
+  For further proceedings please click this [link](https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/low-code-development/overview.md) to open the "LOW CODE DEVELOPMENT – HIGH LEVEL SCENARIO WALKTHROUGH" guide. You can use this guide to test the app.
+ 
+     
 <h3>Common errors</h3>
   
 1. Authentication failed
