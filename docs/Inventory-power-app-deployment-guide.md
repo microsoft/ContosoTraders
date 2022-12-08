@@ -19,7 +19,7 @@ You will need the following before we start the deploymment
 
 3. 3 Microsoft 365 license with ability to use SharePoint lists. If you dont have please, please add a license of Microsoft 365 before you begin click [here](https://learn.microsoft.com/en-us/microsoft-365/commerce/licenses/buy-licenses?view=o365-worldwide).
 
-4. Optionally, 3 Microsoft Teams Explorary, Power Apps for Microsoft 365 and Power Automate for Microsoft 365 licenses if not included in your M365 license already. If you dont have please add a license of Microsoft Teams explorary before you begin click [here](https://learn.microsoft.com/en-us/microsoftteams/teams-exploratory).
+4. Optionally, 3 Microsoft Teams Exploratory, Power Apps for Microsoft 365 and Power Automate for Microsoft 365 licenses if not included in your M365 license already. If you dont have please add a license of Microsoft Teams exploratory before you begin click [here](https://learn.microsoft.com/en-us/microsoftteams/teams-exploratory).
 
  
 <h2>Prepare for Deployment</h2>
