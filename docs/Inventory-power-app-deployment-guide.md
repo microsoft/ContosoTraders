@@ -1,87 +1,95 @@
-<h1>Setup Instructions for Power Platform App- Inventory Management System</h1>
+<h1>Deployment Guide -  Inventory Management System with Microsoft Power Platform</h1>
 
-This deployment guide is designed to deploy a Power app into your Power platform environment. Inventory Management App can be used for updating the product details in a fully automated way. This app created by using workflows and Adaptive card. You can export and import canvas apps by using packages. This feature allows you to export an app from one environment and import it to another. Export and import packages have the file format .zip. Here you are going to import a Canvas App named Inventory Management System into your Power platform environment and will execute some update operations.
+This deployment guide is designed to help you deploy the Inventory Management System for Contoso Traders, built using Microsoft Power Platform. Inventory Management Systems is an internal application designed to manage product catalogue, stock, price etc for products listed on Contoso Traders. 
 
-<h3>Pre-Requisite</h3>
+ Microsoft Power Platform features, including Power Apps & Power Autoamte is used for developing and hosting this application, using Power Platforn's low-code/no-code approach towards application development. 
+
+ Microsoft Power Apps is a low-code platform that allows users to easily create custom business applications for various scenarios. Power Automate is a tool that enables users to automate business processes and workflows. Together, these tools can be used to streamline and improve various business operations, such as data entry, data management, and communication between different business systems. 
+ 
+ In Contoso Traders, we are usinge Power Apps to create a custom app for tracking and updating products inventory and Power Automate to automatically send notifications, approval workflow for change and update the products catalogue database once changes are approved. Power Automate integrates with Microsoft Teams for notifications and approval process. 
+
+You will be using a pre-created Package to import the Power App & Power Automate configuration in your environment. 
+
+<h2>Pre-Requisite</h2>
 You will need the following before we start the deploymment
 
 1. You need to have ContosoTraders App deployed in your Azure Subscription. If you didnt deployed it, please refer the [link](../docs/App-Deployment-Guide.md).
-2. A Microsoft 365 license. If you dont have please, please add a license of Microsoft 365 before you begin click [here](https://learn.microsoft.com/en-us/microsoft-365/commerce/licenses/buy-licenses?view=o365-worldwide).
-3. A Microsoft Teams Explorary License. If you dont have please add a license of Microsoft Teams explorary before you begin click [here](https://learn.microsoft.com/en-us/microsoftteams/teams-exploratory).
 
-<h2>Prepairing your user accounts in Azure Portal</h2>
+2. An account with global administrator rights on the M365 tenant. 
 
-In Azure portal you are going to add a user with licenses PowerApps, Power Automate. Please follow below steps.
-  
-1. Login into Azure Portal and go to Azure Active directory.
-      
-  ![pimg1](images/papp1.png)
-      
-2. Select User on the Azure Active Directory.
-   
-  ![pimg2](images/papp2.png)
-   
-3. Click on +New user to add a new user and select create new user.
-   
-  ![pimg3](images/papp3.png)
-   
-4. You will navigate to New user page. Enter the user name, Name and password you can choose. After that scroll down and under Groups select a group (its not mandatory) and Roles section keep user as it is, you may add other details like usage location, job Info. After that click Create.
-    
-5. Once the user added, please click on the user name which you created just now from the Active Directory Users Page.
+3. 3 Microsoft 365 license with ability to use SharePoint lists. If you dont have please, please add a license of Microsoft 365 before you begin click [here](https://learn.microsoft.com/en-us/microsoft-365/commerce/licenses/buy-licenses?view=o365-worldwide).
 
-7. Click on Assigned Roles.
-   
-  ![pimg4](images/papp5.png)
-   
-8. Select +Add Assignments, a side screen will open with Display Roles, search power platform administrator and select the Power platform administrator role from the list and click Add.
+4. Optionally, 3 Microsoft Teams Explorary, Power Apps for Microsoft 365 and Power Automate for Microsoft 365 licenses if not included in your M365 license already. If you dont have please add a license of Microsoft Teams explorary before you begin click [here](https://learn.microsoft.com/en-us/microsoftteams/teams-exploratory).
 
-  ![pimg6](images/papp7.png)
+ 
+<h2>Prepare for Deployment</h2>
 
-9. Add a global administrator role to the user by using above steps. Now the user is ready to access the power platform
+<h3>Prepairing your user accounts</h3>
 
-10. Add another user into the Active directory. 
+For the purpose of demonstration, you should have following users in your M365 tenant, licensed with M365 licenses specified in pre-requisites. 
 
-11. Login into Microsoft 365 with global administrator user account and add the license of Microsoft 365. To add the license please check the [link](https://learn.microsoft.com/en-us/microsoft-365/commerce/licenses/buy-licenses?view=o365-worldwide).
+1. Inventory Management Executive, who will be using the PowerApp to create/update the products inventory. 
 
-12. Add Microsoft Teams exploratory license to the another user. To add the license please check this [link](https://learn.microsoft.com/en-us/microsoftteams/teams-exploratory).
+2. Inventory Managerm, who will reviewing the inventory and approve changes. 
 
-<h2>Configuring Power platform environment</h2>
-  
-1. Login into power platform environment by clicking on this [link](https://powerapps.microsoft.com/en-us/) with the same user account you have created.
-      
-   If it ask for Location and contact information please enter the detials and click submit.
-     
-  ![pimg7](images/papp8.png)
-      
-2. Add a sharepoint list     
-  
-   1. Create a Team Site
-   2. Create a Sharepoint list with following columns
+
+You can crate new user accounts or use existing accounts. Please follow [this documentation](https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/add-users?view=o365-worldwide). to learn more about creating users and assigning licenses. 
+
+<h3>Create a SharePoint List</h3>
+
+Microsoft SharePoint is a web-based collaboration and document management platform. One of the key features of SharePoint is the ability to create and manage lists of data. 
+
+In Power Apps, SharePoint lists can be easily integrated and used as a data source for creating custom business applications. This allows users to access and manage their SharePoint data within the context of a custom app, making it easier to work with and analyze that data. 
+
+Contoso Traders leverages SharePoint list to store the data used by Inventory Management Power App, such as product price.
+
+Let's create a SharePoint list. 
+
+1. Go to office.com, and sign in to your Global Administrator account. 
+
+2. In the upper left corner of the window, select the app launcher  App Launcher > All apps > SharePoint  
+
+3. Select + Create site on the SharePoint start page.
+
+SEENA-ADD-SCREENSHOT
+
+4. Click on New > List
+
+SEENA-ADD-SCREENSHOT
+
+5. Create a SharePoint list with following columns. 
       1. Title (default column)
       2. Id(Number Type) 
       3. Name(Single Line Text type)
       4. ImageName(Single Line Text Type)
       5. Price(Number with 3 decimal places)
+
+
+<h3>Prepare your Power Platform Environment</h3>
+  
+1. Login into power platform environment by clicking on this [link](https://powerapps.microsoft.com/en-us/) with your Global Administrator account.
       
-    **Note: This list will store the details of the Product update, which the user entered through the Inventory Management app.**
+   If it asks for Location and contact information please enter the details and click submit.
+     
+  ![pimg7](images/papp8.png)
+      
     
-3. Add the connection in your Dataverse
-   1. Go to Powerplatform admin center
-   2. Click down arrow of Dataverse, then select Connections, then click on +New connection.
+3. Add the connection to SharePoint list in your Dataverse
+   1. Navigate to Dataverse <SEENA_UPDATE_THIS_PROPERLY>
+   2. Select Connections and  click on +New connection.
    
    ![simg1](images/share2.png)
    
-   4. From the list of new connection select Sharepoint and Select Connect directly (cloud services) and click Create.
+   4. From the list of new connections, select Sharepoint and Select Connect directly (cloud services) and click Create.
     
    ![simg2](images/share3.png)
     
-   Your sharepoint list connection is available in your Dataverse.   
+   Your sharepoint list connection is now available in your Dataverse.   
     
   
-4. Create an Azure SQL database connection string in the dataverse section of the power platform environment and validate it.
-  
-   1. Go to Powerplatform admin center
-   2. Click down arrow of Dataverse, then select Connections, then click on +New connection.
+4. Create an Azure SQL database connection in in the dataverse
+   1. Navigate to Dataverse <SEENA_UPDATE_THIS_PROPERLY>
+   2. Select Connections, then click on +New connection.
    
    ![simg3](images/share2.png)
    
@@ -90,38 +98,42 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
    
    ![simg4](images/share5.png)
    
-   7. Please provide the SQL Server Name. (You can copy the server name from the azure portal where you deployed the web app)
-   
-      1. You can go to SQL Databases in Azure Portal
-      2. Select productsdb database fromt the list.
-      3. In the over view section you can see the server name on the top right corner.
+   7. Please provide the SQL Server Name. (You can get the server name from the azure portal where you have deployed the Contoso Trader. It'd start with "productsdb...."
       
    6. Add database name productsdb
    7. Add Username localadmin
-   8. Add password (you have created SQL_PASSWORD in github secrets for the execution of workflows), then click Create.
+   8. Add SQL Password.  (You created a new SQL_PASSWORD in GitHub secrets while deploying the Contoso Traders Application)
+   SEENA-ADD-SCREENSHOT
+
+   9. Review all details and Click Create
+
+SEENA-ADD-SCREENSHOT
     
-    Now you have a dataverse connection of your Azure SQL Database.
-    
+Your Azure SQL Connection is now available in Dataverse. 
+
 <h2>Deployment of Inventory Management System App</h2>
 
-   Before deploying, please click [here](../docs/PowerApp) see a zip file named InventoryManagementApp.zip. Please download this file. It  is an Export Package file of Inventory Management System Canvas App. You are going to import this zip file into your power platform environment.
+   Now, we will need to import the Power App package to setup the Power Apps & Power Automate. Please download the zip file named InventoryManagementApp.zip [here](../src/InventoryManagementApp.zip)
+   
 
-1. After login into the Power platform environment go to Power platform admin center and click on Apps and then click on Import Canvas App.
+1. Login to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/) with your Global Administrator account. 
+
+2. Navigate to Apps and then click on Import Canvas App. Select the recently downloaded zip file. 
   
  ![dimg1](images/depap1.png)
   
-2. Power PLatform is importing the Inventory Management App. It will take hardly 2-3 minutes.
+2. Power Platform is importing the Inventory Management App. It will take about 2-3 minutes.
   
  ![dmig2](images/depap2.png)
   
-3. After completing the Import Canvas App, you will reach into import package details pane. Please go through the details.
+3. After completing the Import Canvas App, you will get to import package details pane. Take a moment to look at the details.
 
  ![dimg3](images/depap3.png)
    
  ![dimg4](images/depap4.png)
 
    
-4. Go to Review Package COntent section and select Inventory Management App. A side screen will open please select creat new and click Save.
+4. Go to Review Package Content section and select Inventory Management App. A side screen will open please select create new and click Save.
  
  ![dimg9](images/depap9.png)
 
@@ -129,11 +141,11 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
    
  ![dimg6](images/depap5.png)
 
-6. Go to the Related resources select Microsoft Teams Connection. A side screen will open with a MIcrosoft Teams user connection whiich you already configured in the dataverse. Please click Save.
+6. Go to the Related resources select Microsoft Teams Connection. A side screen will open with a Microsoft Teams user connection which you already configured in the dataverse. Please click Save.
    
  ![dimg7](images/depap7.png)
    
-7. Go to the Related Resources Select Workflow. A side screen will open please select creat new and click Save.
+7. Go to the Related Resources Select Workflow. A side screen will open please select create new and click Save.
 
  ![dimg9](images/depap10.png)
 
@@ -141,11 +153,11 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
 
  ![dimg8](images/depap11.png)
 
-9. It wiil take 2-3 minutes to complete the Import process. After completing the Import you can see a message shows all package rsources were successfully imported.
+9. It wiil take 2-3 minutes to complete the Import process. After completing the Import you will see a message showing that all package rsources were successfully imported.
 
  ![dimg9](images/depap12.png)
    
-10. Please click on the OPen App link from the successful message.
+10. Please click on the open App link from the successful message.
   
  ![dimg10](images/depap13.png)
   
@@ -153,7 +165,7 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
 
  ![dimg11](images/depap14.png)
   
-12. Go to PowerPlatform admin center, select Apps and you can see the imported Inventory Management System Canvas App is there.
+12. Go to Power Platform admin center, select Apps and you can see the imported Inventory Management System Canvas App is now available.
    
  ![dimg12](images/depap15.png)
  
@@ -164,20 +176,25 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
  To execute the Inventory Management System App 
  
   1. Go to Power Platform Admin center and select Apps.
-  2. You can see the imported Power App there and click on it to run it.
+
+  2. Click on Inventory Management app to start the applicaiton. 
+
+  3. You should now be able to see the app and make changes to your products. 
+
+  <SEENA ADD SCREENSHOT>
  
-  For further proceedings please click this [link](../demo-scripts/low-code-development/overview.md) to open the "LOW CODE DEVELOPMENT – HIGH LEVEL SCENARIO WALKTHROUGH" guide. You can use this guide to test the app.
+  For further proceedings please check out the [overview](../demo-scripts/low-code-development/overview.md) this [technical walkthrogh](../demo-scripts/low-code-development/technical-walkthrough.md) to try out the application end to end and review the deployment. 
  
      
-<h3>Common errors</h3>
+<h2>Common errors</h2>
   
 1. Authentication failed
   
-   Check the users having proper permissions assigned. 
-     
+   Validate the users and licenses pre-requisites are met. 
+
 2. Connection string not listed
    
-   Create the connection string in the Dataverse section of the Power PLatform admin center.
+   Create the connection string in the Dataverse section of the Power Platform admin center.
      
 3. Error on connecting the Azure SQL database.
   
