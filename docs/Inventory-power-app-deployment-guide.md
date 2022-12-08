@@ -3,13 +3,11 @@
 This deployment guide is designed to deploy a Power app into your Power platform environment. Inventory Management App can be used for updating the product details in a fully automated way. This app created by using workflows and Adaptive card. You can export and import canvas apps by using packages. This feature allows you to export an app from one environment and import it to another. Export and import packages have the file format .zip. Here you are going to import a Canvas App named Inventory Management System into your Power platform environment and will execute some update operations.
 
 <h3>Pre-Requisite</h3>
-You will the following before we start the deploymment
+You will need the following before we start the deploymment
 
-1. Two users need to be created and one user having Global administrator role.
-
-3. Create Sharepoint list to store the Product update details.
-
-5. Add dataverse connections for Sharepoint list and Azure SQLDatabase.
+1. You need to have ContosoTraders App deployed in your Azure Subscription.
+2. A Microsoft 365 license. If you dont have please, please add a license of Microsoft 365 before you begin click [here](https://learn.microsoft.com/en-us/microsoft-365/commerce/licenses/buy-licenses?view=o365-worldwide).
+3. A Microsoft Teams Explorary License. If you dont have please add a license of Microsoft Teams explorary before you begin click [here](https://learn.microsoft.com/en-us/microsoftteams/teams-exploratory).
 
 <h2>Prepairing your user accounts in Azure Portal</h2>
 
