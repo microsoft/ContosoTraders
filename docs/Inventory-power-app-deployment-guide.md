@@ -33,7 +33,7 @@ For the purpose of demonstration, you should have following users in your M365 t
 2. Inventory Managerm, who will reviewing the inventory and approve changes. 
 
 
-You can crate new user accounts or use existing accounts. Please follow [this documentation](https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/add-users?view=o365-worldwide). to learn more about creating users and assigning licenses. 
+You can create new user accounts or use existing accounts. Please follow [this documentation](https://learn.microsoft.com/en-us/microsoft-365/admin/add-users/add-users?view=o365-worldwide). to learn more about creating users and assigning licenses. 
 
 <h3>Create a SharePoint List</h3>
 
@@ -51,13 +51,25 @@ Let's create a SharePoint list.
 
 3. Select + Create site on the SharePoint start page.
 
-SEENA-ADD-SCREENSHOT
+  ![img](images/list1.png)
 
-4. Click on New > List
+4. Select Teamsite.
 
-SEENA-ADD-SCREENSHOT
+  ![img](images/list2.png)
+  
+5. Enter the Site name, from the privacy settings dropdown list please select public- anyone can access this site and click Next.
 
-5. Create a SharePoint list with following columns. 
+  ![img](images/list4.png)
+  
+6. Please click finish, no need of adding members there.
+
+  ![img](images/list5.png)
+
+7. Click on New > List
+
+  ![img](images/list6.png)
+
+8. Create a SharePoint list with following columns. 
       1. Title (default column)
       2. Id(Number Type) 
       3. Name(Single Line Text type)
@@ -75,8 +87,9 @@ SEENA-ADD-SCREENSHOT
       
     
 3. Add the connection to SharePoint list in your Dataverse
-   1. Navigate to Dataverse <SEENA_UPDATE_THIS_PROPERLY>
-   2. Select Connections and  click on +New connection.
+   1. Go to the Power platform admin center
+   2. Click the down arrow right to the Dataverse 
+   3. Select Connections and  click on +New connection.
    
    ![simg1](images/share2.png)
    
@@ -88,7 +101,8 @@ SEENA-ADD-SCREENSHOT
     
   
 4. Create an Azure SQL database connection in in the dataverse
-   1. Navigate to Dataverse <SEENA_UPDATE_THIS_PROPERLY>
+   1. Go to the Power platform admin center
+   2. Click the down arrow right to the Dataverse 
    2. Select Connections, then click on +New connection.
    
    ![simg3](images/share2.png)
@@ -103,11 +117,12 @@ SEENA-ADD-SCREENSHOT
    6. Add database name productsdb
    7. Add Username localadmin
    8. Add SQL Password.  (You created a new SQL_PASSWORD in GitHub secrets while deploying the Contoso Traders Application)
-   SEENA-ADD-SCREENSHOT
+   
+    ![img](images/sql1.png)
 
    9. Review all details and Click Create
 
-SEENA-ADD-SCREENSHOT
+    ![img](images/sql2.png)
     
 Your Azure SQL Connection is now available in Dataverse. 
 
@@ -181,7 +196,7 @@ Your Azure SQL Connection is now available in Dataverse.
 
   3. You should now be able to see the app and make changes to your products. 
 
-  <SEENA ADD SCREENSHOT>
+    ![img](images/sql3.png)
  
   For further proceedings please check out the [overview](../demo-scripts/low-code-development/overview.md) this [technical walkthrogh](../demo-scripts/low-code-development/technical-walkthrough.md) to try out the application end to end and review the deployment. 
  
