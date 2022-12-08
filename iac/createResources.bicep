@@ -81,7 +81,6 @@ var cartsApiAcaContainerDetailsName = '${prefixHyphenated}-carts${environment}'
 var cartsApiSettingNameKeyVaultEndpoint = 'KeyVaultEndpoint'
 var cartsApiSettingNameManagedIdentityClientId = 'ManagedIdentityClientId'
 
-
 // storage account (product images)
 var productImagesStgAccName = '${prefix}img${environment}'
 var productImagesProductDetailsContainerName = 'product-details'
@@ -122,6 +121,14 @@ var appInsightsName = '${prefixHyphenated}-ai${environment}'
 
 // portal dashboard
 var portalDashboardName = '${prefixHyphenated}-dashboard${environment}'
+
+// aks cluster vnet
+var aksClusterVnetName = '${prefixHyphenated}-aks-vnet${environment}'
+var aksClusterVnetAddressSpace = '10.0.0.0/8'
+var aksClusterVnetSubnetName = 'aks-subnet'
+var aksClusterVnetSubnetAddressPrefix = '10.240.0.0/16'
+var aksClusterAciVnetSubnetName = 'aci-subnet'
+var aksClusterAciVnetSubnetAddressPrefix = '10.241.0.0/16'
 
 // aks cluster
 var aksClusterName = '${prefixHyphenated}-aks${environment}'
@@ -1242,6 +1249,33 @@ resource dashboard 'Microsoft.Portal/dashboards@2020-09-01-preview' = {
 // aks cluster
 //
 
+resource aks_vnet 'Microsoft.Network/virtualNetworks@2021-08-01' = {
+  name: aksClusterVnetName
+  location: resourceLocation
+  tags: resourceTags
+  properties: {
+    addressSpace: {
+      addressPrefixes: [
+        aksClusterVnetAddressSpace
+      ]
+    }
+    subnets: [
+      {
+        name: aksClusterVnetSubnetName
+        properties: {
+          addressPrefix: aksClusterVnetSubnetAddressPrefix
+        }
+      }
+      {
+        name: aksClusterAciVnetSubnetName
+        properties: {
+          addressPrefix: aksClusterAciVnetSubnetAddressPrefix
+        }
+      }
+    ]
+  }
+}
+
 resource aks 'Microsoft.ContainerService/managedClusters@2022-09-02-preview' = {
   name: aksClusterName
   location: resourceLocation
@@ -1250,10 +1284,14 @@ resource aks 'Microsoft.ContainerService/managedClusters@2022-09-02-preview' = {
     type: 'SystemAssigned'
   }
   properties: {
+    networkProfile: {
+      networkPlugin: 'azure'
+    }
     dnsPrefix: aksClusterDnsPrefix
     nodeResourceGroup: aksClusterNodeResourceGroup
     agentPoolProfiles: [
       {
+        vnetSubnetID: aks_vnet.properties.subnets[0].id
         name: 'agentpool'
         osDiskSizeGB: 0 // Specifying 0 will apply the default disk size for that agentVMSize.
         count: 1
@@ -1277,6 +1315,12 @@ resource aks 'Microsoft.ContainerService/managedClusters@2022-09-02-preview' = {
         enabled: true
         config: {
           logAnalyticsWorkspaceResourceID: loganalyticsworkspace.id
+        }
+      }
+      aciConnectorLinux: {
+        enabled: true
+        config: {
+          subnetName: aks_vnet.properties.subnets[1].name
         }
       }
     }
