@@ -9,7 +9,7 @@ This will deploy all components defined in architecture  – [Architecture Diagr
 <html><h3>Pre-Requisites</h3></html>
 
 You will need following before we start with deployment. 
-1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin by clicking [here](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+1.	An Azure Subscription with Owner rights. If you don't have an Azure subscription, create a free account before you begin by clicking [here](https://azure.microsoft.com/free/).
 2.	A GitHub Account. You can create a free account [here](https://github.com/). 
 
 <h2>Preparing your Azure Subscription</h2>
@@ -211,7 +211,7 @@ Let’s get started.
 	![img21](images/workflow4.png)
 	
 **Note : Please note that the workflow provisions all resources through bicep templates, scripts etc. We’ve observed that in many cases, Azure subscription resource cache does not get updated fast enough before the next dependent step starts executing.
-If you feel workflow failure error due to missing Azure resources (Key vault, CDN, container apps etc, please re-run the failed jobs.** 
+If you find workflow failure error due to missing Azure resources (Key vault, CDN, container apps etc, please re-run the failed jobs.** 
 
 
 <h2>Validate & test the deployment</h2>
@@ -255,7 +255,7 @@ If you are interested, you can follow these steps to deploy the inventory manage
 It will be hosted using Power Apps and will use Power Automate & MS Teams to enable a full inventory management and approval workflow.
 Please follow the instructions here:
 
-[Inventory Management](https://github.com/microsoft/ContosoTraders/blob/main/docs/Inventory-power-app-deployment-guide.md)
+[Inventory Management](./Inventory-power-app-deployment-guide.md)
 		
 
 
@@ -278,9 +278,9 @@ As further learning, you can try running through some of the demo scripts listed
 	
 This includes some of the common problems you may during deployment and approach to resolve them. 
 
-1.	AI Terms and services
+1.	AI Terms and services:  
 
-	 **When creating Cognitive service please the allowed locations in your policy. If it resist you can include the location where you want to deploy cognitive service in the allowed policy or you can remove the policy.** 
+	 **If you see an error stating that "Responsible AI terms are not accepted for this subscription", deploy an Azure Cognitive Service resource manually in your subscription temporarily and re-run the jobs.** 
 	 
 3.	Lack of permissions
 	
@@ -290,32 +290,32 @@ This includes some of the common problems you may during deployment and approach
 	
 	**When you are creating secret for Environment please add combination of alphanumeric characters without any symbols. Maximum characters allowed is 6 and minimum characters allowed is 3. Keep small case letters**
 	
-8.	Subscription quota
+8.	Subscription quota: 
 	
-	**For the details of subscription quota please click [here](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits).**
+	**If you get an error related to subscription quota, you may need to raise quota requests in your subscription. For the details of subscription quota please click [here](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits).**
 
-10.	Incorrect secrets format
+10.	Can not find resources (Key Vault, CDN, Storage Account, etc. )
 
-	**Check the github secret formats given as per the directions**
-
+	**Note : Please note that the workflow provisions all resources through bicep templates, scripts etc. We’ve observed that in many cases, Azure subscription resource cache does not get updated fast enough before the next dependent step starts executing.
+	If you find workflow failure error due to missing Azure resources (Key vault, CDN, container apps etc, please re-run the failed jobs.**
 <h3>Known Issues</h3>
 	
 When you run the workflow, it shows following warnings.
 	
-Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).
+** Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).**
 
-Warning: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).
-
-
-This does not block the deployment and workflow will run successfully. It does not have any other impact. It is being tracked here <Link to Issue>
+**  Warning: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).** 
 
 
+** This does not block the deployment and workflow will run successfully. It does not have any other impact. It is being tracked here https://github.com/microsoft/ContosoTraders/issues/68 
 
-<h3>Questions & Support</h3>
+
+
+<h2>Questions & Support</h2>
 	
 This project is community supported. Please raise issue via GitHub incase of issues/questions. 
 
-<h3>Cleanup</h3>
+<h2>Cleanup</h2>
 
 Once you are done deploying, testing, exploring, you can delete the provisioned RGs to prevent incurring additional cost. 
 Delete the following resource groups.
