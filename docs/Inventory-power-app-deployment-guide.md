@@ -158,15 +158,15 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
   
 1. Authentication failed
   
-  **Check the users having proper permissions assigned.** 
+   Check the users having proper permissions assigned. 
      
 2. Connection string not listed
    
- **Create the connection string in the Dataverse section of the Power PLatform admin center.**
+   Create the connection string in the Dataverse section of the Power PLatform admin center.
      
 3. Error on connecting the Azure SQL database.
   
-  **Check the password given for the SQL database is taken from the github secrets SQL_PASSWORD configuration.**
+   Check the password given for the SQL database is taken from the github secrets SQL_PASSWORD configuration.
           
 <h3>Clean Up</h3>
 
