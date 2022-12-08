@@ -123,9 +123,17 @@ Before deploying in github go to docs folder, then click on PowerApp folder, you
 
    ![dimg9](images/depap12.png)
    
-  9. and validate the connection strings. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Then click on the import button.
-  10. It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
-  11. CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. 
+  9. Please click on the OPen App link from the successful message.
+  
+  ![dimg10](images/depap13.png)
+  
+  10. You will get Allow box to allow validated connections you have validated at the time of import process.
+
+  ![dimg11](images/depap14.png)
+  
+  12. and validate the connection strings. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Then click on the import button.
+  13. It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
+  14. CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. 
     
     
 **Common errors**
