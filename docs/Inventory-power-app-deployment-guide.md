@@ -51,7 +51,7 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
   
 1. Login into power platform environment by clicking on this [link](https://powerapps.microsoft.com/en-us/) with the same user account you have created.
       
-  If its ask for Location and contact information please enter the detials and click submit.
+   If it ask for Location and contact information please enter the detials and click submit.
      
   ![pimg7](images/papp8.png)
       
