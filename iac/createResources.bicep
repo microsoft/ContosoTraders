@@ -1259,7 +1259,7 @@ resource aks 'Microsoft.ContainerService/managedClusters@2022-09-02-preview' = {
       {
         name: 'agentpool'
         osDiskSizeGB: 0 // Specifying 0 will apply the default disk size for that agentVMSize.
-        count: 3
+        count: 1
         vmSize: 'standard_d2s_v3'
         osType: 'Linux'
         mode: 'System'
