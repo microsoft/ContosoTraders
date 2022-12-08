@@ -29,19 +29,16 @@ Walkthrough
 
        ![App1](images/App1.png)
        
-4.      After launching the app enter the credentials provided by cloudlabs and click on Login
-
-	![App2](images/App2.png)
-	
-5.      After click on Login you will enter into the Inventory Management Screen. Let us look at product and find out the product where we need to update the price. 
+    
+4.      After click on Login you will enter into the Inventory Management Screen. Let us look at product and find out the product where we need to update the price. 
 	
 	![App3](images/App3.png)
 
-6.	You will enter into Product List Screen and scroll it down or you can search by name in the search box, all the products you can see there and click on any product to see the details of it.	
+5.	You will enter into Product List Screen and scroll it down or you can search by name in the search box, all the products you can see there and click on any product to see the details of it.	
 
 	![App4](images/App4.png)
 	
-7. 	When you click on the first product to see the details, it will enter into the Product details screen. Let us update price from 90 to 100, as per the request from Finance teams
+6. 	When you click on the first product to see the details, it will enter into the Product details screen. Let us update price from 90 to 100, as per the request from Finance teams
 
 	![App5](images/App5.png)
 	
