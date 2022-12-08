@@ -4,7 +4,7 @@
 This deployment  guide is designed to help you deploy Contoso Traders application in your Azure environment. Contoso Trader is a micro-services-based application, leveraging various Azure services including Azure Kubernetes Service, App Services, Cosmos DB, SQL Database and many more. 
 While it’s possible to deploy overall solution using Azure Portal, CLI, PowerShell, ARM Templates, we will be using a combination of GitHub Actions and bicep templates to automate the provisioning of overall solution. 
 
-This will deploy all components defined in architecture  – [Architecture Diagram](../docs/architecture/contoso-traders-enhancements.drawio.png) 
+This will deploy all components defined in the Contoso Traders [architecture](../docs/architecture/contoso-traders-enhancements.drawio.png) 
 
 <html><h3>Pre-Requisites</h3></html>
 
@@ -87,16 +87,16 @@ It is recommended to create this temporary in a separate resource group, so that
 <h3>Project details Description</h3>
 
     1. Subscription		:Select one of your available Azure subscriptions.
-    2. Resource group	:Create new > Cognitive-Temp
+    2. Resource group	:Create new > Cognitive-Temp-RG
     3. Region		:The location of your cognitive service instance.
     4. Name			:A descriptive name for your cognitive services resource. For example, MyTempCognitiveServicesResource1.
     5. Pricing tier		:Free or Standard S0.
-    6. Scroll down and check the box for reviewing and acknowledging all the terms above.
+    6. Scroll down and check the box for reviewing and acknowledging Responsible AI terms. 
 	
 3. Click Review & Create
 4. After Validating click Create
 
-Once the provisioning is completed, you can delete the resource group “Cognitive-Temp” as terms are accepted for your subscription now. 
+Once the provisioning is completed, you can delete the resource group “Cognitive-Temp-RG” as terms are accepted for your subscription now. 
 
 <h2>Preparing your GitHub Account</h2>
 
@@ -220,7 +220,7 @@ Contoso Traders application is now ready in your subscription. Let us review and
 
 <h3>Review Provisioned Azure Resources</h3>
 
-Please refer to the architecture demo script and technical walkthrough to review the provisioned resources.  PLease check the link [here](../demo-scripts/cloud-native-app-architecture/technical-walkthrough.md).
+Please refer to the architecture walkthrough demo script and technical walkthrough to review the provisioned resources. Please check [here](../demo-scripts/cloud-native-app-architecture/technical-walkthrough.md).
 
 
 <h2>Test Application</h2>
@@ -245,7 +245,7 @@ Please refer to the architecture demo script and technical walkthrough to review
 
       ![img34](images/test5.png)
        
-9.	Test basic operations. 
+9.	Test the website by navigating through various pages, search by image etc. 
 	
 If you would like to add a custom domain, like contosotraders.com, you can purchase the domain and add to CDN profile. Please see documentation [here](https://learn.microsoft.com/en-us/azure/cdn/cdn-map-content-to-custom-domain?tabs=azure-dns%2Cazure-portal%2Cazure-portal-cleanup).
 
@@ -253,9 +253,7 @@ If you would like to add a custom domain, like contosotraders.com, you can purch
 
 If you are interested, you can follow these steps to deploy the inventory management application used by internal users for managing product pricing, stock etc. 
 It will be hosted using Power Apps and will use Power Automate & MS Teams to enable a full inventory management and approval workflow.
-Please follow the instructions here:
-
-[Inventory Management](./Inventory-power-app-deployment-guide.md)
+Please follow the instructions here: [Deploy Inventory Management Power App](./Inventory-power-app-deployment-guide.md)
 		
 
 
@@ -264,7 +262,7 @@ Please follow the instructions here:
 
 As further learning, you can try running through some of the demo scripts listed below which’d help in understanding the Azure Cloud Native Technologies.
 
-## Demo Scripts
+
 
   | Scenario                                  | Level                                                                                                                                                                                       |
   | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -298,18 +296,19 @@ This includes some of the common problems you may during deployment and approach
 
 10.	Can not find resources (Key Vault, CDN, Storage Account, etc. )
 
-	**Note : Please note that the workflow provisions all resources through bicep templates, scripts etc. We’ve observed that in many cases, Azure subscription resource cache does not get updated fast enough before the next dependent step starts executing.
+	**Please note that the workflow provisions all resources through bicep templates, scripts etc. We’ve observed that in many cases, Azure subscription resource cache does not get updated fast enough before the next dependent step starts executing.
 	If you find workflow failure error due to missing Azure resources (Key vault, CDN, container apps etc, please re-run the failed jobs.**
+	
 <h3>Known Issues</h3>
 	
 When you run the workflow, it shows following warnings.
 	
-** Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).**
+**Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". **
 
-**  Warning: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).** 
+**Warning: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". **
 
 
-** This does not block the deployment and workflow will run successfully. It does not have any other impact. It is being tracked here https://github.com/microsoft/ContosoTraders/issues/68 
+This does not block the deployment and workflow will run successfully. It does not have any other impact. It is being tracked here https://github.com/microsoft/ContosoTraders/issues/68 
 
 
 
