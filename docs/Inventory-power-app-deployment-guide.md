@@ -58,24 +58,41 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
 2. Add a sharepoint list     
   
    1. Create a Team Site
-   2. Create a Sharepoint list having columns Title (default column), Id(Number Type), Name(Single Line Text type), ImageName(Single Line Text Type), Price(Number with 3 decimal places)
+   2. Create a Sharepoint list with following columns
+      1. Title (default column)
+      2. Id(Number Type) 
+      3. Name(Single Line Text type)
+      4. ImageName(Single Line Text Type)
+      5. Price(Number with 3 decimal places)
       
+    **Note: This list will store the details of the Product update, which the user entered through the inventory app.**
+    
 3. Add the connection in your Dataverse
    1. Go to Powerplatform admin center
    2. Click down arrow of Dataverse, then select Connections, then click on +New connection.
-   3. From the list of new connection select Sharepoint and Select Connect directly (cloud services) and click Create.
-         
+   
+   ![simg1](images/share2.png)
+   
+   4. From the list of new connection select Sharepoint and Select Connect directly (cloud services) and click Create.
+    
+   ![simg2](images/share3.png)
+    
    Your sharepoint list connection is available in your Dataverse.   
-  
-   **Note: This list will store the details of the Product update, the business entered through the inventory app.**
+    
   
 4. Create an Azure SQL database connection string in the dataverse section of the power platform environment and validate it.
   
    1. Go to Powerplatform admin center
    2. Click down arrow of Dataverse, then select Connections, then click on +New connection.
-   3. From the list of connections select SQL Server.
-   4. On the Authentication type select SQL Server Authentication.
-   5. Provide the SQL Server Name. (You can copy the server name from the azure portal where you deployed the web app)
+   
+   ![simg3](images/share2.png)
+   
+   4. From the list of connections select SQL Server.
+   5. On the Authentication type select SQL Server Authentication.
+   
+   ![simg4](images/share5.png)
+   
+   7. Please provide the SQL Server Name. (You can copy the server name from the azure portal where you deployed the web app)
    
       1. You can go to SQL Databases in Azure Portal
       2. Select productsdb database fromt the list.
