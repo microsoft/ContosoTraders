@@ -63,7 +63,7 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
       4. ImageName(Single Line Text Type)
       5. Price(Number with 3 decimal places)
       
-    **Note: This list will store the details of the Product update, which the user entered through the inventory app.**
+    **Note: This list will store the details of the Product update, which the user entered through the Inventory Management app.**
     
 3. Add the connection in your Dataverse
    1. Go to Powerplatform admin center
