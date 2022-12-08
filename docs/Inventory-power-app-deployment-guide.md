@@ -82,13 +82,27 @@ Now the user is ready to access the power platform
     
 **Deployment**
 
+Before deploying in github go to docs folder, then click on PowerApp folder, you can see a zip file named InventoryManagementSystemApp_20221201093604.zip. Please download this file. It is an Export Package file of Inventory Management System Canvas App.
+
   1. After login into the Power platform environment go to Power platform admin center and click on Apps and then click on Import Canvas App.
   
   ![dimg1](images/depap1.png)
   
-  3. After clicking on Import Canvas App, you will reach into import package details pane and validate the connection strings. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Then click on the import button.
-  4. It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
-  5. CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. 
+  3. Power PLatform is importing the Inventory Management App. It will take hardly 2-3 minutes.
+  
+  ![dmig2](images/depap2.png)
+  
+  5. After completing the Import Canvas App, you will reach into import package details pane. Go through the details.
+
+   ![dimg3](images/depap3.png)
+   
+   ![dimg4](images/depap4.png)
+
+   
+  5. 
+  6. and validate the connection strings. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Then click on the import button.
+  7. It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
+  8. CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. 
     
     
 **Common errors**
