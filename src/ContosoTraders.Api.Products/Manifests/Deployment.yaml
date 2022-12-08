@@ -22,7 +22,7 @@ spec:
       containers:
         - name: contoso-traders-products
           #Note: The '{ENVIRONMENT}' token will be substituted with the value of the ENVIRONMENT github secret by github workflow.
-          image: contosotradersacrtest.azurecr.io/contosotradersapiproducts:latest
+          image: contosotradersacr{ENVIRONMENT}.azurecr.io/contosotradersapiproducts:latest
           env:
             - name: KeyVaultEndpoint
               valueFrom:
