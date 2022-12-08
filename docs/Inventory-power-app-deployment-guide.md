@@ -31,7 +31,7 @@ This deployment guide is designed to deploy a Power app into your Power platform
    
 8. Select +Add Assignments, a side screen will open with Display Roles, search power platform administrator and select the Power platform administrator role from the list and click Add.
 
-  ![pimg6](images/papp7.png)
+   ![pimg6](images/papp7.png)
 
 9. Add a global administrator role to the user by using above steps. Now the user is ready to access the power platform
 
@@ -47,12 +47,12 @@ This deployment guide is designed to deploy a Power app into your Power platform
       
   If its ask for Location and contact information please enter the detials and click submit.
      
-  ![pimg7](images/papp8.png)
+   ![pimg7](images/papp8.png)
       
 2. Add a sharepoint list     
   
-  1. Create a Team Site
-  2. Create a Sharepoint list having columns Title (default column), Id(Number Type), Name(Single Line Text type), ImageName(Single Line Text Type), Price(Number with 3 decimal places)
+   1. Create a Team Site
+   2. Create a Sharepoint list having columns Title (default column), Id(Number Type), Name(Single Line Text type), ImageName(Single Line Text Type), Price(Number with 3 decimal places)
       
 3. Add the connection in your Dataverse
    1. Go to Powerplatform admin center
@@ -87,11 +87,11 @@ Before deploying in github go to docs folder, then click on PowerApp folder, you
 
  1. After login into the Power platform environment go to Power platform admin center and click on Apps and then click on Import Canvas App.
   
-  ![dimg1](images/depap1.png)
+   ![dimg1](images/depap1.png)
   
  2. Power PLatform is importing the Inventory Management App. It will take hardly 2-3 minutes.
   
-  ![dmig2](images/depap2.png)
+   ![dmig2](images/depap2.png)
   
  3. After completing the Import Canvas App, you will reach into import package details pane. Go through the details.
 
@@ -146,11 +146,17 @@ Before deploying in github go to docs folder, then click on PowerApp folder, you
     
 <h3>Common errors</h3>
   
-  1. Authentication failed
-  2. Connection string not listed
+1. Authentication failed
+  
+  **Check the users having proper permissions assigned.** 
+     
+2. Connection string not listed
+   
+ **Create the connection string in the Dataverse section of the Power PLatform admin center.**
+     
+3. Error on connecting the Azure SQL database.
+  
+  **Check the password given for the SQL database is taken from the github secrets SQL_PASSWORD configuration.**
+          
     
-**to resolve the above errors you can choose following options**    
-    
-  1. Check the user connection string is available.
-    
-  2. If the Azure SQL database connection string not validated please create a connection string in dataverse section of the power platform.
+
