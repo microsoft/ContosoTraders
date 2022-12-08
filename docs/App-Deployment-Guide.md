@@ -4,7 +4,7 @@
 This deployment  guide is designed to help you deploy Contoso Traders application in your Azure environment. Contoso Trader is a micro-services-based application, leveraging various Azure services including Azure Kubernetes Service, App Services, Cosmos DB, SQL Database and many more. 
 While it’s possible to deploy overall solution using Azure Portal, CLI, PowerShell, ARM Templates, we will be using a combination of GitHub Actions and bicep templates to automate the provisioning of overall solution. 
 
-This will deploy all components defined in architecture  – [Architecture Diagram](https://github.com/microsoft/ContosoTraders/blob/main/docs/architecture/contoso-traders-enhancements.drawio.png) 
+This will deploy all components defined in architecture  – [Architecture Diagram](../docs/architecture/contoso-traders-enhancements.drawio.png) 
 
 <html><h3>Pre-Requisites</h3></html>
 
@@ -220,7 +220,7 @@ Contoso Traders application is now ready in your subscription. Let us review and
 
 <h3>Review Provisioned Azure Resources</h3>
 
-Please refer to the architecture demo script and technical walkthrough to review the provisioned resources.  PLease check the link [here](https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/cloud-native-app-architecture/technical-walkthrough.md).
+Please refer to the architecture demo script and technical walkthrough to review the provisioned resources.  PLease check the link [here](../demo-scripts/cloud-native-app-architecture/technical-walkthrough.md).
 
 
 <h2>Test Application</h2>
@@ -264,13 +264,15 @@ Please follow the instructions here:
 
 As further learning, you can try running through some of the demo scripts listed below which’d help in understanding the Azure Cloud Native Technologies.
 
-| Scenario                                  | Level                                                                                                                                                                                       |
+## Demo Scripts
+
+  | Scenario                                  | Level                                                                                                                                                                                       |
   | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | Cloud Native App Architecture Walkthrough | [Overview](./demo-scripts/cloud-native-app-architecture/overview.md) \| [Technical Walkthrough](./demo-scripts/cloud-native-app-architecture/technical-walkthrough.md)                      |
-  | Autoscaling Cloud Native Apps in Azure    | [Overview](./demo-scripts/autoscaling-cloud-native-apps-azure/overview.md) \| [Technical Walkthrough](./demo-scripts/autoscaling-cloud-native-apps-azure/technical-walkthrough.md)          |
-  | DevSecOps Journey with GitHub + Azure     | [Overview](./demo-scripts/devsecops/overview.md) \| [Technical Walkthrough](./demo-scripts/devsecops/technical-walkthrough.md)                                                              |
-  | Low Code App Development Power Platform   | [Overview](./demo-scripts/low-code-development/overview.md) \| [Technical Walkthrough](./demo-scripts/low-code-development/technical-walkthrough.md) |
-  | Intelligent Apps with Azure AI Services   | [Overview](./demo-scripts/intelligent-apps-with-azure-ai-services/overview.md) \| [Technical Walkthrough](./demo-scripts/intelligent-apps-with-azure-ai-services/technical-walkthrough.md)  |
+  | Cloud Native App Architecture Walkthrough | [Overview](../demo-scripts/cloud-native-app-architecture/overview.md) \| [Technical Walkthrough](../demo-scripts/cloud-native-app-architecture/technical-walkthrough.md)                      |
+  | Autoscaling Cloud Native Apps in Azure    | [Overview](../demo-scripts/autoscaling-cloud-native-apps-azure/overview.md) \| [Technical Walkthrough](../demo-scripts/autoscaling-cloud-native-apps-azure/technical-walkthrough.md)          |
+  | DevSecOps Journey with GitHub + Azure     | [Overview](../demo-scripts/devsecops/overview.md) \| [Technical Walkthrough](../demo-scripts/devsecops/technical-walkthrough.md)                                                              |
+  | Low Code App Development Power Platform   | [Overview](../demo-scripts/low-code-development/overview.md) \| [Technical Walkthrough](../demo-scripts/low-code-development/technical-walkthrough.md) |
+  | Intelligent Apps with Azure AI Services   | [Overview](../demo-scripts/intelligent-apps-with-azure-ai-services/overview.md) \| [Technical Walkthrough](../demo-scripts/intelligent-apps-with-azure-ai-services/technical-walkthrough.md)  |
 			
 
 
