@@ -99,7 +99,7 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
   
  ![dmig2](images/depap2.png)
   
-3. After completing the Import Canvas App, you will reach into import package details pane. Go through the details.
+3. After completing the Import Canvas App, you will reach into import package details pane. Please go through the details.
 
  ![dimg3](images/depap3.png)
    
