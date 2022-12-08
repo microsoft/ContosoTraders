@@ -1,5 +1,3 @@
-# DevSecOps: L300
-
 
 # DevSecOps with GitHub & Azure: Overview  
 
