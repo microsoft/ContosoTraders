@@ -32,11 +32,17 @@ This deployment guide is designed to deploy a Power app into your Power platform
 
   ![pimg6](images/papp7.png)
 
-Now the user is ready to access the power platform
+8. Add a global administrator role to the user by using above steps. Now the user is ready to access the power platform
+
+9. Add another user into the Active directory. 
+
+10. Login into Microsoft 365 with global administrator user account and add the license of Microsoft 365. To add the license please check the [link](https://learn.microsoft.com/en-us/microsoft-365/commerce/licenses/buy-licenses?view=o365-worldwide).
+
+12. Add Microsoft Teams exploratory license to the another user. To add the license please check this [link](https://learn.microsoft.com/en-us/microsoftteams/teams-exploratory).
 
 <h4>Power platform environment</h4>
   
-1.Login into power platform environment with the same user account you have created by clicking on this [link](https://powerapps.microsoft.com/en-us/):
+1.Login into power platform environment by clicking on this [link](https://powerapps.microsoft.com/en-us/) with the same user account you have created.
       
   If its ask for Location and contact information please enter the detials and click submit.
      
