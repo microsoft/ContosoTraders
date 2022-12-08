@@ -1,13 +1,19 @@
-<h2>Setup Instructions for Power Platform App- Inventory Management System</h2>
+<h1>Setup Instructions for Power Platform App- Inventory Management System</h1>
 
 This deployment guide is designed to deploy a Power app into your Power platform environment. Inventory Management App can be used for updating the product details in a fully automated way. This app created by using workflows and Adaptive card. You can export and import canvas apps by using packages. This feature allows you to export an app from one environment and import it to another. Export and import packages have the file format .zip. Here you are going to import a Canvas App named Inventory Management System into your Power platform environment and will execute some update operations.
 
 <h3>Pre-Requisite</h3>
+You will the following before we start the deploymment
 
+1. Two users need to be created and one user having Global administrator role.
 
-<h4>Azure Portal</h4>
+3. Create Sharepoint list to store the Product update details.
 
-   In Azure portal you are going to add a user with licenses PowerApps, Power Automate. Please follow below steps.
+5. Add dataverse connections for Sharepoint list and Azure SQLDatabase.
+
+<h2>Prepairing your user accounts in Azure Portal</h2>
+
+In Azure portal you are going to add a user with licenses PowerApps, Power Automate. Please follow below steps.
   
 1. Login into Azure Portal and go to Azure Active directory.
       
@@ -41,7 +47,7 @@ This deployment guide is designed to deploy a Power app into your Power platform
 
 12. Add Microsoft Teams exploratory license to the another user. To add the license please check this [link](https://learn.microsoft.com/en-us/microsoftteams/teams-exploratory).
 
-<h4>Power platform environment</h4>
+<h2>Configuring Power platform environment</h2>
   
 1.Login into power platform environment by clicking on this [link](https://powerapps.microsoft.com/en-us/) with the same user account you have created.
       
@@ -81,9 +87,9 @@ This deployment guide is designed to deploy a Power app into your Power platform
     
     Now you have a dataverse connection of your Azure SQL Database.
     
-<h3>Deployment</h3>
+<h2>Deployment of Inventory Management System App</h2>
 
-Before deploying in github go to docs folder, then click on PowerApp folder, you can see a zip file named InventoryManagementSystemApp_20221201093604.zip. Please download this file. It is an Export Package file of Inventory Management System Canvas App.
+Before deploying in github go to docs folder, then click on PowerApp folder, you can see a zip file named InventoryManagementSystemApp_20221201093604.zip. Please download this file. It is an Export Package file of Inventory Management System Canvas App. You are going to import this zip file.
 
  1. After login into the Power platform environment go to Power platform admin center and click on Apps and then click on Import Canvas App.
   
