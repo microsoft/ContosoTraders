@@ -302,9 +302,9 @@ This includes some of the common problems you may during deployment and approach
 	
 When you run the workflow, it shows following warnings.
 	
-*Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).
+ * Error: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be   hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).
 
-*Warning: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).
+ * Warning: WARNING: /home/runner/work/ContosoTraders/ContosoTraders/iac/createResources.bicep(191,50) : Warning no-hardcoded-env-urls: Environment URLs should not be hardcoded. Use the environment() function to ensure compatibility across clouds. Found this disallowed host: "database.windows.net". For the details [click on this link](https://aka.ms/bicep/linter/no-hardcoded-env-urls).
 
 
 This does not block the deployment and workflow will run successfully. It does not have any other impact. It is being tracked here <Link to Issue>
