@@ -99,10 +99,21 @@ Before deploying in github go to docs folder, then click on PowerApp folder, you
    ![dimg4](images/depap4.png)
 
    
-  5. 
-  6. and validate the connection strings. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Then click on the import button.
-  7. It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
-  8. CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. 
+  5. On the Import Package Pane under Related resources please select sql server connection. A side screen will open with a SQL server database connectivity which you already created in the dataverse. Please click Save.
+   
+   ![dimg5](images/depap5.png)
+
+  7. Go to the Related resources select Microsoft Teams Connection. A side screen will open with a MIcrosoft Teams user connection whiich you already configured in the dataverse. Please click Save.
+   
+   ![dimg7](images/depap7.png)
+
+8. You can see now all the connections are validated and Import button is enabled. Please click Import.
+
+  ![dimg8](images/depap8.png)
+
+  7. and validate the connection strings. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Then click on the import button.
+  8. It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
+  9. CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. 
     
     
 **Common errors**
