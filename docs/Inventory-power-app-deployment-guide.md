@@ -33,11 +33,11 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
 
 7. Click on Assigned Roles.
    
-   ![pimg4](images/papp5.png)
+  ![pimg4](images/papp5.png)
    
 8. Select +Add Assignments, a side screen will open with Display Roles, search power platform administrator and select the Power platform administrator role from the list and click Add.
 
-   ![pimg6](images/papp7.png)
+  ![pimg6](images/papp7.png)
 
 9. Add a global administrator role to the user by using above steps. Now the user is ready to access the power platform
 
@@ -49,11 +49,11 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
 
 <h2>Configuring Power platform environment</h2>
   
-1.Login into power platform environment by clicking on this [link](https://powerapps.microsoft.com/en-us/) with the same user account you have created.
+1. Login into power platform environment by clicking on this [link](https://powerapps.microsoft.com/en-us/) with the same user account you have created.
       
   If its ask for Location and contact information please enter the detials and click submit.
      
-   ![pimg7](images/papp8.png)
+  ![pimg7](images/papp8.png)
       
 2. Add a sharepoint list     
   
@@ -89,58 +89,58 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
     
 <h2>Deployment of Inventory Management System App</h2>
 
-Before deploying in github go to docs folder, then click on PowerApp folder, you can see a zip file named InventoryManagementSystemApp_20221201093604.zip. Please download this file. It is an Export Package file of Inventory Management System Canvas App. You are going to import this zip file.
+Before deploying in github go to docs folder, then click on PowerApp folder, you can see a zip file named InventoryManagementApp.zip. Please download this file. It is an Export Package file of Inventory Management System Canvas App. You are going to import this zip file into your power platform environment.
 
- 1. After login into the Power platform environment go to Power platform admin center and click on Apps and then click on Import Canvas App.
+1. After login into the Power platform environment go to Power platform admin center and click on Apps and then click on Import Canvas App.
   
-   ![dimg1](images/depap1.png)
+ ![dimg1](images/depap1.png)
   
- 2. Power PLatform is importing the Inventory Management App. It will take hardly 2-3 minutes.
+2. Power PLatform is importing the Inventory Management App. It will take hardly 2-3 minutes.
   
-   ![dmig2](images/depap2.png)
+ ![dmig2](images/depap2.png)
   
- 3. After completing the Import Canvas App, you will reach into import package details pane. Go through the details.
+3. After completing the Import Canvas App, you will reach into import package details pane. Go through the details.
 
-   ![dimg3](images/depap3.png)
+ ![dimg3](images/depap3.png)
    
-   ![dimg4](images/depap4.png)
+ ![dimg4](images/depap4.png)
 
    
- 4. Go to Review Package COntent section and select Inventory Management App. A side screen will open please select creat new and click Save.
+4. Go to Review Package COntent section and select Inventory Management App. A side screen will open please select creat new and click Save.
  
-   ![dimg9](images/depap9.png)
+ ![dimg9](images/depap9.png)
 
- 5.  please select sql server connection. A side screen will open with a SQL server database connectivity which you already created in the dataverse. Please click Save.
+5. Please select sql server connection. A side screen will open with a SQL server database connectivity which you already created in the dataverse. Please click Save.
    
-   ![dimg6](images/depap5.png)
+ ![dimg6](images/depap5.png)
 
- 6. Go to the Related resources select Microsoft Teams Connection. A side screen will open with a MIcrosoft Teams user connection whiich you already configured in the dataverse. Please click Save.
+6. Go to the Related resources select Microsoft Teams Connection. A side screen will open with a MIcrosoft Teams user connection whiich you already configured in the dataverse. Please click Save.
    
-   ![dimg7](images/depap7.png)
+ ![dimg7](images/depap7.png)
    
- 7. Go to the Related Resources Select Workflow. A side screen will open please select creat new and click Save.
+7. Go to the Related Resources Select Workflow. A side screen will open please select creat new and click Save.
 
-   ![dimg9](images/depap10.png)
+ ![dimg9](images/depap10.png)
 
- 8. You can see now all the connections are validated and Import button is enabled. Please click Import.
+8. You can see now all the connections are validated and Import button is enabled. Please click Import.
 
-  ![dimg8](images/depap11.png)
+ ![dimg8](images/depap11.png)
 
- 9. It wiil take 2-3 minutes to complete the Import process. After completing the Import you can see a message shows all package rsources were successfully imported.
+9. It wiil take 2-3 minutes to complete the Import process. After completing the Import you can see a message shows all package rsources were successfully imported.
 
-   ![dimg9](images/depap12.png)
+ ![dimg9](images/depap12.png)
    
- 10. Please click on the OPen App link from the successful message.
+10. Please click on the OPen App link from the successful message.
   
-  ![dimg10](images/depap13.png)
+ ![dimg10](images/depap13.png)
   
- 11. You will get Allow box to allow validated connections you have validated at the time of import process. Please click allow
+11. You will get Allow box to allow validated connections you have validated at the time of import process. Please click allow
 
-  ![dimg11](images/depap14.png)
+ ![dimg11](images/depap14.png)
   
- 12. Go to PowerPlatform admin center, select Apps and you can see the imported Inventory Management System Canvas App is there.
+12. Go to PowerPlatform admin center, select Apps and you can see the imported Inventory Management System Canvas App is there.
    
-   ![dimg12](images/depap15.png)
+ ![dimg12](images/depap15.png)
  
  You have successfully imported the Inventory Management System App.
  
