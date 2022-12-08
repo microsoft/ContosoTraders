@@ -1,16 +1,47 @@
-**Setup Instructions for Power Platform App- Inventory Management System**
---------------------------------------------------------------------------
-This deployment guide is designed to deploy a Power app into your Power platform environment. Inventory Management App can be used for updating the product details in a fully automated way. This app created by using workflows and Adaptive card.
+<h2>Setup Instructions for Power Platform App- Inventory Management System</h2>
 
-**Pre-Requisite**
+This deployment guide is designed to deploy a Power app into your Power platform environment. Inventory Management App can be used for updating the product details in a fully automated way. This app created by using workflows and Adaptive card. You can export and import canvas apps by using packages. This feature allows you to export an app from one environment and import it to another. Export and import packages have the file format .zip. Here you are going to import a Canvas App named Inventory Management System into your Power platform environment and will execute some update operations.
 
-  1.	Azure Portal
-      Login into Azure Portal and go to Azure Active directory.
-      Add a user having licenses of Power apps, Power automate and Microsoft Teams Exploratory.
+<h3>Pre-Requisite</h3>
 
-  2.  Power platform environment
-      Login into power platform environment with your trial or organization account by clicking on the below link:
+
+<h4>Azure Portal</h4>
+
+   In Azure portal you are going to add a user with licenses PowerApps, Power Automate and Microsoft Teams Exploratory. Please follow below steps.
+  
+   1. Login into Azure Portal and go to Azure Active directory.
+      
+   ![pimg1](images/papp1.png)
+      
+    2. Select User on the Azure Active Directory.
+   
+   ![pimg2](images/papp2.png)
+   
+   3. Click on +New user to add a new user and select create new user.
+   
+   ![pimg3](images/papp3.png)
+   
+   4. You will navigate to New user page. Enter the user name, Name and password you an choose. After that scroll down and under Groups select a group (its not mandatory) and Roles section keep user as it is, you may add other details like usage location, job Info. After that click Create.
+    
+   5. Once the user added, please click on the user name which you created just now from the Active Directory Users Page.
+   6. Click on Assigned Roles.
+   
+   ![pimg4](images/papp5.png)
+   
+   7. Select +Add Assignments, a side screen will open with Display Roles, search power platform administrator and select the Power platform administrator role from the list and click Add.
+
+  ![pimg6](images/papp7.png)
+
+Now the user is ready to access the power platform
+
+<h4>Power platform environment</h4>
+  
+  1. Login into power platform environment with the same user account you have created by clicking on the below link:
       https://powerapps.microsoft.com/en-us/ 
+     If its ask for Location and contact information please enter the detials.
+     
+     !{pimg7](images/papp8.png)
+      
   
   3.  Add a business user in sharepoint list. For user details refer cloudlabs instructions.
   
