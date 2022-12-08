@@ -5,7 +5,7 @@ This deployment guide is designed to deploy a Power app into your Power platform
 <h3>Pre-Requisite</h3>
 You will need the following before we start the deploymment
 
-1. You need to have ContosoTraders App deployed in your Azure Subscription.
+1. You need to have ContosoTraders App deployed in your Azure Subscription. If you didnt deployed it, please refer the [link](../docs/App-Deployment-Guide.md).
 2. A Microsoft 365 license. If you dont have please, please add a license of Microsoft 365 before you begin click [here](https://learn.microsoft.com/en-us/microsoft-365/commerce/licenses/buy-licenses?view=o365-worldwide).
 3. A Microsoft Teams Explorary License. If you dont have please add a license of Microsoft Teams explorary before you begin click [here](https://learn.microsoft.com/en-us/microsoftteams/teams-exploratory).
 
@@ -104,7 +104,7 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
     
 <h2>Deployment of Inventory Management System App</h2>
 
-   Before deploying, in github go to docs folder, then click on PowerApp folder, you can see a zip file named InventoryManagementApp.zip. Please download this file. It  is an Export Package file of Inventory Management System Canvas App. You are going to import this zip file into your power platform environment.
+   Before deploying, please click [here](../docs/PowerApp) see a zip file named InventoryManagementApp.zip. Please download this file. It  is an Export Package file of Inventory Management System Canvas App. You are going to import this zip file into your power platform environment.
 
 1. After login into the Power platform environment go to Power platform admin center and click on Apps and then click on Import Canvas App.
   
@@ -166,7 +166,7 @@ In Azure portal you are going to add a user with licenses PowerApps, Power Autom
   1. Go to Power Platform Admin center and select Apps.
   2. You can see the imported Power App there and click on it to run it.
  
-  For further proceedings please click this [link](https://github.com/microsoft/ContosoTraders/blob/main/demo-scripts/low-code-development/overview.md) to open the "LOW CODE DEVELOPMENT – HIGH LEVEL SCENARIO WALKTHROUGH" guide. You can use this guide to test the app.
+  For further proceedings please click this [link](../demo-scripts/low-code-development/overview.md) to open the "LOW CODE DEVELOPMENT – HIGH LEVEL SCENARIO WALKTHROUGH" guide. You can use this guide to test the app.
  
      
 <h3>Common errors</h3>
