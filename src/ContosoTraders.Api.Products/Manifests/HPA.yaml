@@ -9,4 +9,4 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: contoso-traders-product
-  targetCPUUtilizationPercentage: 30 # target CPU utilization
+  targetCPUUtilizationPercentage: 5 # target CPU utilization
