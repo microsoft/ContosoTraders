@@ -7,7 +7,7 @@ This deployment guide is designed to deploy a Power app into your Power platform
 
 <h4>Azure Portal</h4>
 
-   In Azure portal you are going to add a user with licenses PowerApps, Power Automate and Microsoft Teams Exploratory. Please follow below steps.
+   In Azure portal you are going to add a user with licenses PowerApps, Power Automate. Please follow below steps.
   
    1. Login into Azure Portal and go to Azure Active directory.
       
@@ -38,27 +38,57 @@ Now the user is ready to access the power platform
   
   1. Login into power platform environment with the same user account you have created by clicking on the below link:
       https://powerapps.microsoft.com/en-us/ 
-     If its ask for Location and contact information please enter the detials.
+     If its ask for Location and contact information please enter the detials and click submit.
      
-     !{pimg7](images/papp8.png)
+     ![pimg7](images/papp8.png)
       
   
   3.  Add a business user in sharepoint list. For user details refer cloudlabs instructions.
+   
+    1. Create a new Team Site
+    2. Create a Sharepoint list with columns Title(defaukt column), Password(Single Line Text Type)
   
-      **Note: This user is going authenticate the Inventory Management Application.** 
+   **Note: This user is going authenticate the Inventory Management Application.** 
   
   4. A sharepoint list to be created named Update Product details.
+
+      1. Create a new Sharepoint Teamsite
+      2. Create a Sharepoint list having columns Title (default column), Id(Number Type), Name(Single Line Text type), ImageName(Single Line Text Type), Price(Number with 3 decimal places)
+      
+      4. Add the connection in your Dataverse
+        1. Go to Powerplatform admin center
+        2. Click down arrow of Dataverse, then select Connections, then click on +New connection.
+        3. From the list of new connection select Sharepoint and Select Connect directly (cloud services) and click Create.
+         
+   Your sharepoint list connection is available in your Dataverse.   
   
-      **Note: This list will store the details of the Product update, the business entered through the inventory app.**
+   **Note: This list will store the details of the Product update, the business entered through the inventory app.**
   
   5. Create an Azure SQL database connection string in the dataverse section of the power platform environment and validate it.
-      
+  
+    1. Go to Powerplatform admin center
+    2. Click down arrow of Dataverse, then select Connections, then click on +New connection.
+    3. From the list of connections select SQL Server.
+    4. On the Authentication type select SQL Server Authentication.
+    5. Provide the SQL Server Name. (You can copy the server name from the azure portal where you deployed the web app)
+       1. You can go to SQL Databases in Azure Portal
+       2. Select productsdb database fromt the list.
+       3. In the over view section you can see the server name on the top right corner.
+    6. Add database name productsdb
+    7. Add Username localadmin
+    8. Add password (you have created SQL_PASSWORD in github secrets for the execution of workflows), then click Create.
+    
+    Now you have a dataverse connection of your Azure SQL Database.
+    
 **Deployment**
 
   1. After login into the Power platform environment go to Power platform admin center and click on Apps and then click on Import Canvas App.
-  2. After clicking on Import Canvas App, you will reach into import package details pane and validate the connection strings. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Then click on the import button.
-  3. It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
-  4. CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. 
+  
+  ![dimg1](images/depap1.png)
+  
+  3. After clicking on Import Canvas App, you will reach into import package details pane and validate the connection strings. While importing the application user need to validate the workflow as created new and connection string with Azure SQL database as update. Then click on the import button.
+  4. It will take 5-10 minutes to complete the import operation and once it completed user can access the Inventory Management System App.
+  5. CLick on the App to execute it, enter the business user credentials on it and go to update product screen and do an update of the price of any product. 
     
     
 **Common errors**
