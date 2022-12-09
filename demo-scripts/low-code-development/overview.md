@@ -38,11 +38,7 @@ You must have Inventory Management System App deployed in your Power platform en
  
 ## Walkthrough - Inventory Management System App
 
-   Please create a Teams group named TailwindTradersApproval and a channel named ProductPriceUpdate in your Microsoft Teams.
-
-   Now, Let us try the Inventory Management System App and see how it executes. 
-
-   We are going to launch the App and make some pricing updates on XBOX Controllers.
+   Now, Let us try the Inventory Management System App for Contoso Traders. We are going to launch the App and make  pricing updates on XBOX Controllers.
 
 1. Please login into your Power Apps platform with your Microsoft 365 account.
 
@@ -51,54 +47,50 @@ You must have Inventory Management System App deployed in your Power platform en
    ![App1](images/UApp1.png)
        
       
-3. After click on Login you will enter into the Inventory Management Screen. Please click on Product List. 
+3. You are now in Inventory Management application. Please click on Product List. 
 	
    ![App3](images/App3.png)
 
-4. You will enter into Product List Screen and scroll it down or you can search by name in the search box, all the products you can see there and click on the first product named "XBOX Wireless Controller Lunar Shift Special Edition".	
+4. On Product List page, you can scroll through products or you can search by name in the search box. Click on "XBOX Wireless Controller Lunar Shift Special Edition".	
 
    ![App4](images/UApp4.png)
 	
-5. When you click on the first product to see the details, you will navigate to the Product details screen. To update the price of the product, click on the Update Icon on the top of the screen.
+5. You can now see the product details, Click **update**. 
 
    ![App5](images/App5.png)
 	
-6. After reaching into the Update Product Screen change the price to 100 and click on Send for the Approval.
+6. Update the price to 100 and click on **Send for the Approval**
 
    ![App6](images/App6.png)
 	
-7. You will receive a message on the top of the screen showing Sent for approval.
+7. You will receive a message stating that the price change is sent for approva.
 
    ![img](images/UApp3.png)
 
-8. Now, approval request is sent to stakeholders. Let's login into Microsoft Teams and check the channel you have created before as one of the stakeholder and try it out. 
-
-9. Check Microsoft Teams TailwindTradersApproval and channel named ProductPriceUpdate.
-
-**Note: When you are login into the Microsoft Teams please use the credentials used for enter into the power platform environment.**
+8. Approval request is sent to stakeholders. Let's login into Microsoft Teams as Inventory Manager and navigate to Contoso Traders Inventory > Pricing Updates channel
 
    ![App7](images/App7.png)
 	
-10. When you enter into the channel mentioned above, review the adaptive card request and click on view items, you can see the product details to be updated in a sharepoint list.
+10. When you enter into the channel mentioned above, review the price change request and click on view items, you can see the product details and changes in SharePoint. 
 
    ![App8](images/App8.png)
 	
-11. After viewing the price When you click on the approve button in the Microsoft Teams channel, it will send a message “Approved” in the same channel and also updated the new price in the website, also you will receive another message in the Teams channel “Price Updated”.
+11. Once you are ready, you can approve the price change. This will send a message “Approved” in the same channel and also updates the price in the Azure SQL database. You  will receive another message in the Teams channel “Price Updated” once the process is completed.
 
    ![App9](images/App9.png)
 	
-12. You can see the Updation of the price in the Website also by clicking the following [link](https://www.contosotraders.com/list/controllers) 
+12. You can see the Updation of the price in the Website also by navigating to your Contoso Traders website, as demonstrated in screenshot below.
 
    ![App10](images/App10.png)
 	
 ## Summary
 
-In this scenario, we looked at how Inventory Management System App successfully automated the process of update price request approval. Stakeholders can easily identify the details of the product to be approved and once it get approved it will automatically update in website as well as database
+In this scenario, we looked at how Inventory Management System App successfully automated the process of updating and manage product pricing for Contoso Traders. 
 
-If you are interested in a technical walkthrough with steps, please follow the technical walkthrough documentation.
+If you are interested in a technical walkthrough with steps, please follow the technical walkthrough [documentation](./technical-walkthrough.md)
 
 
-## Additional References
+## Additional Resources
 
 [Getting started with Canvas App](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/getting-started)
 
