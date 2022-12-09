@@ -10,7 +10,7 @@ The key takeaways from this demo are:
 
 ## Before You Begin
 
-* There are some prerequisites for this demo mentioned in the [setup instructions document](../docs/../../docs/setup-instructions.md)). After executing all the steps mentioned in that document, the application's infrastructure will be provisioned on Azure, and the latest code will be deployed as well.
+* There are some prerequisites for this demo mentioned in the [application deployment guide](../docs/../../docs/app-deployment-guide.md). After executing all the steps mentioned in that document, the application's infrastructure will be provisioned on Azure, and the latest code will be deployed as well.
 
 ## Walkthrough: Exploring the application's architecture
 
@@ -120,3 +120,9 @@ All the resources related to the application will be provisioned in this resourc
 ## Walkthrough: Launching the application
 
 This section has already been covered in our previous overview document. You can refer to it [here](./overview.md).
+
+## Summary
+
+In this document, we revisited the application's architecture, and also got a tour of the various Azure services that this application leveraged. 
+
+Next up, you can explore the [application's codebase](../../src), and also explore the [other demo scripts](../../demo-scripts/).
