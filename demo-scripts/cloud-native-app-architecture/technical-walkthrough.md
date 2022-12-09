@@ -1,88 +1,128 @@
-# Technical Walkthrough: Cloud Native Infrastructure
+# Cloud Native App Architecture: Technical Walkthrough
 
-## Overview of the Contoso Traders application
+## Key Takeaways
 
-Contoso Traders is one of the leading E-Commerce platforms with a wide range of electronic products like desktops and laptops, mobile phones, gaming console accessories, and monitors. 
+The key takeaways from this demo are:
 
-## Key Takeway
+* You'll revisit the overview of the application's architecture.
+* You'll revisit the various Azure services that this application leverages.
+* You'll get an hands-on experience of deploying the application to Azure.
 
-1. **Archiecture Contoso Traders application**: The complete architecture of the Contoso Traders application is explained. The architecture is divided into multiple sub-components which covers different aspect of the application, demonstrating hosting of a Cloud Native Application in Azure. 
+## Before You Begin
 
-1. **Demo of Azure Deployment**: You will also go through the Azure deployment of Contoso Traders.
+* There are some prerequisites for this demo mentioned in the [application deployment guide](../docs/../../docs/app-deployment-guide.md). After executing all the steps mentioned in that document, the application's infrastructure will be provisioned on Azure, and the latest code will be deployed as well.
 
-## Before your begin
-You must have Contoso Traders deployed in your environment and setup with GitHub Actions.  Please refer to the deployment instructions [here](../docs/App-Deployment-Guide.md)
+## Walkthrough: Exploring the application's architecture
 
+This section has already been covered in our previous overview document. You can refer to it [here](./overview.md).
 
-## Walkthrough
+## Walkthrough: Exploring the application's infrastructure on Azure
 
-### Archiecture Contoso Traders application
+Open the Azure Portal, and navigate to the resource group that was created for this demo. The resource group name will generally be  `contoso-traders-rg`.
 
-In this walkthrough, You will understand the architecture of the Contoso Traders application and its different components.
+![Resource Group](./media/rg.png)
 
-1. Open browser, using a new tab navigate to `https://github.com/microsoft/ContosoTraders` GitHub repository. This repository conatins all the neccessary files and documents which will guide you to host the contoso traders application from the scratch.
+All the resources related to the application will be provisioned in this resource group. Let's take a look at the various resources that have been provisioned.
 
-   ![](media/cni2.png)
-   
-1. Scroll down a bit, In the **Proposed Archtecture** section you'll see the the architecture diagram of the complete application.   
+### Front-End Infrastructure
 
-   ![](media/cni3.png)
-   
-1. The architecture is broken down into mulitple parts and the major ones are, **DEVOPS (1)**, **FRONT END (2)**, **MICROSERVICES (3)**, **GATEWAY & IAM (4)**, **MONITORING AND TELEMETRY (5)**, and **SECURITY (6)**.  
-   
-   - **DEVOPS**: Using the GitHub repository and GitHub actions, the resources are created. Individual docker images are built and pushed to Azure container registry. The same docker images will be pulled by Azure container apps, Kubernetes cluster, and App services which will host different parts of the application.
-   
-   - **FRONTEND**: Frontend is basically a ReactJS application hosted in Azure App service which works with backend(microservices) in a synchronized manner to get data.
-  
-   - **MICROSERVICES**: There are 3 components of the application which are containerized that is, Shopping cart, products + carts, and Image search.**Shopping cart** is hosted in Azure container instance which pulls the image from container instance. **Products + carts** is hosted in Azure Kubernetes cluster which is deployed by pulling the image from container instance. **Image search** is hosted in conatinerzied App service.
-   
-   - **GATEWAY & IAM**: All the resources, identities communicate using Azure APIs to provide seamless experience inorder to keep up the website up and running. Azure Key vault is used to store all the sensitive keys and secrets, access policies are created which is assigned to resources and identities which uses the stored keys and secrets as needed.
-   
-   - **MONITORING AND TELEMETRY**: Azure Monitor, Application Insights, and Log Analytics is used to collect the logs and telemetry which can be used to check features like availabilty, performance, scability, etc of the resources.
-   
-   - **SECURITY**: Microsoft Defender for cloud and DevOps are used th protect the resources and GitHub repository from vulnerabilities and threats. 
-   
-   ![](media/cni13.png)
-   
-1. Open browser, using a new tab navigate to your forked **ContosoTraders** repo (`https://github.com/<GITHUB USERNAME/ContosoTraders`) GitHub repository. This repository conatins all the neccessary files and documents which will guide you to host the contoso traders application from the scratch.
+1. The front-end is a React JS application that is hosted in an Azure storage account. The storage account has static website hosting enabled, and consequently, the `$web` container hosts the application code.
 
-   ![](media/cni6.png) 
-   
-### Deploying the application to Azure
+   ![$web container](./media/static-website-hosting.png)
 
-In this walkthrough, Let's explore and understand the GitHub Wworkflows which deploys the Contoso traders application in detail.
+2. Azure CDN is used to cache the static content of the application, and to serve it from the nearest edge location. This helps in reducing the latency and improving the performance of the application. The CDN is configured to use the storage account as its origin.
 
-1. Navigate to **github/workflows (1)** folder, it contains the **workflow YAML files (2)** using which you can deploy and configure the resources. Each workflow has its own functionality.
+   ![CDN Profile](./media/cdn-profile.png)
 
-   ![](media/cni7.png)   
-   
-1. Click on **contoso-traders-provisioning-deployment.yml** to open the workflow. The workflow has multiple jobs which deploys/configures the different parts of application architecture. Many **environment variables (1)** are defined which are basically names of the resources which will be created as part of the pipeline. Let's dive in depth and look at all the jobs. 
+3. CDN rules are used to:
 
-   ![](media/cni8.png)  
-   
-1. The first job **provision-infrastructure** is the one which deploys the Infrasructure to Azure. Let us look at the each component of the job.
+   * manage `cache-control` headers (rules are configured to cache the static content for 2 hours).
+   * enforce http to https redirection.
 
-   - **azure login (1)**: The checkout component step automates the Azure sign in using the details defined in a secret named **SERVICEPRINCIPAL**.
-   
-   - **create resource group (2)**: This step creates an **Azure resource group**, A bicep template named **createResources.bicep** bicep template which is present in `ContosoTraders/iac` directory.
-   
-   - **create resources (3)**: This step deploys the all the **Azure resources** which are defined in **createResources.bicep** template which is also prsent in `ContosoTraders/iac` directory.
-   
-   - **add service principal to kv access policy (4)**: This step creates and assigns **Key vault access policy** to the service principal.
-   
-   - **assign user-assigned managed-identity to aks agentpool (5)**: This step assigns the **service principal** to the **Virtual machine scale set** which gets created as part Azure Kuberenetes service deployment.
-   
-   - **seed products db (6)**: This step **seeds** the **SQL database** from a storage account.
-   
-   - **purge CDN endpoint (7)**: This step purges the **CDN Endpoint**.
+   ![CDN Rules](./media/cdn-rules-engine.png)
 
-   ![](media/cni11.png) 
-   
-1. The second job **deploy-carts-api**, it builds a docker image of the carts-api and pushes it to Azure container instance. Let us look at the each component of the job.
+4. Another advantage of Azure CDN is that it allows for custom domain HTTPS, along with managed TLS certificates.
 
-   - **azure login (1)**: The checkout component step automates the Azure sign in using the details defined in a secret named **SERVICEPRINCIPAL**.
-   
-   
-# Summary
+   ![CDN TLS Certificates](./media/cdn-tls-certificates.png)
 
+### Back-End APIs
 
+1. The back-end APIs consist of containerized .NET 6 applications, hosted on AKS (Azure Kubernetes Service), ACA (Azure Container Apps), and Azure App Service.
+
+2. The container images are built by the CI pipeline (github workflows), and pushed to Azure Container Registry.
+
+   ![ACR](./media/acr.png)
+
+3. The various APIs then pull these latest/tagged container images from ACR, and deploy them to their respective hosting platforms.
+
+4. The `Carts API` is hosted on ACA where traffic ingress has been enabled.
+
+   ![ACA](./media/aca.png)
+
+5. We use a `single: active` revision strategy for the `Carts API` on ACA. This means that only one revision (i.e. the latest revision) of the application will be running at any given time. New revisions are automatically created whenever a newer docker image gets pushed to ACR. The old revisions will be automatically decommissioned.
+
+   ![ACA](./media/aca.png)
+
+6. Each revision has a unique (revision-specific) endpoint/URL. However you can also use the revision-neutral URL to access the application. This URL will always point to the latest revision.
+
+   ![ACA Revision](./media/aca-revision1.png)
+
+   ![ACA Revision](./media/aca-revision2.png)
+
+7. The `Products API` is hosted on AKS. We have two deployments in the AKS cluster's `default` namespace: one for the API, one for the ingress controller (nginx).
+
+   ![AKS Deployments](./media/aks-deployments.png)
+
+8. Pods are deployed in the AKS cluster using a `rollingUpdate` strategy. This means that the new pods will be created first, and then the old pods will be decommissioned. This ensures that there is no downtime during the deployment. The `maxSurge` and `maxUnavailable` parameters are used to control the number of pods that can be created/decommissioned at any given time.
+
+   ![AKS Pods](./media/aks-pods.png)
+
+9. Container live-logs are enabled, users can view container & application activity in real-time. Historic logs are also accessible from a tethered Azure LogAnalytics workspace.
+
+   ![AKS Container Logs](./media/aks-container-logs.png)
+
+10. TLS certificates (from LetsEncrypt) are automatically provisioned for the `Products API` using the `cert-manager` addon. This enables HTTPs access to the API.
+
+    ![AKS TLS](./media/aks-tls.png)
+
+### Back-End Databases
+
+1. The `Products API` primarily uses a SQL Azure database for storing the product catalog (accessed via the EFCore library)
+
+   ![SQL Azure](./media/products-db.png)
+
+2. The same API also uses an Azure CosmosDB database (SQL Core APIs) for storing the inventory/stock data.
+
+3. The `Carts API` uses Azure CosmosDB (SQL Core API) for storing the cart data. The APIs uses CosmosDB SDK for all CRUD operations.
+
+### Monitoring and Telemetry
+
+1. Application Insights is used for monitoring and telemetry. It is enabled on all the API apps, and the front-end application. All traces, metrics, events to an Application Insights instance.
+
+   ![App Insights](./media/ai.png)
+
+2. Azure Monitor will coalesce the telemetry data from the Application Insights instances, and provide a single pane of glass for monitoring the application (.e.g Application Map, Failures View, Log Queries).
+
+   ![AI Application Map](./media/application-map.png)
+
+   ![AI Failures](./media/ai-failures.png)
+
+### Security
+
+1. All API apps have a user-assigned managed identity enabled on them. This MI has permissions to retrieve secrets (e.g. connection strings to databases) from the Azure KeyVault. This ensures that the secrets are not exposed in the application code.
+
+    ![KV](./media/kv.png)
+
+2. Microsoft Defender for Cloud is enabled on the subscription. A secure score is calculated for the subscription, and recommendations are provided to improve the security posture of the subscription.
+
+   ![Defender for Cloud](./media/defender.png)
+
+## Walkthrough: Launching the application
+
+This section has already been covered in our previous overview document. You can refer to it [here](./overview.md).
+
+## Summary
+
+In this document, we revisited the application's architecture, and also got a tour of the various Azure services that this application leveraged. 
+
+Next up, you can explore the [application's codebase](../../src), and also explore the [other demo scripts](../../demo-scripts/).
