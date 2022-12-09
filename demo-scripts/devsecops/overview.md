@@ -26,18 +26,18 @@ Let us take a look at the GitHub Actions used by Contoso Traders for CI/CD.
 
 2. Go to the **github/workflows** folder; inside, you'll find the workflow **YAML files** that are used to deploy and set up the resources.  
 
-    ![image](https://user-images.githubusercontent.com/83349577/206231087-981ed021-4b12-474e-8c41-b80782609993.png)
+    ![image](media/ct2.png)
 
 3. Here is a quick overview of both workflows. If you are interested, you can review the workflow code to get into more details.
 
    **Contoso-traders-provisioning-deployment:**  This workflow provisions Azure resources used for hosting the application and deploys the application and initial data to the provisioned resources. It includes everything needed to get the application up and running in an Azure Environment.  
 
-   ![image](https://user-images.githubusercontent.com/83349577/206231035-2fbae1d1-0003-43c0-b9e6-400a38359677.png)
+   ![image](media/provision.png)
 
    **contoso-traders-load-testing:** This workflow runs a load testing against the ContosoTraders application using Azure Load Testing.  
 
-   ![image](https://user-images.githubusercontent.com/83349577/206231861-f4b238cd-b0d5-4178-beab-d08f9c5aee6e.png)
-
+   ![image](media/ct5.png)
+      
 ## Monitor GitHub Actions Workflow
 
 GitHub Actions workflows can be monitored from the Actions tab on a repository. This tab shows a list of all the active and past workflows, along with their status and any associated logs. Users can see at a glance whether their workflows are running successfully and can troubleshoot any issues that may arise. Additionally, users can set up notifications to be alerted when a workflow starts or completes, or if it encounters an error. This can help users stay on top of their workflows and ensure that their projects are running smoothly.
@@ -46,11 +46,11 @@ Let us take a look at the workflows status for Contoso Traders in this public re
 
 1. Navigate to the [ContosoTraders/Actions](https://github.com/microsoft/ContosoTraders/actions) folder.
 
-   ![image](https://user-images.githubusercontent.com/83349577/206232683-32f09b2a-97b1-4518-9afc-483af675349e.png)
+   ![image](media/actions.png)
+    
+2. Select the workflow **contoso-traders-provisioning-deployment**. This will the history of workflows execution.  
 
-2. Select the workflow `contoso-traders-provisioning-deployment`. This will show you the history of the workflow's execution.
-
-   ![image](https://user-images.githubusercontent.com/83349577/206233128-c0cdd257-4689-4cf9-b3cb-1f34502184f3.png)
+    ![image](media/actions1.png)
 
 3. Select the latest run from the list. In Summary, you will see 4 jobs listed.
 
@@ -59,11 +59,11 @@ Let us take a look at the workflows status for Contoso Traders in this public re
    * `deploy-products-api`: Used to deploy Products API service in Azure Kubernetes Service.
    * `deploy-ui`: Used to deploy the front end website to Azure App Service.
 
-   ![image](https://user-images.githubusercontent.com/83349577/206233488-20025b4a-6c65-4aa4-8aab-76984722e3bc.png)
+    ![image](media/jobs.png)
 
 4. Click on **provision-infrastructure** job. You can now see the detailed task of this job and expand to see the logs and steps.
 
-   ![image](https://user-images.githubusercontent.com/83349577/206234025-381770a5-2a59-4b11-a9b8-4db75e8cd938.png)
+   ![image](media/actions3.png)
 
   Similarly, you can review other jobs and workflows. Workflow are set to run on push to the main branch so that any new code change to the main branch is automatically built and deployed.
 
@@ -91,13 +91,15 @@ Let us take a look at how dependabot is used in Contoso Traders.  Please note th
 
 2. Dependabot generates alerts for vulnerability, as demonstrated in the below screenshot.  These vulnerabilities are not fixed intentionally to demonstrate the dependabot features.
 
-   ![image](https://user-images.githubusercontent.com/83349577/206235828-8b976009-9dd8-4da5-81ae-c8e4e2b074d1.png)
+    ![image](media/settings.png)
+    
+3. Let us look at  **minimatch ReDoS vulnerability** . As you can see in screenshot it includes  details about vulnerability and suggested upgrade version.
 
-3. Let us look at  **minimatch ReDoS vulnerability** . As you can see in screenshot it includes details about vulnerability and suggested upgrade version.
-
-   ![image](https://user-images.githubusercontent.com/83349577/206237298-e163c16c-55c1-41f0-8194-045f88096468.png)
+   ![image](media/security.png)
 
    GitHub Dependabot can also raise pull request automatically based on vulnerability detected along with selected versions. Let us take a look at one such pull request raised by dependabot.
+
+    ![image](media/pr.png)
 
 4. Navigate to one such [pull request example](https://github.com/microsoft/ContosoTraders/pull/25).
 
@@ -109,7 +111,11 @@ Let us take a look at how dependabot is used in Contoso Traders.  Please note th
 
 GitHub scans repositories for known secret formats to prevent fraudulent use of credentials that were committed accidentally. Secret scanning happens by default on public repositories and can be enabled on private repositories by repository administrators or organization owners.
 
-Contoso Traders is set to have secret scanning enabled for the public repository. Please note that GitHub Advanced security secret scanning alerts are not public, so screenshots are included further. If you’d like to see this in action, please follow technical walkthrough for DevSecOps with Contoso Traders.
+ Contoso Traders is set to have secret scanning enabled for the public repository. Please note that GitHub Advanced security secret scanning alerts are not public, so screenshots are included further. If you’d like to see this in action, please follow technical walkthrough for DevSecOps with Contoso Traders. 
+ 
+ You will notice that Secret Scanning is already enabled. GitHub enables secret scanning by default for all Public repo. If you have a private repo, you can manually enable it from this page.
+ 
+   ![](media/L300-16.png)
 
 ## Microsoft Defender for Cloud with GitHub Advanced Security
 
