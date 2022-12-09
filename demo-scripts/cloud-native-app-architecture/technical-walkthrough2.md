@@ -12,7 +12,7 @@ The key takeaways from this demo are:
 
 * There are some prerequisites for this demo mentioned in the [setup instructions document](../docs/../../docs/setup-instructions.md)). After executing all the steps mentioned in that document, the application's infrastructure will be provisioned on Azure, and the latest code will be deployed as well.
 
-## Walkthrough: Exploring the application's architecture and the Azure services leveraged
+## Walkthrough: Exploring the application's architecture
 
 This section has already been covered in our previous overview document. You can refer to it [here](./overview.md).
 
