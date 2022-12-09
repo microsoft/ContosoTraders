@@ -1,5 +1,5 @@
 
-# DevSecOps with GitHub & Azure: Overview  
+# DevSecOps with GitHub & Azure: Technical Walkthrough  
 
  
 ## Key Takeaways 

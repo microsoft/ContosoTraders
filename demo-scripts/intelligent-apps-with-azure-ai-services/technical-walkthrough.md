@@ -1,19 +1,16 @@
-# Intelligent Apps with Azure AI Services - L200/L300
+# Intelligent Apps with Azure AI Services - Technical Walkthrough
 
-Lab time: 10 minutes
+## Overview of the Contoso Traders application
 
-## Overview
-
-Contoso Traders are one of the leading E-Commerce platforms with a wide range of electronic products like Desktops and Laptops, Mobile Phones, Gaming console accessories, and Monitors. This includes a wide range of international brands like Microsoft Surface, XBOX, Samsung, ASUS, DELL, etc.
-
-In this lab, you will explore the [Contoso traders application](https://www.contosotraders.com) and will go through the overview of an app with a focus on the need for AI/Visual Search, use the image search option in the application to find the device from the product catalog. You will get to learn **Computer Vision**, the **Azure AI service** used in the application and also get high-level idea of how the Cognitive services work.
+Contoso Traders is a fictitious company that sells a wide range of products. The company has a website that allows customers to browse products and add them to their shopping cart. 
 
 ## Key Takeaways
 
-The key takeaways from this demo are:
+* Azure AI Services is a suite of tools and services offered by Microsoft Azure that allows developers to incorporate intelligent features into their applications. With Azure AI Services, developers can easily add these intelligent features to their applications without the need for specialized knowledge or expertise in the field of artificial intelligence
 
-* You'll get an overview of Azure AI Services
-* You'll get to know in detail about how Azure Computer Vision helps in finding products using images.
+* Cognitive Services image search is a feature of Azure AI Services that allows developers to incorporate image recognition capabilities into their applications. This service uses machine learning algorithms to analyze and understand the content of images, making it possible for applications to search for and retrieve images based on their visual characteristics
+
+* You will have understanding of how Contoso Traders is leveraging Azure Cognitive Services to faclitate image based search
 
 ## Abstract and learning objectives
 
