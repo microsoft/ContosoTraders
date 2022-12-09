@@ -7,6 +7,10 @@
 3. Git clone this repository to your machine.
 4. Create the `SERVICEPRINCIPAL`, `ENVIRONMENT`, and `SQL_PASSWORD` github secrets ([instructions here](./App-Deployment-Guide)).
 5. Next, run the `contoso-traders-provisioning-deployment` github workflow. You can do this by going to the github repo's `Actions` tab, selecting the workflow, and clicking on the `Run workflow` button. This will both provision the infrastructure on Azure as well as deploy the applications (APIs, UI) to the infrastructure.
+<<<<<<< HEAD
+6. Next, deploy the apps, by running the `contoso-traders-app-deployment` workflow.
+=======
+>>>>>>> 510aff416b4860d99f0214742bd8a7ad7a93c737
 
 
 ## Running ContosoTraders Locally
