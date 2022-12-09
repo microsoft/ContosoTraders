@@ -24,7 +24,7 @@
 
 ## Demo Scripts
 
-  | Scenario                                  | Level                                                                                                                                                                                       |
+  | Scenario                                  | Documentation                                                                                                                                                                                       |
   | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
   | Cloud Native App Architecture Walkthrough | [Overview](./demo-scripts/cloud-native-app-architecture/overview.md) \| [Technical Walkthrough](./demo-scripts/cloud-native-app-architecture/technical-walkthrough.md)                      |
   | Autoscaling Cloud Native Apps in Azure    | [Overview](./demo-scripts/autoscaling-cloud-native-apps-azure/overview.md) \| [Technical Walkthrough](./demo-scripts/autoscaling-cloud-native-apps-azure/technical-walkthrough.md)          |
