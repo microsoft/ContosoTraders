@@ -13,7 +13,7 @@ You will be using a pre-created Package to import the Power App & Power Automate
 <h2>Pre-Requisite</h2>
 You will need the following before we start the deploymment
 
-1. You need to have ContosoTraders App deployed in your Azure Subscription. If you didnt deployed it, please refer the [link](../docs/App-Deployment-Guide.md).
+1. You need to have ContosoTraders App deployed in your Azure Subscription. If you have not deployed it yet, please refer the [documentation](../docs/App-Deployment-Guide.md).
 
 2. An account with global administrator rights on the M365 tenant. 
 
