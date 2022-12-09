@@ -2,15 +2,16 @@
 
 ## Overview of the Contoso Traders application
 
-Contoso Traders is one of the leading E-Commerce platforms with a wide range of electronic products like desktops and laptops, mobile phones, gaming console accessories, and monitors. This includes a wide range of international brands like Microsoft Surface, XBOX, Samsung, ASUS, DELL etc. Contoso Traders Organization is using Microsoft 365 for their collaboration works internally.
-
-Contoso Traders has different departments like marketing, sales, accounts, HR, and IT. For internal communication, they are using Microsoft Teams and Outlook. In the Contoso Traders organisation, there are various functionalities with the Contoso Traders E-commerce platform like product approval, product price approval, Product 
+Contoso Traders is one of the leading E-Commerce platforms with a wide range of electronic products like desktops and laptops, mobile phones, gaming console accessories, and monitors. 
 
 ## Key Takeway
 
-1. **Archiecture Contoso Traders application**: The complete architecture of the Contoso Traders application is explained. The architecture is divided into multiple sub-components which covers different aspect of the application.
+1. **Archiecture Contoso Traders application**: The complete architecture of the Contoso Traders application is explained. The architecture is divided into multiple sub-components which covers different aspect of the application, demonstrating hosting of a Cloud Native Application in Azure. 
 
-1. **Demo of Azure Deployment**: You 
+1. **Demo of Azure Deployment**: You will also go through the Azure deployment of Contoso Traders.
+
+## Before your begin
+You must have Contoso Traders deployed in your environment and setup with GitHub Actions.  Please refer to the deployment instructions [here](../docs/App-Deployment-Guide.md)
 
 
 ## Walkthrough
@@ -81,6 +82,7 @@ In this walkthrough, Let's explore and understand the GitHub Wworkflows which de
 
    - **azure login (1)**: The checkout component step automates the Azure sign in using the details defined in a secret named **SERVICEPRINCIPAL**.
    
-   - 
+   
+# Summary
 
 
