@@ -2,7 +2,7 @@
 
 ## Key Takeaways
 
-In this demo, you'll get an overview of the autoscaling features of various Azure services like ACA (Azure Container Apps) and AKS (Azure Kubernetes Service).
+In this demo, we'll do a deep dive on the autoscaling capabilities of various Azure services like ACA (Azure Container Apps) and AKS (Azure Kubernetes Service).
 
 You'll also get an insight into how to use Azure Monitor to monitor the application's performance and health.
 
@@ -12,50 +12,48 @@ All these are especially crucial for an e-commerce application like Contoso Trad
 
 * There are some prerequisites for this demo mentioned in the [application deployment guide](../docs/../../docs/app-deployment-guide.md). After executing all the steps mentioned in that document, the application's infrastructure will be provisioned on Azure, and the latest code will be deployed as well.
 
-## Walkthrough: Metrics & Dashboards
+* Prior to attempting this exercise, you should first execute the [autoscaling overview exercise](./overview.md).
+
+## Walkthrough: Without Autoscaling
 
 1. In the Azure portal, you can navigate to the Azure Container App in the `contoso-traders-rg` resource group.
 
    ![ACA](./media/aca.png)
 
-2. For demo purposes, we have configured a `HTTP Scaling` rule that horizontally scales out additional replicas when the number of concurrent requests exceeds a threshold (`3` in this case). ACA also supports automatic scale-in to zero when traffic dips below threshold.
+2. You can create a new revision without scaling enabled (i.e. max instances = 1).
 
-   ![ACA Scaling Rules](./media/aca-scaling-rules.png)
+   ![ACA](./media/aca-revision1.png)
 
-3. In the metrics tab, you can see the various metrics measured & published by the ACA infrastructure. You can create a metric chart that combines two metrics: `replica count` vs `requests`. This will help you visualize the increase in replica count under load.
+   ![ACA](./media/aca-revision2.png)
 
-   ![ACA Metrics Chart](./media/aca-metrics.png)
+3. Next modify the github workflow file `.github\workflows\contoso-traders-load-testing.yml` to increase the `threads_per_engine` to (say) 30. Now commit the change to the `main` branch.
 
-4. Finally, you can pin this metric chart to the dashboard for easy access. This dashboard can be a shared-team dashboard, or a private dashboard.
+   ![ACA](./media/github-action-edit1.png)
 
-   ![ACA Metrics Chart Pinning](./media/aca-metrics-pin.png)
-
-## Walkthrough: Load Testing & Autoscaling
-
-1. We have a GitHub workflow that executes load tests on the application's APIs. The workflow can be launched on-demand from the GitHub Actions tab of this repository.
+4. Manually execute the github workflow from the portal.
 
    ![github workflow](./media/github-workflow.png)
 
-2. The workflow uses a github action to invoke the [Azure Load Testing](https://learn.microsoft.com/en-us/azure/load-testing/) service and simulates load on the application's `Product API` and `Carts API`, which are hosted on AKS and ACA respectively.
+5. Since ACA cannot scale out beyond 1 instance, the API will starting failing.
 
-   ![workflow for load testing](./media/github-workflow2.png)
+   ![github workflow](./media/l300-load-5xx.png)
 
-   ![github action for load testing](./media/github-action.png)
+6. Azure Application Insights (where the API app sends its traces & telemetry) will have the fine-grained details of the failures.
 
-3. The load test takes about 2 minutes to execute. Once done, you can navigate to the Azure Portal to get more in-depth details about the test.
+   ![github workflow](./media/l300-load-failures.png)
 
-   ![load testing result](./media/github-workflow3.png)
+## Walkthrough: Autoscaling in Action
 
-   ![load testing portal](./media/portal-load-test.png)
+1. Let's configure a `HTTP Scaling` rule that horizontally scales out to (say) 25 replicas. Also let us set a scaling rule `http-scaling` that causes ACA to create replicas when there are more than 10 concurrent requests.
 
-4. You can also direct the load testing service to extract & correlate metrics from the concerned Azure Services. This will give you a great overview of how the various APIs/databases performed under load, whether the users got throttled/rate-limited, whether the average round-trip latency increased etc. In the example below, it has correlated metrics from Azure CosmosDB (which is used by Carts API).
+   ![ACA Scaling Rules](./media/l300-scaling.png)
 
-   ![load testing cosmos](./media/portal-load-test-cosmos.png)
+2. You can now re-run steps 4 to 6 from first walkthrough above (i.e. re-run the load test).
 
-5. You can also revisit the earlier metric charts in ACA. It'll now have updated with the latest data after the load test. Of particular interest is the replica count chart of `Carts API`, which shows the instances auto-scaled out under increasing load. After load subsided, the instances auto-scaled back in to zero.
+3. This time you shouldn't encounter any failures. The API will be able to handle the load by automatically scaling out to 25 replicas. Once the load subsides, the replicas will be scaled back in.
 
-   ![load testing ACA](./media/aca-metrics2.png)
+   ![github workflow](./media/l300-scale-out.png)
 
 ## Summary
 
-In this demo, you got an overview of the autoscaling features of Azure services like ACA (Azure Container Apps). You can now head over to a [detailed demo](./technical-walkthrough.md) of AKS autoscaling.
+In this demo, you got an deep dive into the autoscaling features of Azure services like ACA (Azure Container Apps). You can now head over to the [other demos](../../demo-scripts/) of this app.
