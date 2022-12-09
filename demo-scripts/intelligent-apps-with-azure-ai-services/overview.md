@@ -1,12 +1,14 @@
-# Intelligent Apps with Azure AI Services - L100
-
-Lab time: 5 minutes
+# Intelligent Apps with Azure AI Services - Overview
 
 ## Overview of the Contoso Traders application
 
-Contoso Traders is a fictitious company that sells a wide range of products. The company has a website that allows customers to browse products and add them to their shopping cart. The website also allows customers to search for products by name or category. The website is hosted in Azure and uses a variety of Azure services to provide the functionality.
+Contoso Traders is a fictitious company that sells a wide range of products. The company has a website that allows customers to browse products and add them to their shopping cart. 
 
-In this demo script, we will explore how to use Azure AI services to enhance the Contoso Traders application. We will start by launching the application and giving an overview of the app with a focus on the need for AI/Visual Search. We will then search for a product through an image. Finally, we will explore the AI services used in the app and how/where they are hosted.
+## Key Takeaways
+
+* Azure AI Services is a suite of tools and services offered by Microsoft Azure that allows developers to incorporate intelligent features into their applications. With Azure AI Services, developers can easily add these intelligent features to their applications without the need for specialized knowledge or expertise in the field of artificial intelligence
+
+* Cognitive Services image search is a feature of Azure AI Services that allows developers to incorporate image recognition capabilities into their applications. This service uses machine learning algorithms to analyze and understand the content of images, making it possible for applications to search for and retrieve images based on their visual characteristics
 
 ## Launch the Contoso Traders application
 
