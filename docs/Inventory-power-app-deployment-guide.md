@@ -194,9 +194,9 @@ Your Azure SQL Connection is now available in Dataverse.
 
   2. Click on Inventory Management app to start the applicaiton. 
 
-  3. You should now be able to see the app and make changes to your products. 
+  3. You should now be able to use the app and make changes to your products catalogue. 
 
-    ![img](images/sql3.png)
+
  
   For further proceedings please check out the [overview](../demo-scripts/low-code-development/overview.md) this [technical walkthrogh](../demo-scripts/low-code-development/technical-walkthrough.md) to try out the application end to end and review the deployment. 
  
