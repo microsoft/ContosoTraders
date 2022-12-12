@@ -1,48 +1,84 @@
-**Technical Walkthrough of Solution**
-------------------------------------
+# Inventory Management System with Power Platform - Technical Walkthrough
 
 Power platform helps to build the Inventory Management System App for resolving the issues in the current scenario of Contoso Traders. It enables the collaborations internally. Two main components of Power platform were used to build the application viz, PowerApp and Power Automate. Lets walkthrough each component and how its configured. 
 
-**Power App**
+## Key Takeaways
 
-Inventory Management System App was built in Canvas App by using cloud database connectivity. Databases are kept in Azure SQL Database. We can use the app for CRUD operations. In Contoso Traders they need the Update operation through an automation process, before update the price of any product the stakeholders should approve and once it get approved the price will updated automatically. Based on this scenario the App built and it has eight screens. Lets go through each screen and explore how its configured and what are the scripts and formulas applied.  
+The Key takeaways from this demo are: 
 
-1. Home Screen allows to login into Inventory Management System App. In Home screen added the Text labels for “Inventory Management System” and “Sign into continue”. Added Contoso Traders logo and some images. Also added two Text inputs to enter username and password. Configured the password Text input’s property mode as password and provided hint texts to both text inputs. Added a login button and configured the connection with a SharePoint list having Contoso Traders business users data. It will validate the username and password entered into the Home screen.
+* Power Platform is a suite of low-code and no-code tools that makes it easy for users with little or no technical expertise to build custom applications.
+* The platform includes tools such as PowerApps, Power BI, and Power Automate etc, which can be used to quickly create and customize business solutions.
+* PowerApps allows users to create custom applications using pre-built templates and drag-and-drop tools, while Power BI provides a range of visualization options for presenting data.
+* Microsoft Power Automate  allows users to automate business processes and connect different applications and services, simplifying common tasks and reducing the need for manual intervention.
 
-    ![TApp1](images/TApp1.png)
-     
+Overall, Power Platform makes it easy for users to create custom internal applications without the need for specialized development skills.
+
+## Before you begin
+
+You must have Inventory Management System App deployed in your Power platform environment. If you have not deployed it yet, please refer the [documentation](../docs/Inventory-power-app-deployment-guide.md).
+
+## Walkthrough: Solution Overview
+
+This section has already been covered in our previous overview document. You can refer to it [here](./overview.md).
+
+## Technical Walkthrough - Power App 
+
+Inventory Management System App was built in Canvas App by using cloud database connectivity. Databases are kept in Azure SQL Database. We can use the app for CRUD operations. In Contoso Traders they need the Update operation through an automation process, before update the price of any product the stakeholders should approve and once it get approved the price will updated automatically. Based on this scenario the App built. Lets go through some of the screens in detail and explore how its configured and what are the scripts and formulas applied.    
+  
       
-2. In the Login button’s Onselect property added code in the below image:
-      
-    ![TApp2](images/TApp2.png)
-      
-3. User will reach into Inventory Management Screen, by clicking on Product List they can view Product List screen having all the products listed from the database named Productdb. They can scroll it down to view all the Products. If they want to check a particular product details they can click on the name of the product and it will navigate to Product Details Screen. If they decided to update the product, they can click on the Update icon on the top of screen. It will navigate to Product Update Screen. Here as an example the price of the Product named “XBOX wireless controller lunar shift special edition” is going to be updated. Current price of the product is $99, after updating the price to $100 click on “Send for approval” button, it will trigger an approval request to the teams, and the stakeholders can approve the request, once it get approved, business user can see the message as approved and automatically the amended price will be updated in the website as well as the database. So getting this desired output, on the update screen added one Edit form which connected to the datasource, and a lookup function set the item property of the form which will find single record matches the criteria, here the criteria is the record saved into a variable named “SelectedItemname”. So when a user select a particular product, the details of the product will save into the  variable and will display into the form. 
-       
-       
-    ![TApp3](images/TApp3.png)
-       
-       
- 4. Here on the “Send Approval” button configure a workflow named “Adaptiveworkflow1”. Also the updated details will be fetched into a SharePoint list named “UpdatePrice”.
-       
-    ![TApp4](images/TApp4.png)
-       
- 5. After clicking on the “Send for the Approval” button, it will trigger a notification message of Approval request into Microsoft Teams channel named “ProductPriceUpdate”. It has been configured by using Adaptive cards.
+1. Login into the Power platform Admin Center (https://admin.powerplatform.microsoft.com) with your Microsoft 365 Global Administrator account. 
 
-    ![TApp5](images/App7.png)
-       
+2. After login into the Power platform select the environment where you have deployed Inventory Management System App.
+
+3. Select Apps and Select Inventory Management App, then click on Edit from the top side.
+
+   ![img](images/TApp1.png)
+
+4. This will launch Power app studio where you can see the application screens,  the details of connections and the workflow.
+
+5. Select the first screen named Inventory and select the list icon and on the left top side from the dropdown list, select **OnSelect** and see the formula added. This helps users in navigating to products page. 
+   ![img](images/TApp2.png)
+
+
+6. Product List screen will show all the products in a vertical gallery. Select the vertical gallery and on the left top side Select Items from the dropdown list and see the formula added there. This formula will list the entire data from the table Products of the Azure SQL database productsdb. Also a user can search the product by its name on the search box.
+
+   ![img](images/NApp1.png)
+
+7.Select the Onselect of the Vertical gallery in the same screen to review the configuration. A variable is created which stores the value of item selected by the user from the gallery. It will also help navigate to ProductDetails screen.
+
+   ![img](images/NApp2.png)   
+  
+8. On the Product Details Screen select the form, then select Item property from the dropdownlist on the top left side. This formula is for displaying the selected item stored from the variable.
+
+  ![img](images/NApp4.png)
+
+  
+9. Select the ProductDetails screen select update icon, then select onselect property from the dropdown on the top left side, see the formula. This formula is for navigating to the Update screen.
    
-       
- 6. In this Approval request we can see three buttons, one is for View Items, when the stakeholder click on view item it will redirect to a SharePoint list having the details of the product to be updated. Another two buttons are for Approve and Reject. When the Stakeholder click on Reject it will pass a message in the channel “Rejected”. When the stakeholder click on Approve it will pass a message in the channel “Approved” and immediately after a while another message will comes “Price updated”.
-       
-    ![TApp6](images/App9.png)
-       
- Also it will automatically updated the price in the website as well as database.
+   ![img](images/NApp3.png)
 
-**POWER AUTOMATE**
+      
+10. On the Update screen select “Send for Approval” button, You will see that it's triggering “Adaptiveworkflow1” which will updates the price into SharePoint list named “UpdatePrice”.
+       
+   ![img](images/NApp5.png)
+    
+       
+ 11. After clicking on the “Send for the Approval” button, it will trigger a notification message of Approval request into Microsoft Teams channel named "Pricing Updates" on the Teams named “Contoso Traders Inventory”. It has been configured by using Adaptive cards.
 
-Let’s walkthrough the workflow named “Adaptiveworkflow1”. Here the requirement is when a business user trying to update the price of any product, it should automate an approval request to a Teams Channel and the stakeholder can approve it. To build the workflow Power automate tool has been used.
+   ![TApp5](images/FApp1.png)       
+  
+       
+ 12. In this Approval request Adaptive card we can see three buttons, one is for View Items, when the stakeholder click on view item it will redirect to a SharePoint list having the details of the product to be updated. Another two buttons are for Approve and Reject. When the Stakeholder click on Reject it will pass a message in the channel “Rejected”. When the stakeholder click on Approve it will pass a message in the channel “Approved” and immediately after a while another message will comes “Price updated”.
+       
+   ![TApp6](images/FApp2.png)
+       
+ Also it will automatically updated the price in SQL Database, resulting into updated price on Contoso Traders Website.
 
-1. A simple instant cloud workflow has been created.
+## Walkthrough - Power Automate
+
+Let’s takea look at Power Automate workflow named “Adaptiveworkflow1”. Here the requirement is when a business user trying to update the price of any product, it should automate an approval request to a Teams Channel sso that stakeholder can approve/reject the price changes. 
+
+1. Review the instant cloud workflow, as demonstrated in below screenshot.
 
    ![TApp5](images/TApp5.png)
         
@@ -50,27 +86,43 @@ In this workflow three variables initialized with values submitted by, submitted
            
    ![TApp13](images/TApp6.png)
    
-   ![TApp7](images/TApp7.png)
+   ![TApp7](images/FApp3.png)
         
-After that configured “Post an Adaptive card and wait for response” flow. In this flow, configured an Adaptive card in json script and pass value of two variables submitted on and submitted by into the adaptive card. 
+After that it is using the component “Post an Adaptive card and wait for response” flow. In this component, adaptive card configuration is supplied in JSON format along with parameter values. 
 
+** If you are intrested, you can deep dive into the adaptive card json file [here](../iac/Adaptivecard.json).** 
 
-*Refer the Adaptive card document* https://github.com/seenakhan/ContosoTraders/blob/main/demo-scripts/LOW%20CODE%20DEVELOPMENT/Adaptivecard.json 
+After that a Condition control flow configured with a condition body(‘PostAdaptiveCardToChannelAndWaitforaresponse’)[‘submitActionId’] to check for approval status. Along with the condition If Yes and IF No flows also configured When the stakeholder click on the Approve button then the If yes flow will execute. It has additional three flows added two flows are for passing the message on the Teams channel and One flow is for calling the variable having T-SQL update query. This will trigger the SQL query execution upon sucessful approval. 
 
-After that a Condition control flow configured with a condition body(‘PostAdaptiveCardToChannelAndWaitforaresponse’)[‘submitActionId’] is equal to Approve. Along with the condition If Yes and IF No flows also configured When the stakeholder click on the Approve button then the If yes flow will execute. It has additional three flows added two flows are for passing the message on the Teams channel and One flow is for calling the variable having T-SQL update query. Below are the images shows the If Yes flow configuration.
-
- 
     
-  ![TApp8](images/TApp8.png)
+  ![TApp8](images/FApp4.png)
     
-And for the If No flow configured a Post message in a chat or channel 2. Below image shows the same:
+Incase of rejection, the flow is set to update Teams Channel with "Rejected" message. 
 
-   ![TApp9](images/TApp9.png)
+  ![img](images/FApp6.png)
 
+## Summary
 
-**Conclusion: With Power platform tools automation for any complex business scenarios can be configured and deployed easily. We can do more use cases by using various functionalities of Power platform tools.
+With Power platform tools any complex business scenarios can be configured and deployed easily. The Power Platform offers several benefits, including:
 
+* Low-code and no-code tools: Power Platform tools, such as PowerApps and Microsoft Flow, are designed to be easy to use, even for users with little or no technical expertise. This allows organizations to empower their non-technical staff to build custom applications and automate business processes without the need for specialized development skills.
 
+* Rapid development: Because Power Platform tools use pre-built templates and drag-and-drop tools, applications can be built quickly, reducing the time and cost required to develop custom solutions.
+
+* Integration with other services: PowerApps and Microsoft Flow can be easily integrated with other services, such as Office 365 and Dynamics 365, allowing users to create custom solutions that leverage the capabilities of these platforms.
+
+* Scalability: Power Platform applications can be easily scaled to meet the needs of an organization, from small businesses to large enterprises.
+
+* Customization: PowerApps allows users to fully customize the look and feel of their applications, allowing organizations to create solutions that are tailored to their specific needs and branding.
+
+## Additional Reading
+
+[Create a Canvas App](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/get-started-test-drive)
+
+[Adding workflows to Canvas App
+](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/using-logic-flows)
+
+[Configure Adaptive Card by using Adaptive card designer](https://adaptivecards.io/designer/)
       
       
       
