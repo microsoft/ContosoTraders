@@ -28,7 +28,7 @@
   | Azure Load Testing    | [Overview](./demo-scripts/autoscaling-cloud-native-apps-azure/overview.md) \| [Technical Walkthrough](./demo-scripts/autoscaling-cloud-native-apps-azure/technical-walkthrough.md)          |
   | DevOps Journey with GitHub + Azure     | [Overview](./demo-scripts/devsecops/overview.md) \| [Technical Walkthrough](./demo-scripts/devsecops/technical-walkthrough.md)                                                              |
   | Azure Chaos Studio   | [Overview](./demo-scripts/low-code-development/overview.md) \| [Technical Walkthrough](./demo-scripts/low-code-development/technical-walkthrough.md) |
-  | Testing with Playwright   | [Overview](./demo-scripts/intelligent-apps-with-azure-ai-services/overview.md) \| [Technical Walkthrough](./demo-scripts/intelligent-apps-with-azure-ai-services/technical-walkthrough.md)  |
+  | Testing with Playwright   | [Overview]([./demo-scripts/intelligent-apps-with-azure-ai-services/overview.md](https://github.com/microsoft/ContosoTraders/blob/cloud-testing/demo-scripts/playwright-documentation/playwright.md)) \| [Technical Walkthrough](https://github.com/microsoft/ContosoTraders/blob/cloud-testing/demo-scripts/playwright-documentation/playwright.md)  |
 
 ##  Architecture 
 
