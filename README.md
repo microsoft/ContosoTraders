@@ -1,4 +1,4 @@
-# Contoso Traders
+# Contoso Traders - Cloud Testing Demos
 
 ![Logo](./docs/images/logo-1280x640.png)
 
@@ -13,7 +13,6 @@
 ## Documentation and Resources
 
 * [Deployment Guide](./docs/App-Deployment-Guide.md)
-  * [Deployment Guide for Inventory Management PowerApp](./docs/Inventory-power-app-deployment-guide.md)
 * [Contributing](./docs/contributing.md)
 * [Bicep Templates](./iac/)
 * [Load Tests](./tests/loadtests/)
@@ -26,11 +25,11 @@
 
   | Scenario                                  | Documentation                                                                                                                                                                                       |
   | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | Cloud Native App Architecture Walkthrough | [Overview](./demo-scripts/cloud-native-app-architecture/overview.md) \| [Technical Walkthrough](./demo-scripts/cloud-native-app-architecture/technical-walkthrough.md)                      |
-  | Autoscaling Cloud Native Apps in Azure    | [Overview](./demo-scripts/autoscaling-cloud-native-apps-azure/overview.md) \| [Technical Walkthrough](./demo-scripts/autoscaling-cloud-native-apps-azure/technical-walkthrough.md)          |
-  | DevSecOps Journey with GitHub + Azure     | [Overview](./demo-scripts/devsecops/overview.md) \| [Technical Walkthrough](./demo-scripts/devsecops/technical-walkthrough.md)                                                              |
-  | Low Code App Development Power Platform   | [Overview](./demo-scripts/low-code-development/overview.md) \| [Technical Walkthrough](./demo-scripts/low-code-development/technical-walkthrough.md) |
-  | Intelligent Apps with Azure AI Services   | [Overview](./demo-scripts/intelligent-apps-with-azure-ai-services/overview.md) \| [Technical Walkthrough](./demo-scripts/intelligent-apps-with-azure-ai-services/technical-walkthrough.md)  |
+
+  | Azure Load Testing    | [Overview](./demo-scripts/autoscaling-cloud-native-apps-azure/overview.md) \| [Technical Walkthrough](./demo-scripts/autoscaling-cloud-native-apps-azure/technical-walkthrough.md)          |
+  | DevOps Journey with GitHub + Azure     | [Overview](./demo-scripts/devsecops/overview.md) \| [Technical Walkthrough](./demo-scripts/devsecops/technical-walkthrough.md)                                                              |
+  | Azure Chaos Studio   | [Overview](./demo-scripts/low-code-development/overview.md) \| [Technical Walkthrough](./demo-scripts/low-code-development/technical-walkthrough.md) |
+  | Testing with Playwright   | [Overview](./demo-scripts/intelligent-apps-with-azure-ai-services/overview.md) \| [Technical Walkthrough](./demo-scripts/intelligent-apps-with-azure-ai-services/technical-walkthrough.md)  |
 
 ##  Architecture 
 
