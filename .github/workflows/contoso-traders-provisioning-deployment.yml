@@ -17,8 +17,8 @@ jobs:
   provision-and-deploy:
     strategy:
       matrix:
-        environmentName: [TEST, PROD]
+        environment: [TEST, PROD]
     uses: ./.github/workflows/contoso-traders-provisioning-deployment-template.yml
     secrets: inherit
     with:
-      environmentName: ${{ matrix.environmentName }}
+      environment: ${{ matrix.environment }}
