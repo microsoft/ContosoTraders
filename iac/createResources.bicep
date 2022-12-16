@@ -29,8 +29,10 @@ param prefixHyphenated string = 'contoso-traders'
 // variables
 ////////////////////////////////////////////////////////////////////////////////
 
+var suffix = toLower(environment)
+
 // key vault
-var kvName = '${prefix}kv${environment}'
+var kvName = '${prefix}kv${suffix}'
 var kvSecretNameProductsApiEndpoint = 'productsApiEndpoint'
 var kvSecretNameProductsDbConnStr = 'productsDbConnectionString'
 var kvSecretNameProfilesDbConnStr = 'profilesDbConnectionString'
@@ -43,89 +45,89 @@ var kvSecretNameCognitiveServicesAccountKey = 'cognitiveServicesAccountKey'
 var kvSecretNameAppInsightsConnStr = 'appInsightsConnectionString'
 
 // user-assigned managed identity (for key vault access)
-var userAssignedMIForKVAccessName = '${prefixHyphenated}-mi-kv-access${environment}'
+var userAssignedMIForKVAccessName = '${prefixHyphenated}-mi-kv-access${suffix}'
 
 // cosmos db (stocks db)
-var stocksDbAcctName = '${prefixHyphenated}-stocks${environment}'
+var stocksDbAcctName = '${prefixHyphenated}-stocks${suffix}'
 var stocksDbName = 'stocksdb'
 var stocksDbStocksContainerName = 'stocks'
 
 // cosmos db (carts db)
-var cartsDbAcctName = '${prefixHyphenated}-carts${environment}'
+var cartsDbAcctName = '${prefixHyphenated}-carts${suffix}'
 var cartsDbName = 'cartsdb'
 var cartsDbStocksContainerName = 'carts'
 
 // app service plan (products api)
-var productsApiAppSvcPlanName = '${prefixHyphenated}-products${environment}'
-var productsApiAppSvcName = '${prefixHyphenated}-products${environment}'
+var productsApiAppSvcPlanName = '${prefixHyphenated}-products${suffix}'
+var productsApiAppSvcName = '${prefixHyphenated}-products${suffix}'
 var productsApiSettingNameKeyVaultEndpoint = 'KeyVaultEndpoint'
 var productsApiSettingNameManagedIdentityClientId = 'ManagedIdentityClientId'
 
 // sql azure (products db)
-var productsDbServerName = '${prefixHyphenated}-products${environment}'
+var productsDbServerName = '${prefixHyphenated}-products${suffix}'
 var productsDbName = 'productsdb'
 var productsDbServerAdminLogin = 'localadmin'
 var productsDbServerAdminPassword = sqlPassword
 
 // sql azure (profiles db)
-var profilesDbServerName = '${prefixHyphenated}-profiles${environment}'
+var profilesDbServerName = '${prefixHyphenated}-profiles${suffix}'
 var profilesDbName = 'profilesdb'
 var profilesDbServerAdminLogin = 'localadmin'
 var profilesDbServerAdminPassword = sqlPassword
 
 // azure container app (carts api)
-var cartsApiAcaName = '${prefixHyphenated}-carts${environment}'
-var cartsApiAcaEnvName = '${prefix}acaenv${environment}'
+var cartsApiAcaName = '${prefixHyphenated}-carts${suffix}'
+var cartsApiAcaEnvName = '${prefix}acaenv${suffix}'
 var cartsApiAcaSecretAcrPassword = 'acr-password'
-var cartsApiAcaContainerDetailsName = '${prefixHyphenated}-carts${environment}'
+var cartsApiAcaContainerDetailsName = '${prefixHyphenated}-carts${suffix}'
 var cartsApiSettingNameKeyVaultEndpoint = 'KeyVaultEndpoint'
 var cartsApiSettingNameManagedIdentityClientId = 'ManagedIdentityClientId'
 
 
 // storage account (product images)
-var productImagesStgAccName = '${prefix}img${environment}'
+var productImagesStgAccName = '${prefix}img${suffix}'
 var productImagesProductDetailsContainerName = 'product-details'
 var productImagesProductListContainerName = 'product-list'
 
 // storage account (old website)
-var uiStgAccName = '${prefix}ui${environment}'
+var uiStgAccName = '${prefix}ui${suffix}'
 
 // storage account (new website)
-var ui2StgAccName = '${prefix}ui2${environment}'
+var ui2StgAccName = '${prefix}ui2${suffix}'
 
 // storage account (image classifier)
-var imageClassifierStgAccName = '${prefix}ic${environment}'
+var imageClassifierStgAccName = '${prefix}ic${suffix}'
 var imageClassifierWebsiteUploadsContainerName = 'website-uploads'
 
 // cognitive service (image recognition)
-var cognitiveServiceName = '${prefixHyphenated}-cs${environment}'
+var cognitiveServiceName = '${prefixHyphenated}-cs${suffix}'
 
 // cdn
-var cdnProfileName = '${prefixHyphenated}-cdn${environment}'
-var cdnImagesEndpointName = '${prefixHyphenated}-images${environment}'
-var cdnUiEndpointName = '${prefixHyphenated}-ui${environment}'
-var cdnUi2EndpointName = '${prefixHyphenated}-ui2${environment}'
+var cdnProfileName = '${prefixHyphenated}-cdn${suffix}'
+var cdnImagesEndpointName = '${prefixHyphenated}-images${suffix}'
+var cdnUiEndpointName = '${prefixHyphenated}-ui${suffix}'
+var cdnUi2EndpointName = '${prefixHyphenated}-ui2${suffix}'
 
 // redis cache
-var redisCacheName = '${prefixHyphenated}-cache${environment}'
+var redisCacheName = '${prefixHyphenated}-cache${suffix}'
 
 // azure container registry
-var acrName = '${prefix}acr${environment}'
+var acrName = '${prefix}acr${suffix}'
 // var acrCartsApiRepositoryName = '${prefix}apicarts' // @TODO: unused, probably remove later
 
 // load testing service
-var loadTestSvcName = '${prefixHyphenated}-loadtest${environment}'
+var loadTestSvcName = '${prefixHyphenated}-loadtest${suffix}'
 
 // application insights
-var logAnalyticsWorkspaceName = '${prefixHyphenated}-loganalytics${environment}'
-var appInsightsName = '${prefixHyphenated}-ai${environment}'
+var logAnalyticsWorkspaceName = '${prefixHyphenated}-loganalytics${suffix}'
+var appInsightsName = '${prefixHyphenated}-ai${suffix}'
 
 // portal dashboard
-var portalDashboardName = '${prefixHyphenated}-dashboard${environment}'
+var portalDashboardName = '${prefixHyphenated}-dashboard${suffix}'
 
 // aks cluster
-var aksClusterName = '${prefixHyphenated}-aks${environment}'
-var aksClusterDnsPrefix = '${prefixHyphenated}-aks${environment}'
+var aksClusterName = '${prefixHyphenated}-aks${suffix}'
+var aksClusterDnsPrefix = '${prefixHyphenated}-aks${suffix}'
 var aksClusterNodeResourceGroup = '${prefixHyphenated}-aks-nodes-rg'
 
 // tags
