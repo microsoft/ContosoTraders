@@ -46,10 +46,10 @@ jobs:
   provision-and-deploy:
     strategy:
       matrix:
-        environment: [TEST, PROD]
+        ENVIRONMENT: [TEST, PROD]
     uses: ./templates/template.yml
     with:
-      environment: ${{ matrix.environment }}
+      ENVIRONMENT: ${{ matrix.environment }}
 
   # provision-infrastructure:
   #   runs-on: ubuntu-latest

@@ -2,9 +2,10 @@ name: template2
 
 on:
   workflow_call:
-    secrets:
+    inputs:
       ENVIRONMENT:
         required: true
+        type: string
 
 jobs:
   provision-infrastructure:
