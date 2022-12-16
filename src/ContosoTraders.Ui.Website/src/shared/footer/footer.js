@@ -15,7 +15,10 @@ const Footer = () => {
             <Link to="/">
                 <Logo />
             </Link>
-            <p  className='mt-2'>We are proud to announce the launch of one of our latest innovations: Contoso Traders eCommerce store. Our journey of building India’s biggest unicorn start-up has been full of successes, but also failures and learning from them.</p>
+            <p  className='mt-2 text-justify'>
+            Contoso Traders is an e-commerce platform that specializes in electronic items. Our website offers a wide range of electronics, including smartphones, laptops, and other popular gadgets.
+            We pride ourselves on providing high-quality products at competitive prices, and our dedicated customer service team is always on hand to assist with any queries or concerns. With fast and secure shipping, convenient payment options, and a user-friendly interface, Contoso Traders is the perfect place to shop for all your electronic needs. 
+            </p>
         </Grid>
         <Grid item xs={2} className='section-2'>
             <ul>
