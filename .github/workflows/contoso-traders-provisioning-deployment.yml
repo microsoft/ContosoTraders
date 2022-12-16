@@ -45,6 +45,7 @@ env:
 jobs:
   provision-infrastructure:
     runs-on: ubuntu-latest
+    environment: TEST
     steps:
       - name: checkout code
         uses: actions/checkout@v3
@@ -112,6 +113,7 @@ jobs:
 
   deploy-carts-api:
     runs-on: ubuntu-latest
+    environment: TEST
     needs: provision-infrastructure
     steps:
       - name: checkout code
@@ -144,6 +146,7 @@ jobs:
 
   deploy-products-api:
     runs-on: ubuntu-latest
+    environment: TEST
     needs: provision-infrastructure
     steps:
       - name: checkout code
@@ -301,6 +304,7 @@ jobs:
 
   deploy-ui:
     runs-on: ubuntu-latest
+    environment: TEST
     needs: [provision-infrastructure, deploy-carts-api, deploy-products-api]
     steps:
       - name: checkout code
