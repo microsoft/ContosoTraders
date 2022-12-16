@@ -39,8 +39,7 @@ env:
 jobs:
   provision-infrastructure:
     runs-on: ubuntu-latest
-    environment:
-      name: ${{ inputs.ENVIRONMENT }}
+    environment: ${{ inputs.ENVIRONMENT }}
     steps:
       - run: echo ${{ inputs.ENVIRONMENT }}
       - name: checkout code

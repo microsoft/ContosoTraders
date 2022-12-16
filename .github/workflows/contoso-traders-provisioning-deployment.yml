@@ -48,6 +48,7 @@ jobs:
       matrix:
         ENVIRONMENT: [TEST, PROD]
     uses: ./.github/workflows/template.yml
+    secrets: inherit
     with:
       ENVIRONMENT: ${{ matrix.environment }}
 
