@@ -5,9 +5,8 @@
 1. You'll need an Azure subscription with the `Microsoft.OperationsManagement` resource provider registered ([steps](https://learn.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-portal)).
 2. You'll need a service principal in the `owner` role on the Azure subscription where the infrastructure is to be provisioned.
 3. Git clone this repository to your machine.
-4. Create the `SERVICEPRINCIPAL`, `ENVIRONMENT`, and `SQL_PASSWORD` github secrets ([instructions here](./App-Deployment-Guide)).
+4. Create the `SERVICEPRINCIPAL`, `ENVIRONMENT`, and `SQL_PASSWORD` github secrets ([instructions here](./App-deployment-Guide)).
 5. Next, run the `contoso-traders-provisioning-deployment` github workflow. You can do this by going to the github repo's `Actions` tab, selecting the workflow, and clicking on the `Run workflow` button. This will both provision the infrastructure on Azure as well as deploy the applications (APIs, UI) to the infrastructure.
-
 
 ## Running ContosoTraders Locally
 

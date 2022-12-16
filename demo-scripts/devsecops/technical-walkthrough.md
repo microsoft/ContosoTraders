@@ -15,7 +15,7 @@ The key takeaways from this demo are:
   
 ## Before you Begin 
 
-You must have Contoso Traders deployed in your environment and setup with GitHub Actions.  Please refer to the deployment instructions [here](https://github.com/microsoft/ContosoTraders/blob/main/docs/App-Deployment-Guide.md)
+You must have Contoso Traders deployed in your environment and setup with GitHub Actions.  Please refer to the deployment instructions [here](https://github.com/microsoft/ContosoTraders/blob/main/docs/app-deployment-Guide.md)
 
 ## Walkthrough – DevSecOps with Contoso Traders  
 
