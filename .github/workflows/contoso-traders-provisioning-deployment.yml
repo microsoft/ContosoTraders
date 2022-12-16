@@ -47,7 +47,7 @@ jobs:
     strategy:
       matrix:
         ENVIRONMENT: [TEST, PROD]
-    uses: ./.github/workflows/templates/template.yml
+    uses: ./.github/workflows/template2.yml
     with:
       ENVIRONMENT: ${{ matrix.environment }}
 
