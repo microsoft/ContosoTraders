@@ -3,7 +3,7 @@ name: template
 on:
   workflow_call:
     inputs:
-      ENVIRONMENT:
+      environmentName:
         required: true
         type: string
 
@@ -39,7 +39,7 @@ env:
 jobs:
   provision-infrastructure:
     runs-on: ubuntu-latest
-    environment: ${{ inputs.environment }}
+    environment: ${{ inputs.environmentName }}
     steps:
       - name: checkout code
         uses: actions/checkout@v3
@@ -107,7 +107,7 @@ jobs:
 
   deploy-carts-api:
     runs-on: ubuntu-latest
-    environment: ${{ inputs.environment }}
+    environment: ${{ inputs.environmentName }}
     needs: provision-infrastructure
     steps:
       - name: checkout code
@@ -140,7 +140,7 @@ jobs:
 
   deploy-products-api:
     runs-on: ubuntu-latest
-    environment: ${{ inputs.environment }}
+    environment: ${{ inputs.environmentName }}
     needs: provision-infrastructure
     steps:
       - name: checkout code
@@ -298,7 +298,7 @@ jobs:
 
   deploy-ui:
     runs-on: ubuntu-latest
-    environment: ${{ inputs.environment }}
+    environment: ${{ inputs.environmentName }}
     needs: [provision-infrastructure, deploy-carts-api, deploy-products-api]
     steps:
       - name: checkout code
