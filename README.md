@@ -12,7 +12,7 @@
 
 ## Documentation and Resources
 
-* [Deployment Guide](./docs/App-Deployment-Guide.md)
+* [Deployment Guide](./docs/app-deployment-Guide.md)
   * [Deployment Guide for Inventory Management PowerApp](./docs/Inventory-power-app-deployment-guide.md)
 * [Contributing](./docs/contributing.md)
 * [Bicep Templates](./iac/)
