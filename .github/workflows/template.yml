@@ -2,9 +2,10 @@ name: template
 
 on:
   workflow_call:
-    secrets:
+    inputs:
       ENVIRONMENT:
         required: true
+        type: string
 
 env:
   # You can specify any location for `SUB_DEPLOYMENT_REGION`. It's the region where the deployment
@@ -38,7 +39,7 @@ env:
 jobs:
   provision-infrastructure:
     runs-on: ubuntu-latest
-    environment: ${{ secrets.ENVIRONMENT }}
+    environment: ${{ inputs.ENVIRONMENT }}
     steps:
       - name: checkout code
         uses: actions/checkout@v3
@@ -106,7 +107,7 @@ jobs:
 
   deploy-carts-api:
     runs-on: ubuntu-latest
-    environment: ${{ secrets.ENVIRONMENT }}
+    environment: ${{ inputs.ENVIRONMENT }}
     needs: provision-infrastructure
     steps:
       - name: checkout code
@@ -139,7 +140,7 @@ jobs:
 
   deploy-products-api:
     runs-on: ubuntu-latest
-    environment: ${{ secrets.ENVIRONMENT }}
+    environment: ${{ inputs.ENVIRONMENT }}
     needs: provision-infrastructure
     steps:
       - name: checkout code
@@ -297,7 +298,7 @@ jobs:
 
   deploy-ui:
     runs-on: ubuntu-latest
-    environment: ${{ secrets.ENVIRONMENT }}
+    environment: ${{ inputs.ENVIRONMENT }}
     needs: [provision-infrastructure, deploy-carts-api, deploy-products-api]
     steps:
       - name: checkout code
