@@ -48,6 +48,7 @@ jobs:
       matrix:
         environment: [TEST, PROD]
     runs-on: ubuntu-latest
+    environment: ${{ matrix.environment }}
     steps:
       - name: checkout code
         uses: actions/checkout@v3
