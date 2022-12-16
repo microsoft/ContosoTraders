@@ -1,0 +1,15 @@
+name: template2
+
+on:
+  workflow_call:
+    secrets:
+      ENVIRONMENT:
+        required: true
+
+jobs:
+  provision-infrastructure:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.ENVIRONMENT }}
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3

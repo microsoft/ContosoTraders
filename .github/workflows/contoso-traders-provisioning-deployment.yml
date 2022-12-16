@@ -43,15 +43,13 @@ on:
 #   USER_ASSIGNED_MANAGED_IDENTITY_NAME: contoso-traders-mi-kv-access
 
 jobs:
-  a-job:
+  provision-and-deploy:
     strategy:
       matrix:
         environment: [TEST, PROD]
-    runs-on: ubuntu-latest
-    environment: ${{ matrix.environment }}
-    steps:
-      - name: checkout code
-        uses: actions/checkout@v3
+    uses: ./templates/template.yml
+    with:
+      environment: ${{ matrix.environment }}
 
   # provision-infrastructure:
   #   runs-on: ubuntu-latest
