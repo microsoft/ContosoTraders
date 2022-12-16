@@ -39,7 +39,7 @@ env:
 jobs:
   provision-infrastructure:
     runs-on: ubuntu-latest
-    environment: ${{ inputs.ENVIRONMENT }}
+    environment: TEST #${{ inputs.ENVIRONMENT }}
     steps:
       - run: echo ${{ inputs.ENVIRONMENT }}
       - name: checkout code
