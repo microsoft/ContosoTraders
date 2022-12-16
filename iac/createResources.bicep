@@ -29,6 +29,7 @@ param prefixHyphenated string = 'contoso-traders'
 // variables
 ////////////////////////////////////////////////////////////////////////////////
 
+// common
 var suffix = toLower(environment)
 
 // key vault
