@@ -3,7 +3,7 @@ name: contoso-traders-provisioning-deployment
 on:
   workflow_dispatch:
   push:
-    branches: ["main"]
+    branches: ["dev", "main"]
     paths:
       [
         "src/ContosoTraders.Api.Carts/**",
