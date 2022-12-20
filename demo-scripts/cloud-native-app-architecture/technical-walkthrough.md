@@ -6,11 +6,11 @@ The key takeaways from this demo are:
 
 * You'll revisit the overview of the application's architecture.
 * You'll revisit the various Azure services that this application leverages.
-* You'll get an hands-on experience of deploying the application to Azure.
+* You'll get a hands-on experience of deploying the application to Azure.
 
 ## Before You Begin
 
-* There are some prerequisites for this demo mentioned in the [application deployment guide](../docs/../../docs/app-deployment-guide.md). After executing all the steps mentioned in that document, the application's infrastructure will be provisioned on Azure, and the latest code will be deployed as well.
+* There are some prerequisites for this demo mentioned in the [application deployment guide](../docs/../../docs/app-deployment-guide.md). After completing all the steps mentioned in that document, the application's infrastructure will be provisioned on Azure, and the latest code will also be deployed.
 
 ## Walkthrough: Exploring the application's architecture
 
@@ -18,7 +18,7 @@ This section has already been covered in our previous overview document. You can
 
 ## Walkthrough: Exploring the application's infrastructure on Azure
 
-Open the Azure Portal, and navigate to the resource group that was created for this demo. The resource group name will generally be  `contoso-traders-rg`.
+Open the Azure Portal, and navigate to the resource group that was created for this demo. The resource group name will generally be `contoso-traders-rg`.
 
 ![Resource Group](./media/rg.png)
 
@@ -41,7 +41,7 @@ All the resources related to the application will be provisioned in this resourc
 
    ![CDN Rules](./media/cdn-rules-engine.png)
 
-4. Another advantage of Azure CDN is that it allows for custom domain HTTPS, along with managed TLS certificates.
+4. Another advantage of Azure CDN is that it allows custom domain HTTPS, along with managed TLS certificates.
 
    ![CDN TLS Certificates](./media/cdn-tls-certificates.png)
 
@@ -63,7 +63,7 @@ All the resources related to the application will be provisioned in this resourc
 
    ![ACA](./media/aca.png)
 
-6. Each revision has a unique (revision-specific) endpoint/URL. However you can also use the revision-neutral URL to access the application. This URL will always point to the latest revision.
+6. Each revision has a unique (revision-specific) endpoint/URL. However, you can also use the revision-neutral URL to access the application. This URL will always point to the latest revision.
 
    ![ACA Revision](./media/aca-revision1.png)
 
@@ -125,4 +125,4 @@ This section has already been covered in our previous overview document. You can
 
 In this document, we revisited the application's architecture, and also got a tour of the various Azure services that this application leveraged. 
 
-Next up, you can explore the [application's codebase](../../src), and also explore the [other demo scripts](../../demo-scripts/).
+Next, you can understand the [application's codebase](../../src), and also explore the [other demo scripts](../../demo-scripts/).
