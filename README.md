@@ -10,7 +10,7 @@
   * [Products API](https://contoso-traders-productsprod.eastus.cloudapp.azure.com/swagger/)
 * [Deployment Guide](./docs/App-Deployment-Guide.md)
   * [Deployment Guide for Inventory Management PowerApp](./docs/Inventory-power-app-deployment-guide.md)
-* [Contributing](./docs/contributing.md)
+* [Contributing](./CONTRIBUTING.md)
 * [Bicep Templates](./iac/)
 * [Load Tests](./tests/loadtests/)
 * [Github Workflows](./.github/workflows/)
