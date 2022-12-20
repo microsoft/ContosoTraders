@@ -13,7 +13,7 @@ The key takeaways from this demo are:
 
 ## Walkthrough: Exploring the application's architecture and the Azure services leveraged
 
-Let's take a quick peek into Contoso Traders's application architecture. The various components can be broadly categorized as follows:
+Here's a quick snapshot of the Contoso Traders's application architecture. The various components can be broadly categorized as follows:
 
 ![Contoso Traders Architecture](./media/cni1.png)
 
