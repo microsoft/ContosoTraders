@@ -6,8 +6,8 @@
 
 * Application Links
   * [UI](https://www.contosotraders.com/)
-  * [Carts API](https://contoso-traders-productsprod.azurewebsites.net/swagger/)
-  * [Products API](https://contoso-traders-cartsprod.delightfuldune-ced90d47.eastus.azurecontainerapps.io/swagger)
+  * [Carts API](https://contoso-traders-cartsprod.delightfuldune-ced90d47.eastus.azurecontainerapps.io/swagger)
+  * [Products API](https://contoso-traders-productsprod.eastus.cloudapp.azure.com/swagger/)
 * [Deployment Guide](./docs/App-Deployment-Guide.md)
   * [Deployment Guide for Inventory Management PowerApp](./docs/Inventory-power-app-deployment-guide.md)
 * [Contributing](./docs/contributing.md)
