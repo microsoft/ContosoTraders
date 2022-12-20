@@ -4,8 +4,8 @@
 
 The key takeaways from this demo are:
 
-* GitHub Actions is used to automate the deployment of the application and infrastructure. Using GitHub Action workflows, the application and infrastructure can be deployed to the Azure cloud with a single click, allowing you to implement continuous integration and a continuous deployment process.
-* GitHub Actions integrates with Azure services to enable you to build, test, and deploy to Azure directly from your GitHub repository, along with tons of other integrations.
+* GitHub Actions is used to automate the deployment of the application and infrastructure. Using GitHub Action workflows, the application and infrastructure can be deployed to Azure cloud with a single click, allowing you to implement continuous integration with a continuous deployment process.
+* GitHub Actions integrates with Azure services to enable you to build, test, and deploy to Azure directly from your GitHub repository, along with many other integrations.
 * GitHub Advanced Security is a set of tools that help you find and fix vulnerabilities in your code, protect your users, and detect and prevent malicious activity.
 * GitHub Advanced Security is available for public and private repositories on GitHub.com and GitHub Enterprise Cloud.
 * GitHub Advanced Security can be integrated with Microsoft Defender for Cloud to provide a unified view of security alerts and vulnerabilities across the entire DevSecOps pipeline.
@@ -24,11 +24,11 @@ Let us take a look at the GitHub Actions used by Contoso Traders for CI/CD.
 
 1. Navigate to [ContosoTraders github repo](https://github.com/microsoft/ContosoTraders).
 
-2. Go to the **github/workflows** folder; inside, you'll find the workflow **YAML files** that are used to deploy and set up the resources.  
+2. Go to the **github/workflows** folder; here you'll find the workflow **YAML files** that are used to deploy and set up the resources.  
 
     ![image](media/ct2.png)
 
-3. Here is a quick overview of both workflows. If you are interested, you can review the workflow code to get into more details.
+3. Here is a quick overview of both workflows. If you are interested, you can review the workflow code for more details.
 
    **Contoso-traders-provisioning-deployment:**  This workflow provisions Azure resources used for hosting the application and deploys the application and initial data to the provisioned resources. It includes everything needed to get the application up and running in an Azure Environment.  
 
@@ -48,13 +48,13 @@ Let us take a look at the workflows status for Contoso Traders in this public re
 
    ![image](media/actions.png)
     
-2. Select the workflow **contoso-traders-provisioning-deployment**. This will the history of workflows execution.  
+2. Select the workflow **contoso-traders-provisioning-deployment**. This will be the history of workflows execution.  
 
     ![image](media/actions1.png)
 
 3. Select the latest run from the list. In Summary, you will see 4 jobs listed.
 
-   * `provision-infrastructure`: Used for provisioning Azure resources, configure access policies and permissions, seeding initial database.
+   * `provision-infrastructure`: Used for provisioning Azure resources, configuring access policies and permissions, seeding initial database.
    * `deploy-carts-api`: Used to deploy the Carts API in Azure Container Apps.
    * `deploy-products-api`: Used to deploy Products API service in Azure Kubernetes Service.
    * `deploy-ui`: Used to deploy the front end website to Azure App Service.
@@ -85,7 +85,7 @@ Let us look at some of the GitHub Advanced Security features in action on our Co
 
 Dependabot security updates make it easier for you to fix vulnerable dependencies in your repository. If you enable this feature, when a Dependabot alert is raised for a vulnerable dependency in the dependency graph of your repository, Dependabot automatically tries to fix it.
 
-Let us take a look at how dependabot is used in Contoso Traders.  Please note that GitHub Advanced security alerts are not public, so screenshots are included further. If you’d like to see this in action, please follow technical walkthrough for DevSecOps with Contoso Traders.
+Let us take a look at how dependabot is used in Contoso Traders.  Please note that GitHub Advanced security alerts are not public, so screenshots are included further. If you’d like to see this in action, please follow the technical walkthrough for DevSecOps with Contoso Traders.
 
 1. Contoso Traders repository is enabled with GitHub Advanced Security features, including dependabot.
 
@@ -93,7 +93,7 @@ Let us take a look at how dependabot is used in Contoso Traders.  Please note th
 
     ![image](media/settings.png)
     
-3. Let us look at  **minimatch ReDoS vulnerability** . As you can see in screenshot it includes  details about vulnerability and suggested upgrade version.
+3. Let us look at  **minimatch ReDoS vulnerability** . As you can see in the screenshot, it includes details about vulnerability and has suggested an upgrade version.
 
    ![image](media/security.png)
 
@@ -111,7 +111,7 @@ Let us take a look at how dependabot is used in Contoso Traders.  Please note th
 
 GitHub scans repositories for known secret formats to prevent fraudulent use of credentials that were committed accidentally. Secret scanning happens by default on public repositories and can be enabled on private repositories by repository administrators or organization owners.
 
- Contoso Traders is set to have secret scanning enabled for the public repository. Please note that GitHub Advanced security secret scanning alerts are not public, so screenshots are included further. If you’d like to see this in action, please follow technical walkthrough for DevSecOps with Contoso Traders. 
+ Contoso Traders is set to have secret scanning enabled for the public repository. Please note that GitHub Advanced security secret scanning alerts are not public, so screenshots are included further. If you’d like to see this in action, please follow the technical walkthrough for DevSecOps with Contoso Traders. 
  
  You will notice that Secret Scanning is already enabled. GitHub enables secret scanning by default for all Public repo. If you have a private repo, you can manually enable it from this page.
  
@@ -129,7 +129,7 @@ By connecting your GitHub repositories to Defender for Cloud, you'll extend Defe
 
 **Defender for Cloud's Cloud Workload Protection features**: Extends Defender for Cloud's threat detection capabilities and advanced defenses to your GitHub resources.
 
-If you’d like to see this in action, please follow technical walkthrough for DevSecOps with Contoso Traders.
+If you’d like to see this in action, please follow the technical walkthrough for DevSecOps with Contoso Traders.
 
 ## Summary
 
