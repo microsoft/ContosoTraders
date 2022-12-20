@@ -10,26 +10,25 @@ The key takeaways from this demo are:
 
 * Contoso Traders leverages Power Apps, Power Automate and Microsoft Teams to implement an end to end inventory management system including approval workflows. 
 
-
 ## Problem Statement(s):
-Contoso Traders are one of the leading E-Commerce platform with wide range of electronic products like Desktops and Laptops, Mobile Phones, Gaming console accessories and Monitors. 
+Contoso Traders is one of the leading E-Commerce platforms with wide range of electronic products like Desktops and Laptops, Mobile Phones, Gaming console accessories and Monitors. 
 
 Contoso Traders has different departments like Marketing, Sales, Finance, HR and IT, colloborating with Microsoft Teams and Outlook. 
 
-Contoso Traders internal teams wants to avoid manual process for product updates in website and would want to leverage Microsoft Power Platform to build an internal inventory management system without having to do custom development. 
+Contoso Traders internal teams wants to avoid manual process for product updates in website and want to leverage Microsoft Power Platform to build an internal inventory management system without engaging in custom development. 
 
 
-* In Contoso Traders for internal and external workflows collaborations there are several processes going on for different database transactions. A new product need to add into the product database, updating price of a product or deleting a product from the database, Contoso Traders depends on Microsoft 365 email and Teams for the internal collaborations.
-* In the current approval process, the approvers (managers) getting the approval notifications in their emails and its difficult to find which category of item is getting approved, also need to check the product details manually and which team member sending the approval request and the details of the request. Also, its difficult for the users to send emails to the approver when the price of a product change happens. Once the approver approved the request and sent back the notifications to the users, users should update the price manually in the system.
-* When the Finance Team wants to change the price of a product and get it approved from the approver, they are following manual approval process over email.. At the same time, multiple teams sending the request for updating the price, the approver find it difficult to view all the request notifications in the email, also the details of the product and the requester. In the current scenario there are so much mismatch happens when the price changes of different products happens.
-* Approver needs to view the product details and the requestor before approving the price change of any product. Also when the approver approved the request the change of the price of that particular product should update automatically in the website as well as the database.
+* In Contoso Traders, for internal and external workflows collaborations, there are several processes going on for different database transactions. Whether a new product needs to be added into the product database, or price of a product needs to be updated or a product needs to be deleted from the database, Contoso Traders depends on Microsoft 365 email and Teams for the internal collaborations.
+* In the current approval process, the approvers (managers) get approval notifications in their emails and it is difficult to find which category of item is getting approved, also there is a need to check the product details manually by the team member sending the approval request and the details of the request. Also, it's difficult for the users to send emails to the approver when there is a change in the price of the product. Once the approver approves the request and sends it back, the user gets notified and then updates the price manually in the system.
+* When the Finance Team wants to change the price of a product and get it approved from the approver, they are following manual approval process over email. At the same time, multiple teams send the request for updating the price, making it difficult for the approver to view all the request notifications in the email with the details of the product and the requester. In the current scenario there is a lot of mismatch when the price changes of different products take place.
+* Approver needs to view the product and requestor details before approving the price change of any product. Also when the approver approves the request for the change of the price of that particular product, it should be updated automatically in the website as well as the database.
 
 ## Solutions
 
-* Microsoft 365 is the collaboration platform for business users. Microsoft 365 offers different applications like Microsoft Office, Outlook, Teams, Power Platform, SharePoint etc. To resolve the issues in the current scenario, Contoso Traders decided to build an app in power platform  by using MS Cloud services like, Teams, cosmos etc., allowed to implement an end to end solution which’d update price on final website (contosotraders.com) with zero manual efforts from engineering/other teams and is fully automated with approval process in place. 
-* PowerApps allows us to build custom apps, to accommodate our business needs or solve our issues when we cannot find a suitable off-the-shelf solution. PowerApps can easily connect to our stored business data, which is either located in Microsoft Dataverse or within an on-premise/online data source, for example; Excel, SharePoint, Office 365, SQL Server and Dynamics365. Also service in the Power platform  named Power Automate  can use for creating workflows to automate our processes.
+* Microsoft 365 is the collaboration platform for business users. Microsoft 365 offers different applications like Microsoft Office, Outlook, Teams, Power Platform, SharePoint etc. To resolve the issues in the current scenario, Contoso Traders decided to build an app in Power Platform using MS Cloud services like, Teams, cosmos etc., to implement an end to end solution which will update the price on the final website (contosotraders.com) with zero manual efforts from engineering/other teams and is fully automated with an approval process in place. 
+* PowerApps allows us to build custom apps, to accommodate our business needs or solve our issues when we cannot find a suitable off-the-shelf solution. PowerApps can easily connect to our stored business data, which is either located in Microsoft Dataverse or within an on-premise/online data source, for example; Excel, SharePoint, Office 365, SQL Server and Dynamics365. Also, another service in the Power platform named Power Automate can be used for creating workflows to automate our processes.
 * Created a custom Power App named Inventory Management System along with Power Automate workflow. This Inventory Management System App helps business users to easily update the price of a product by taking the approval from the stakeholders.
-* When a business user send the approval request for updating the price of a particular product to the Approver through the Inventory Management App, a request will trigger in Microsoft Teams channel and the stakeholder can view the request and open the view items in the request to view the product details to be updated. When the stakeholder approves the request, business user can view it at the same time on the same Teams channel and the price will update in the website as well as database automatically. When the approver rejects the request business user can view the message at the same time.
+* When a business user send the approval request for updating the price of a particular product to the Approver through the Inventory Management App, a request will trigger in Microsoft Teams channel and the stakeholder can view the request and open to view items in the request and the product details to be updated. When the stakeholder approves the request, business user can view it at the same time on the same Teams channel and the price will be updated on the website as well as the database automatically. When the approver rejects the request, the business user can view the message at the same time.
 
 
 ## Before you begin
@@ -38,7 +37,7 @@ You must have Inventory Management System App deployed in your Power platform en
  
 ## Walkthrough - Inventory Management System App
 
-   Now, Let us try the Inventory Management System App for Contoso Traders. We are going to launch the App and make  pricing updates on XBOX Controllers.
+   Now, Let us try the Inventory Management System App for Contoso Traders. We are going to launch the App and make pricing updates on XBOX Controllers.
 
 1. Please login into your Power Apps platform with your Microsoft 365 account.
 
@@ -63,7 +62,7 @@ You must have Inventory Management System App deployed in your Power platform en
 
    ![App6](images/App6.png)
 	
-7. You will receive a message stating that the price change is sent for approva.
+7. You will receive a message stating that the price change is sent for approval.
 
    ![img](images/UApp3.png)
 
@@ -85,7 +84,7 @@ You must have Inventory Management System App deployed in your Power platform en
 	
 ## Summary
 
-In this scenario, we looked at how Inventory Management System App successfully automated the process of updating and manage product pricing for Contoso Traders. 
+In this scenario, we looked at how Inventory Management System App successfully automated the process of updating and managing product pricing for Contoso Traders. 
 
 If you are interested in a technical walkthrough with steps, please follow the technical walkthrough [documentation](./technical-walkthrough.md)
 
