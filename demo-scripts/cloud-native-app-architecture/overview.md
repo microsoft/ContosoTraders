@@ -19,7 +19,7 @@ Let's take a quick peek into Contoso Traders's application architecture. The var
 
 ### DevOps
 
-The application's source code, tests, deployment scripts (IaC), tests are all available in this GitHub repository itself. We also have CI/CD pipelines (github workflows) that build the various application components, and deploy them to Azure Cloud.
+The application's source code, tests and deployment scripts (IaC) are all available in this GitHub repository itself. We also have CI/CD pipelines (github workflows) that build the various application components, and deploy them to Azure Cloud.
 
 An Azure Container Registry (ACR) is used to store the container images for the application's microservices. The ACR is integrated with the GitHub repository, and the container images are built and pushed to the ACR whenever there is a commit to the repository's `main` branch.
 
@@ -27,7 +27,7 @@ An Azure Container Registry (ACR) is used to store the container images for the 
 
 The front-end is a React JS application that is hosted on Azure App Service. The front-end application is also configured to use Azure Application Insights for monitoring and telemetry.
 
-Power Apps is used to create the Shipping Management App where this app will be managing shipment. Storage Account is used to store the images of the products available in the application.
+Power Apps is used to create the Shipping Management App where this app will be managing shipment. Storage Account is a repository of images of the products available in the application.
 
 CDN is used to cache the static content of the application, and to serve it from the nearest edge location. This helps in reducing the latency and improving the performance of the application.
 
@@ -49,7 +49,7 @@ All these microservices are also configured to use Azure Application Insights fo
 
 ### Monitoring and Telemetry
 
-Application Insights is used to monitor the application's performance and health. It is also used to collect telemetry data (metrics, events, logs) from the application's various components. The telemetry data is used to generate dashboards and alerts.
+Application Insights is used to monitor the application's performance and health. It is also used to collect telemetry data (metrics, events, logs) from the various components of the application. The telemetry data is used to generate dashboards and alerts.
 
 ### Security
 
@@ -67,4 +67,4 @@ Microsoft Defender is used to monitor the application's security posture. It is 
 
 ## Summary
 
-Hope this demo was helpful in giving you an overview of the application's architecture and the various Azure services that this application leverages. We have a more detailed technical walkthrough of this application in [the next demo](./technical-walkthrough.md).
+We hope this demo was helpful in giving you an overview of the application's architecture and the various Azure services that this application leverages. We have a more detailed technical walkthrough of this application in [the next demo](./technical-walkthrough.md).
