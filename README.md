@@ -2,40 +2,34 @@
 
 ![Logo](./docs/images/logo-1280x640.png)
 
-## Application Links
-
-| Application  | Link                                                                                                                                                                                                            |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UI           | [PROD](https://www.contosotraders.com/) \| [TEST](https://test.contosotraders.com/)                                                                                                                             |
-| Carts API    | [PROD](https://contoso-traders-cartsprod.delightfuldune-ced90d47.eastus.azurecontainerapps.io/swagger) \| [TEST](https://contoso-traders-cartstest.orangeflower-95b09b9d.eastus.azurecontainerapps.io/swagger/) |
-| Products API | [PROD](https://contoso-traders-productsprod.azurewebsites.net/swagger/) \| [TEST](https://contoso-traders-productstest.azurewebsites.net/swagger/)                                                              |
-
 ## Documentation and Resources
 
+* Application Links
+  * [UI](https://www.contosotraders.com/)
+  * [Carts API](https://contoso-traders-cartsprod.delightfuldune-ced90d47.eastus.azurecontainerapps.io/swagger)
+  * [Products API](https://contoso-traders-productsprod.eastus.cloudapp.azure.com/swagger/)
 * [Deployment Guide](./docs/App-Deployment-Guide.md)
   * [Deployment Guide for Inventory Management PowerApp](./docs/Inventory-power-app-deployment-guide.md)
-* [Contributing](./docs/contributing.md)
+* [Contributing](./CONTRIBUTING.md)
 * [Bicep Templates](./iac/)
 * [Load Tests](./tests/loadtests/)
 * [Github Workflows](./.github/workflows/)
   * [![contoso-traders-provisioning-deployment](https://github.com/microsoft/ContosoTraders/actions/workflows/contoso-traders-provisioning-deployment.yml/badge.svg)](https://github.com/microsoft/ContosoTraders/actions/workflows/contoso-traders-provisioning-deployment.yml)
   * [![contoso-traders-load-testing](https://github.com/microsoft/ContosoTraders/actions/workflows/contoso-traders-load-testing.yml/badge.svg)](https://github.com/microsoft/ContosoTraders/actions/workflows/contoso-traders-load-testing.yml)
 
-
 ## Demo Scripts
 
-  | Scenario                                  | Documentation                                                                                                                                                                                       |
-  | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | Cloud Native App Architecture Walkthrough | [Overview](./demo-scripts/cloud-native-app-architecture/overview.md) \| [Technical Walkthrough](./demo-scripts/cloud-native-app-architecture/technical-walkthrough.md)                      |
-  | Autoscaling Cloud Native Apps in Azure    | [Overview](./demo-scripts/autoscaling-cloud-native-apps-azure/overview.md) \| [Technical Walkthrough](./demo-scripts/autoscaling-cloud-native-apps-azure/technical-walkthrough.md)          |
-  | DevSecOps Journey with GitHub + Azure     | [Overview](./demo-scripts/devsecops/overview.md) \| [Technical Walkthrough](./demo-scripts/devsecops/technical-walkthrough.md)                                                              |
-  | Low Code App Development Power Platform   | [Overview](./demo-scripts/low-code-development/overview.md) \| [Technical Walkthrough](./demo-scripts/low-code-development/technical-walkthrough.md) |
-  | Intelligent Apps with Azure AI Services   | [Overview](./demo-scripts/intelligent-apps-with-azure-ai-services/overview.md) \| [Technical Walkthrough](./demo-scripts/intelligent-apps-with-azure-ai-services/technical-walkthrough.md)  |
+  | Scenario                                  | Documentation                                                                                                                                                                              |
+  | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+  | Cloud Native App Architecture Walkthrough | [Overview](./demo-scripts/cloud-native-app-architecture/overview.md) \| [Technical Walkthrough](./demo-scripts/cloud-native-app-architecture/technical-walkthrough.md)                     |
+  | Autoscaling Cloud Native Apps in Azure    | [Overview](./demo-scripts/autoscaling-cloud-native-apps-azure/overview.md) \| [Technical Walkthrough](./demo-scripts/autoscaling-cloud-native-apps-azure/technical-walkthrough.md)         |
+  | DevSecOps Journey with GitHub + Azure     | [Overview](./demo-scripts/devsecops/overview.md) \| [Technical Walkthrough](./demo-scripts/devsecops/technical-walkthrough.md)                                                             |
+  | Low Code App Development Power Platform   | [Overview](./demo-scripts/low-code-development/overview.md) \| [Technical Walkthrough](./demo-scripts/low-code-development/technical-walkthrough.md)                                       |
+  | Intelligent Apps with Azure AI Services   | [Overview](./demo-scripts/intelligent-apps-with-azure-ai-services/overview.md) \| [Technical Walkthrough](./demo-scripts/intelligent-apps-with-azure-ai-services/technical-walkthrough.md) |
 
-##  Architecture 
+## Architecture
 
 ![Architecture](./docs/architecture/contoso-traders-enhancements.drawio.png)
-
 
 ## Contributing
 
@@ -53,9 +47,7 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 ## Trademarks
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft
+trademarks or logos is subject to and must follow [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
-

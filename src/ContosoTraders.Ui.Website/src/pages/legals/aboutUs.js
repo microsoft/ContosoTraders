@@ -10,7 +10,7 @@ const AboutUs = (props) => {
                 <Breadcrump currentPath={currentCategory} />
                 <div className="refund-policy">
                     <p className="mainHeading">About Us</p>
-                    <p className="subHeading">Our Mission</p>
+                    {/* <p className="subHeading">Our Mission</p> */}
                     <p className="paragraph">
                         Contoso Traders is an e-commerce platform that specializes in electronic items. Our website offers a wide range of electronics, including smartphones, laptops, and other popular gadgets.
                         <br/><br/>

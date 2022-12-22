@@ -6,25 +6,25 @@ Contoso Traders is a fictitious company that sells a wide range of products. The
 
 ## Key Takeaways
 
-* Azure AI Services is a suite of tools and services offered by Microsoft Azure that allows developers to incorporate intelligent features into their applications. With Azure AI Services, developers can easily add these intelligent features to their applications without the need for specialized knowledge or expertise in the field of artificial intelligence
+* Azure AI Services is a suite of tools and services offered by Microsoft Azure that allows developers to incorporate intelligent features into their applications. With Azure AI Services, developers can easily add these intelligent features to their applications without the need for specialized knowledge or expertise in the field of artificial intelligence.
 
-* Cognitive Services image search is a feature of Azure AI Services that allows developers to incorporate image recognition capabilities into their applications. This service uses machine learning algorithms to analyze and understand the content of images, making it possible for applications to search for and retrieve images based on their visual characteristics
+* Cognitive Services image search is a feature of Azure AI Services that allows developers to incorporate image recognition capabilities into their applications. This service uses machine learning algorithms to analyze and understand the content of images, making it possible for applications to search for and retrieve images based on their visual characteristics.
 
-* You will have understanding of how Contoso Traders is leveraging Azure Cognitive Services to faclitate image based search
+* You will have understanding of how Contoso Traders is leveraging Azure Cognitive Services to faclitate image based search.
 
 ## Abstract and learning objectives
 
-In this lab, you will explore the [Contoso traders application](https://www.contosotraders.com/) and will go through the overview of an app with a focus on the need for AI/Visual Search, use the image search option in the application to find the device from the product catalog and finally you will learn on the **Azure AI service** used in the application and also the high-level idea of how the Cognitive services work.
+In this lab, you will explore the [Contoso traders application](https://www.contosotraders.com/) and will go through the overview of an app with a focus on the need for AI/Visual Search, use the image search option in the application to find the device from the product catalog, learn how the **Azure AI service** is used in the application and also the high-level idea of how the Cognitive services work.
 
 For this, we use the service called **Computer Vision**, an Azure AI service that analyzes content in images and videos.
 
 Azure's Computer Vision service gives you access to advanced algorithms that process images and return information based on the visual features you're interested in such as **Optical Character Recognition (OCR**), **Image Analysis**, **Face Service** and **Spatial Analysis**.
 
-With the Analyze Image API, Computer Vision can analyze the content type of images, indicating whether an image is clip art or a line drawing.
+With the Analyze Image API, Computer Vision can analyze content type of images, indicating whether an image is clip art or a line drawing.
 
 ## Before you begin
 
-You will need the following pre-requisites to get started
+You will need the following pre-requisites to get started:
 
 * Microsoft Azure Subscription with required permissions. You can [create one for free](https://azure.microsoft.com/en-us/free/ai/)
   
@@ -44,7 +44,7 @@ You will need the following pre-requisites to get started
 
    ![image](https://user-images.githubusercontent.com/48020356/204916409-3c559023-64e1-4c7a-95d5-558a5743dbde.png)
 
-1. Either download an image from a browser and save it or select a locally existing image and click **Open**. This will take you to the **Suggested Product list** page as per the image provided to search and you can select the product you wish to buy from the application from here.
+1. Either download an image from a browser and save it or select a locally existing image and click **Open**. This will take you to the **Suggested Product list** page as per the image provided to search and select the product you wish to buy from the application.
 
    ![image](https://user-images.githubusercontent.com/48020356/204917533-db8beed3-29f5-4c34-9c4f-d35ffe8b906e.png)
 
@@ -52,17 +52,17 @@ You will need the following pre-requisites to get started
 
    The **Image Analysis service** extracts many visual features from images, such as objects, faces, adult content, and auto-generated text descriptions, it provides you with AI algorithms for processing images and returning information on their visual features.
 
-   We can use **Vision Studio** to understand the process of Image Analysis in cognitive service using Computer Vsion features
+   We can use **Vision Studio** to understand the process of Image Analysis in cognitive service using Computer Vsion features.
 **Vision Studio** is a set of UI-based tools that lets you explore, build, and integrate features from Azure Computer Vision.
-Vision Studio provides you with a platform to try several service features and sample their returned data in a quick, straightforward manner. Using Studio, you can start experimenting with the services and learning what they offer without needing to write any code. Then, use the available client libraries and REST APIs to get started embedding these services into your applications.
+Vision Studio provides you with a platform to try several service features and sample their returned data in a quick, straightforward manner. Using Studio, you can start experimenting with the services and learning what they offer without the need to write any code. Then, use the available client libraries and REST APIs to get started embedding these services into your applications.
 
-1. Sign in to [Vision Studio](https://portal.vision.cognitive.azure.com/) from browser with your Azure subscription and if it's your first time logging in, you'll see a popup window appear that prompts you to **Sign in to Azure** and then choose or create a Vision resource. You have the option to skip this step and do it later also.
+1. Sign in to [Vision Studio](https://portal.vision.cognitive.azure.com/) from browser with your Azure subscription and if it's your first time logging in, you'll see a popup window appear that prompts you to **Sign in to Azure** and then choose or create a Vision resource. You have the option to skip this step and do it later.
    ![image](https://user-images.githubusercontent.com/48020356/204954594-90143c0a-65c1-4155-9136-bb93ee57985a.png)
   
-1. Select the **Subscription** dropdown, and then select the available subscription and select an existing resource within your subscription under the **Azure Resources** option. If you'd like to create a new one, select Create a new resource.
+1. Select the **Subscription** dropdown, select the available subscription and then select an existing resource within your subscription under the **Azure Resources** option. If you'd like to create a new one, select Create a new resource.
    ![image](https://user-images.githubusercontent.com/48020356/205177896-bcad5c19-ef01-47e5-96ed-099bf95e3f58.png)
 
-1. If selected *Create a new resource* then enter information for your new resources, such as a name, subscription, resource group, Cognitive service resource type, location, and the pricing tier as below, and click **Create resource**.
+1. If you have selected *Create a new resource* then enter information for your new resources, such as a name, subscription, resource group, Cognitive service resource type, location, and the pricing tier as below, and click **Create resource**.
 
    ![image](https://user-images.githubusercontent.com/83349577/205639512-bdbc8303-66fa-4341-96a2-d4e2ac920a84.png)
 
@@ -118,7 +118,7 @@ Vision Studio provides you with a platform to try several service features and s
 
     ![image](media/image-classifier.png)
 
-1. To see the implementation part, in the solution, go to ContosoTraders.Api.Core/Services/Implementations
+1. To see the implementation part in the solution, go to ContosoTraders.Api.Core/Services/Implementations
    ![image](medi/../media/services-for-image-categorization.png)
 
 Here you can see the 3 services, which facilitates the image categorization feature using Computer Vision.
@@ -139,7 +139,7 @@ Here you can see the 3 services, which facilitates the image categorization feat
   
 * ## Summary
 
-You have got an overview of Azure AI Services, got to know in detail about Computer Vision and seen it in action on Contoso Traders website.
+You have got an overview of Azure AI Services, understood in detail about Computer Vision and seen it in action on Contoso Traders website.
 
 ## Cleanup
 

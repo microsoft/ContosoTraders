@@ -30,7 +30,7 @@ Contoso Traders is a fictitious company that sells a wide range of products. The
 
 ## Overview of Azure AI services used
 
-The Contoso Traders application uses the `Azure Cognitive Services` (Computer Vision API) to analyze images and return a list of suggested products. The `Computer Vision API` is a cloud-based service that provides developers with access to advanced algorithms for processing images and returning information. The API can be used to find recognize objects, items and faces in an image. It can also be used to analyze the text in an image. In our case, the API is used to analyze an image and return a list of products that are similar to the image.
+The Contoso Traders application uses the `Azure Cognitive Services` (Computer Vision API) to analyze images and return a list of suggested products. The `Computer Vision API` is a cloud-based service that provides developers with access to advanced algorithms for processing images and returning information. The API can be used to recognize objects, items and faces in an image. It can also be used to analyze the text in an image. In our case, the API is used to analyze an image and return a list of products that are similar to the image.
 
 For more technical details, please see our [technical walkthrough document](./technical-walkthrough.md).
 

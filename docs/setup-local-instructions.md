@@ -1,4 +1,4 @@
-# Instructions to run Contoso Traders locally. 
+# Instructions to run Contoso Traders locally
 
 ## Setting up ContosoTraders Infrastructure
 
@@ -7,7 +7,6 @@
 3. Git clone this repository to your machine.
 4. Create the `SERVICEPRINCIPAL`, `ENVIRONMENT`, and `SQL_PASSWORD` github secrets ([instructions here](./App-Deployment-Guide)).
 5. Next, run the `contoso-traders-provisioning-deployment` github workflow. You can do this by going to the github repo's `Actions` tab, selecting the workflow, and clicking on the `Run workflow` button. This will both provision the infrastructure on Azure as well as deploy the applications (APIs, UI) to the infrastructure.
-
 
 ## Running ContosoTraders Locally
 

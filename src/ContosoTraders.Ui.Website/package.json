@@ -65,6 +65,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@playwright/test": "^1.29.0",
     "babel-plugin-macros": "^2.8.0"
   }
 }
