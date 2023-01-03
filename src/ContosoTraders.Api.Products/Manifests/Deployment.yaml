@@ -13,7 +13,14 @@ spec:
         app: contoso-traders-products
     spec:
       nodeSelector:
-        "kubernetes.io/os": linux
+        kubernetes.io/role: agent
+        beta.kubernetes.io/os: linux
+        type: virtual-kubelet
+      tolerations:
+        - key: virtual-kubelet.io/provider
+          operator: Exists
+        - key: azure.com/aci
+          effect: NoSchedule
       containers:
         - name: contoso-traders-products
           #Note: The '{ENVIRONMENT}' token will be substituted with the value of the ENVIRONMENT github secret by github workflow.
@@ -34,5 +41,5 @@ spec:
               cpu: 100m
               memory: 128Mi
             limits:
-              cpu: 250m
-              memory: 256Mi
+              cpu: 100m
+              memory: 128Mi
