@@ -327,8 +327,12 @@ jobs:
         env:
           CARTS_API_ENDPOINT: ${{ steps.get-cartsApiEndpoint.outputs.cartsApiEndpoint }}
           PRODUCTS_API_ENDPOINT: ${{ steps.get-productsApiEndpoint.outputs.productsApiEndpoint }}
-      - name: npm install
-        run: npm install
+      - name: setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: npm ci
+        run: npm ci
         working-directory: src/ContosoTraders.Ui.Website
       - name: npm run build
         run: npm run build
